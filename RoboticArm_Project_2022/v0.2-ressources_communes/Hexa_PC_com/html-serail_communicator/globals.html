@@ -1,0 +1,691 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>serial_communicator: Membres de fichier</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">serial_communicator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li class="current"><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow3" class="tabs2">
+    <ul class="tablist">
+      <li class="current"><a href="globals.html"><span>Tout</span></a></li>
+      <li><a href="globals_func.html"><span>Fonctions</span></a></li>
+      <li><a href="globals_type.html"><span>Définitions&#160;de&#160;type</span></a></li>
+      <li><a href="globals_eval.html"><span>Valeurs&#160;énumérées</span></a></li>
+      <li><a href="globals_defs.html"><span>Macros</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li><a href="#index__"><span>_</span></a></li>
+      <li><a href="#index_a"><span>a</span></a></li>
+      <li><a href="#index_f"><span>f</span></a></li>
+      <li><a href="#index_l"><span>l</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_p"><span>p</span></a></li>
+      <li><a href="#index_s"><span>s</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="contents">
+<div class="textblock">Liste de tous les membres de fichier avec des liens vers les fichiers auxquels ils appartiennent :</div>
+
+<h3><a class="anchor" id="index__"></a>- _ -</h3><ul>
+<li>_WIN32_WINNT
+: <a class="el" href="targetver_8h.html#ac50762666aa00bd3a4308158510f1748">targetver.h</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>ASCII_BEL
+: <a class="el" href="port__com__functions_8h.html#aaced5820037559ab6f7fdd7d3256bc1f">port_com_functions.h</a>
+</li>
+<li>ASCII_BS
+: <a class="el" href="port__com__functions_8h.html#a74cfd0b97396b41e6cbb25de858ece5b">port_com_functions.h</a>
+</li>
+<li>ASCII_CR
+: <a class="el" href="port__com__functions_8h.html#a089ed4925403ab02a05e603967c74579">port_com_functions.h</a>
+</li>
+<li>ASCII_LF
+: <a class="el" href="port__com__functions_8h.html#aca3b498f5936dbe4f3076a47c3e1810d">port_com_functions.h</a>
+</li>
+<li>ASCII_XOFF
+: <a class="el" href="port__com__functions_8h.html#afcf583b92f0898d99d86611e5b56d718">port_com_functions.h</a>
+</li>
+<li>ASCII_XON
+: <a class="el" href="port__com__functions_8h.html#afc0f42590f4bdc554d6bc17c54aedc2b">port_com_functions.h</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>FC_DTRDSR
+: <a class="el" href="port__com__functions_8h.html#a09db1680c0bd19acf9d2552a7bd10324">port_com_functions.h</a>
+</li>
+<li>FC_RTSCTS
+: <a class="el" href="port__com__functions_8h.html#a3a75741627cae6c18586c78f30abe3a2">port_com_functions.h</a>
+</li>
+<li>FC_XONXOFF
+: <a class="el" href="port__com__functions_8h.html#ae9de1cc1f1b64c3da89754863ad0202e">port_com_functions.h</a>
+</li>
+<li>FT_BAUD_115200
+: <a class="el" href="ftd2xx_8h.html#adb922f6750ba0de7d94f59dd211f409f">ftd2xx.h</a>
+</li>
+<li>FT_BAUD_1200
+: <a class="el" href="ftd2xx_8h.html#ac3325ebc6ac88aa67a42dffa689edc49">ftd2xx.h</a>
+</li>
+<li>FT_BAUD_14400
+: <a class="el" href="ftd2xx_8h.html#acb0ce03efa1d0bf52a2278cca43553aa">ftd2xx.h</a>
+</li>
+<li>FT_BAUD_19200
+: <a class="el" href="ftd2xx_8h.html#a6d1774538883197bee4ff9fc59b583a6">ftd2xx.h</a>
+</li>
+<li>FT_BAUD_230400
+: <a class="el" href="ftd2xx_8h.html#ad610d9cc881a7f5c5544a11cb19195a4">ftd2xx.h</a>
+</li>
+<li>FT_BAUD_2400
+: <a class="el" href="ftd2xx_8h.html#afd87f5ad59f3e098041645fca1b9a3f3">ftd2xx.h</a>
+</li>
+<li>FT_BAUD_300
+: <a class="el" href="ftd2xx_8h.html#ad97e3607f107d74051ea788d22a18389">ftd2xx.h</a>
+</li>
+<li>FT_BAUD_38400
+: <a class="el" href="ftd2xx_8h.html#ac6c8d9d79047c1d509e40f490e8a3aaa">ftd2xx.h</a>
+</li>
+<li>FT_BAUD_460800
+: <a class="el" href="ftd2xx_8h.html#a8b6ace02b75b40e7cb9f3e20f91dad3b">ftd2xx.h</a>
+</li>
+<li>FT_BAUD_4800
+: <a class="el" href="ftd2xx_8h.html#a4f1c4b531030b36e484288d5efd8c0cd">ftd2xx.h</a>
+</li>
+<li>FT_BAUD_57600
+: <a class="el" href="ftd2xx_8h.html#a575d3bbf9d4af6fb6fa9554bb6172e3e">ftd2xx.h</a>
+</li>
+<li>FT_BAUD_600
+: <a class="el" href="ftd2xx_8h.html#a6b93c82a1fe4ef3cca195f90ef6dcf7b">ftd2xx.h</a>
+</li>
+<li>FT_BAUD_921600
+: <a class="el" href="ftd2xx_8h.html#a665f7815816e1d71892b542967cafd81">ftd2xx.h</a>
+</li>
+<li>FT_BAUD_9600
+: <a class="el" href="ftd2xx_8h.html#ae08b2bbc43e51b7b24e74c4950e4241f">ftd2xx.h</a>
+</li>
+<li>FT_BITS_7
+: <a class="el" href="ftd2xx_8h.html#a5badc95904ea3f66fc19e056a4df5f60">ftd2xx.h</a>
+</li>
+<li>FT_BITS_8
+: <a class="el" href="ftd2xx_8h.html#acc75d014ed9d6aa33ed6e338c27f56d1">ftd2xx.h</a>
+</li>
+<li>FT_Close()
+: <a class="el" href="ftd2xx_8h.html#a62c31590fa78d9fe4e46fc1fbc71ce7e">ftd2xx.h</a>
+</li>
+<li>FT_ClrDtr()
+: <a class="el" href="ftd2xx_8h.html#afc9ed9087d9afe2d850fe4011da8a13d">ftd2xx.h</a>
+</li>
+<li>FT_ClrRts()
+: <a class="el" href="ftd2xx_8h.html#adadcb94fe58ffc7be90bbf3c79e0899d">ftd2xx.h</a>
+</li>
+<li>FT_CreateDeviceInfoList()
+: <a class="el" href="ftd2xx_8h.html#a8d452a978313dbebcc600a5b1c3cbf65">ftd2xx.h</a>
+</li>
+<li>FT_CyclePort()
+: <a class="el" href="ftd2xx_8h.html#a657a238350cf97c83d50fd0a25bb29a8">ftd2xx.h</a>
+</li>
+<li>FT_DEFAULT_RX_TIMEOUT
+: <a class="el" href="ftd2xx_8h.html#aa35a4291c4801decb09c85c7151d30a1">ftd2xx.h</a>
+</li>
+<li>FT_DEFAULT_TX_TIMEOUT
+: <a class="el" href="ftd2xx_8h.html#acfae99fd66f223b8666d1d14d7e047c9">ftd2xx.h</a>
+</li>
+<li>FT_DEVICE
+: <a class="el" href="ftd2xx_8h.html#a93f97052222c089b780302ff9c175cb6">ftd2xx.h</a>
+</li>
+<li>FT_DEVICE_100AX
+: <a class="el" href="ftd2xx_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a332f9bed769b5c31614dc58f4d15d277">ftd2xx.h</a>
+</li>
+<li>FT_DEVICE_2232C
+: <a class="el" href="ftd2xx_8h.html#adf764cbdea00d65edcd07bb9953ad2b7ac2a75281abc9c0a22c8e9b050ec127b3">ftd2xx.h</a>
+</li>
+<li>FT_DEVICE_2232H
+: <a class="el" href="ftd2xx_8h.html#adf764cbdea00d65edcd07bb9953ad2b7abd6d39c6ef4f9ed49fdc4bac60fd6d6b">ftd2xx.h</a>
+</li>
+<li>FT_DEVICE_232H
+: <a class="el" href="ftd2xx_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a6b4f056cfac5b1745c1e82bd738ed206">ftd2xx.h</a>
+</li>
+<li>FT_DEVICE_232R
+: <a class="el" href="ftd2xx_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a19516809cd3cd1f454030e53ddbb0cb6">ftd2xx.h</a>
+</li>
+<li>FT_DEVICE_4232H
+: <a class="el" href="ftd2xx_8h.html#adf764cbdea00d65edcd07bb9953ad2b7ac645608979a5fae076928728dc52acce">ftd2xx.h</a>
+</li>
+<li>FT_DEVICE_AM
+: <a class="el" href="ftd2xx_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a7d7f625750b6f8e6ffe52f7476c0fb8d">ftd2xx.h</a>
+</li>
+<li>FT_DEVICE_BM
+: <a class="el" href="ftd2xx_8h.html#adf764cbdea00d65edcd07bb9953ad2b7ab99f8bd4cc1e82b8814c8516328ab6e3">ftd2xx.h</a>
+</li>
+<li>FT_DEVICE_LIST_INFO_NODE
+: <a class="el" href="ftd2xx_8h.html#ab9aea7f9fabbfa11b271a05889ad073f">ftd2xx.h</a>
+</li>
+<li>FT_DEVICE_LIST_NOT_READY
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba15d7660d2fdecb7d3d479800bf1766ba">ftd2xx.h</a>
+</li>
+<li>FT_DEVICE_NOT_FOUND
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba52ef35c13606c4e5073f82392310829f">ftd2xx.h</a>
+</li>
+<li>FT_DEVICE_NOT_OPENED
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55bafc9ebd84b6b29fc3ce081d3f5098a5fc">ftd2xx.h</a>
+</li>
+<li>FT_DEVICE_NOT_OPENED_FOR_ERASE
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba55cf3c5c20c011e8751d832472cba590">ftd2xx.h</a>
+</li>
+<li>FT_DEVICE_NOT_OPENED_FOR_WRITE
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55babd2799052f1f1abf98eba222ebe78631">ftd2xx.h</a>
+</li>
+<li>FT_DEVICE_UNKNOWN
+: <a class="el" href="ftd2xx_8h.html#adf764cbdea00d65edcd07bb9953ad2b7a4db221c21cbf58e08677f62bc8da2e54">ftd2xx.h</a>
+</li>
+<li>FT_EE_Program()
+: <a class="el" href="ftd2xx_8h.html#ab251540da5505a45eb5ebda4ee9f9497">ftd2xx.h</a>
+</li>
+<li>FT_EE_ProgramEx()
+: <a class="el" href="ftd2xx_8h.html#ad4870c4da168d8facf114d446f060521">ftd2xx.h</a>
+</li>
+<li>FT_EE_Read()
+: <a class="el" href="ftd2xx_8h.html#a38d79ea84104e81aaac000a67c53887a">ftd2xx.h</a>
+</li>
+<li>FT_EE_ReadConfig()
+: <a class="el" href="ftd2xx_8h.html#ae0d4e2e728af270d20c9fb0cc72cf032">ftd2xx.h</a>
+</li>
+<li>FT_EE_ReadECC()
+: <a class="el" href="ftd2xx_8h.html#a27d2fc79521c15478184667876926651">ftd2xx.h</a>
+</li>
+<li>FT_EE_ReadEx()
+: <a class="el" href="ftd2xx_8h.html#a748ef5c6e1903c15fd348b256766aa2a">ftd2xx.h</a>
+</li>
+<li>FT_EE_UARead()
+: <a class="el" href="ftd2xx_8h.html#ad5a0032edf19104afcb44cdba8b8e78f">ftd2xx.h</a>
+</li>
+<li>FT_EE_UASize()
+: <a class="el" href="ftd2xx_8h.html#aff432ce085c2948b834fe607f1107170">ftd2xx.h</a>
+</li>
+<li>FT_EE_UAWrite()
+: <a class="el" href="ftd2xx_8h.html#aaf0eab542414de17f694413658371a63">ftd2xx.h</a>
+</li>
+<li>FT_EE_WriteConfig()
+: <a class="el" href="ftd2xx_8h.html#a06914fa1fd2222b5e70605e1592222c1">ftd2xx.h</a>
+</li>
+<li>FT_EEPROM_ERASE_FAILED
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba951eb59384691e4ff67bcb9b80ff5ffb">ftd2xx.h</a>
+</li>
+<li>FT_EEPROM_NOT_PRESENT
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba944fbc6bd0e02569ddd963c3fe440b0a">ftd2xx.h</a>
+</li>
+<li>FT_EEPROM_NOT_PROGRAMMED
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba07b21ff8dd1609f3072cd47639905ddd">ftd2xx.h</a>
+</li>
+<li>FT_EEPROM_READ_FAILED
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8f6929c07ae094d0d87e109de0311511">ftd2xx.h</a>
+</li>
+<li>FT_EEPROM_WRITE_FAILED
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba58a00530b68e32f9092a4c2b780cfcfe">ftd2xx.h</a>
+</li>
+<li>FT_EraseEE()
+: <a class="el" href="ftd2xx_8h.html#a89da4d15e72d9055a9bf0168f375b2c5">ftd2xx.h</a>
+</li>
+<li>FT_EVENT_LINE_STATUS
+: <a class="el" href="ftd2xx_8h.html#a1510601605ed5dc4252203e4b6db4105">ftd2xx.h</a>
+</li>
+<li>FT_EVENT_MODEM_STATUS
+: <a class="el" href="ftd2xx_8h.html#a6e1f173fb23d494c640006046dd8cb38">ftd2xx.h</a>
+</li>
+<li>FT_EVENT_RXCHAR
+: <a class="el" href="ftd2xx_8h.html#a66352a269997385ea3e173190eda9e25">ftd2xx.h</a>
+</li>
+<li>FT_FAILED_TO_WRITE_DEVICE
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55bacd5f30669a8d167427ac9fe660cdbf62">ftd2xx.h</a>
+</li>
+<li>FT_FLAGS_HISPEED
+: <a class="el" href="ftd2xx_8h.html#a99fb83031ce9923c84392b4e92f956b5a6a597b179be79b51ee1ed9d39b8693f9">ftd2xx.h</a>
+</li>
+<li>FT_FLAGS_OPENED
+: <a class="el" href="ftd2xx_8h.html#a99fb83031ce9923c84392b4e92f956b5ad7c65505edafca0fa22c4b1618526153">ftd2xx.h</a>
+</li>
+<li>FT_FLOW_DTR_DSR
+: <a class="el" href="ftd2xx_8h.html#a2a14232366b07845b0b2b6acafe4cae6">ftd2xx.h</a>
+</li>
+<li>FT_FLOW_NONE
+: <a class="el" href="ftd2xx_8h.html#ac85fe560bae3a6e6fb6529c30348eefc">ftd2xx.h</a>
+</li>
+<li>FT_FLOW_RTS_CTS
+: <a class="el" href="ftd2xx_8h.html#ad53d0567c173395369d77696a6c2ba7a">ftd2xx.h</a>
+</li>
+<li>FT_FLOW_XON_XOFF
+: <a class="el" href="ftd2xx_8h.html#a1305453ab3e7ddcdf6791bca508cb2ad">ftd2xx.h</a>
+</li>
+<li>FT_GetBitMode()
+: <a class="el" href="ftd2xx_8h.html#a2c7e42beec8b93abdd12455b0fb4ea16">ftd2xx.h</a>
+</li>
+<li>FT_GetComPortNumber()
+: <a class="el" href="ftd2xx_8h.html#a53d85d4c6420e8bdcc01d35a07e9827f">ftd2xx.h</a>
+</li>
+<li>FT_GetDeviceInfo()
+: <a class="el" href="ftd2xx_8h.html#a3278224221d578283edb456646941f99">ftd2xx.h</a>
+</li>
+<li>FT_GetDeviceInfoDetail()
+: <a class="el" href="ftd2xx_8h.html#a83370dba4c6c26ae0cb2cd8a58db18e1">ftd2xx.h</a>
+</li>
+<li>FT_GetDeviceInfoList()
+: <a class="el" href="ftd2xx_8h.html#acbeeb2a0da3a34b1b61b9841ddd26974">ftd2xx.h</a>
+</li>
+<li>FT_GetDriverVersion()
+: <a class="el" href="ftd2xx_8h.html#ab77b0d3e86c7f8e430cd7458202bb1a6">ftd2xx.h</a>
+</li>
+<li>FT_GetEventStatus()
+: <a class="el" href="ftd2xx_8h.html#a733b71a6aeaa815d0a6c943df1e50297">ftd2xx.h</a>
+</li>
+<li>FT_GetLatencyTimer()
+: <a class="el" href="ftd2xx_8h.html#add62e019900500f3c38e64b3ac62143e">ftd2xx.h</a>
+</li>
+<li>FT_GetLibraryVersion()
+: <a class="el" href="ftd2xx_8h.html#a4a70f5c62c29f7812b630f404b88a354">ftd2xx.h</a>
+</li>
+<li>FT_GetModemStatus()
+: <a class="el" href="ftd2xx_8h.html#a235a203c92b865537fe14aa984ac97ef">ftd2xx.h</a>
+</li>
+<li>FT_GetQueueStatus()
+: <a class="el" href="ftd2xx_8h.html#a6418e012a85928c31ad3b6e144fac31a">ftd2xx.h</a>
+</li>
+<li>FT_GetQueueStatusEx()
+: <a class="el" href="ftd2xx_8h.html#ad58239c8c1d7701c6bff65c109e486d6">ftd2xx.h</a>
+</li>
+<li>FT_GetStatus()
+: <a class="el" href="ftd2xx_8h.html#a9117c924aed38c8a506a550cd28fa717">ftd2xx.h</a>
+</li>
+<li>FT_HANDLE
+: <a class="el" href="ftd2xx_8h.html#a6b3b6700c4c65514ae24fee3d5bb2908">ftd2xx.h</a>
+</li>
+<li>FT_INSUFFICIENT_RESOURCES
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba9e4e6e7f0ffce5ff0c2516fcdd9f1ec4">ftd2xx.h</a>
+</li>
+<li>FT_INVALID_ARGS
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55baced75884f01bf862c7662cec61dc2b2c">ftd2xx.h</a>
+</li>
+<li>FT_INVALID_BAUD_RATE
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1c1c84a2e6da2984b178a2784ace3ab9">ftd2xx.h</a>
+</li>
+<li>FT_INVALID_HANDLE
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba51b951885e2427ac2adcc42f8e8aa7d6">ftd2xx.h</a>
+</li>
+<li>FT_INVALID_PARAMETER
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba5db9fe4ea1249f6177b8e62ec42e1561">ftd2xx.h</a>
+</li>
+<li>FT_IO_ERROR
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba187bd12394306ca35c13e95699cc2d76">ftd2xx.h</a>
+</li>
+<li>FT_IoCtl()
+: <a class="el" href="ftd2xx_8h.html#a4e82e98f2cdfb84336a83bc009f22d1b">ftd2xx.h</a>
+</li>
+<li>FT_LIST_ALL
+: <a class="el" href="ftd2xx_8h.html#abab49e2cbbf5215c7ccedd184ff84c8c">ftd2xx.h</a>
+</li>
+<li>FT_LIST_BY_INDEX
+: <a class="el" href="ftd2xx_8h.html#a172d291e40b262ec6acbf97e416dade3">ftd2xx.h</a>
+</li>
+<li>FT_LIST_MASK
+: <a class="el" href="ftd2xx_8h.html#afa7947881c0dd7f25b412e8c4517e5c2">ftd2xx.h</a>
+</li>
+<li>FT_LIST_NUMBER_ONLY
+: <a class="el" href="ftd2xx_8h.html#a434d09528c59e293a7e464b6913d7d29">ftd2xx.h</a>
+</li>
+<li>FT_ListDevices()
+: <a class="el" href="ftd2xx_8h.html#a5d6d6143c10c87b3c6e6b21fae4a37dc">ftd2xx.h</a>
+</li>
+<li>FT_NOT_SUPPORTED
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba66b84db9ae1ae21cdcc972ac2856e172">ftd2xx.h</a>
+</li>
+<li>FT_OK
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba57771796d33c3f4178130c5daa56b9a3">ftd2xx.h</a>
+</li>
+<li>FT_Open()
+: <a class="el" href="ftd2xx_8h.html#a5f33a6dde9b2938f8e2426b1b0353906">ftd2xx.h</a>
+</li>
+<li>FT_OPEN_BY_DESCRIPTION
+: <a class="el" href="ftd2xx_8h.html#ad5b36ceee8df0d014da9764f010e0259">ftd2xx.h</a>
+</li>
+<li>FT_OPEN_BY_LOCATION
+: <a class="el" href="ftd2xx_8h.html#a67cdb1fc67ca54da293088fbc5484fe4">ftd2xx.h</a>
+</li>
+<li>FT_OPEN_BY_SERIAL_NUMBER
+: <a class="el" href="ftd2xx_8h.html#a3666f8674d68859eaf7670efc0ad5613">ftd2xx.h</a>
+</li>
+<li>FT_OpenEx()
+: <a class="el" href="ftd2xx_8h.html#a706bccadc094e6da104864908c0f352f">ftd2xx.h</a>
+</li>
+<li>FT_OTHER_ERROR
+: <a class="el" href="ftd2xx_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba69ca4908cb1d711452f413c66d408b8d">ftd2xx.h</a>
+</li>
+<li>FT_PARITY_EVEN
+: <a class="el" href="ftd2xx_8h.html#a47b6fb82d2ea46960128843f0c66d373">ftd2xx.h</a>
+</li>
+<li>FT_PARITY_MARK
+: <a class="el" href="ftd2xx_8h.html#ac4eda8244c50f5361fa2e512954305bd">ftd2xx.h</a>
+</li>
+<li>FT_PARITY_NONE
+: <a class="el" href="ftd2xx_8h.html#a9ac9820851fd51defa66c9adf78de064">ftd2xx.h</a>
+</li>
+<li>FT_PARITY_ODD
+: <a class="el" href="ftd2xx_8h.html#a5685247e0b64662788e5317de16cf825">ftd2xx.h</a>
+</li>
+<li>FT_PARITY_SPACE
+: <a class="el" href="ftd2xx_8h.html#a797a92db48dd90a2c0253ab5e29a8d7e">ftd2xx.h</a>
+</li>
+<li>FT_PROGRAM_DATA
+: <a class="el" href="ftd2xx_8h.html#a6942a6cfb57fc7b3376fdeef9c2c1a38">ftd2xx.h</a>
+</li>
+<li>FT_Purge()
+: <a class="el" href="ftd2xx_8h.html#a722da1a691ba20623e3a820073c499af">ftd2xx.h</a>
+</li>
+<li>FT_PURGE_RX
+: <a class="el" href="ftd2xx_8h.html#a33dae350052685249d00aa991367f2bb">ftd2xx.h</a>
+</li>
+<li>FT_PURGE_TX
+: <a class="el" href="ftd2xx_8h.html#aa18aebb3e1bdb838289f23ff5c6086fa">ftd2xx.h</a>
+</li>
+<li>FT_Read()
+: <a class="el" href="ftd2xx_8h.html#abe77b78e2658d559850369fc024c8b7a">ftd2xx.h</a>
+</li>
+<li>FT_ReadEE()
+: <a class="el" href="ftd2xx_8h.html#ada5dab6ca007215fbdf08b4bbdd7acaf">ftd2xx.h</a>
+</li>
+<li>FT_Reload()
+: <a class="el" href="ftd2xx_8h.html#a5e78893b75e05208e347e9c811d0c192">ftd2xx.h</a>
+</li>
+<li>FT_Rescan()
+: <a class="el" href="ftd2xx_8h.html#a9b0caf8b7d383bf41b8891fd256acd16">ftd2xx.h</a>
+</li>
+<li>FT_ResetDevice()
+: <a class="el" href="ftd2xx_8h.html#a379dc995669c611865bfa77c2d974e18">ftd2xx.h</a>
+</li>
+<li>FT_ResetPort()
+: <a class="el" href="ftd2xx_8h.html#a9b9c8c5f921fa96f1c8260ed3788b38f">ftd2xx.h</a>
+</li>
+<li>FT_RestartInTask()
+: <a class="el" href="ftd2xx_8h.html#afbfab987202b5aafa207c4639b088df3">ftd2xx.h</a>
+</li>
+<li>FT_SetBaudRate()
+: <a class="el" href="ftd2xx_8h.html#ab319e07afc99d9a293789a5235e8d1b1">ftd2xx.h</a>
+</li>
+<li>FT_SetBitMode()
+: <a class="el" href="ftd2xx_8h.html#a540ae92eb5837aba32ad77c1b2e1d59b">ftd2xx.h</a>
+</li>
+<li>FT_SetBreakOff()
+: <a class="el" href="ftd2xx_8h.html#afa1d9787185c2a78a452ece9ecd04a68">ftd2xx.h</a>
+</li>
+<li>FT_SetBreakOn()
+: <a class="el" href="ftd2xx_8h.html#a7b81f3eedad74c0bb93e85d19740a082">ftd2xx.h</a>
+</li>
+<li>FT_SetChars()
+: <a class="el" href="ftd2xx_8h.html#a1876bd038225e6c78d4ac17bb0cd6548">ftd2xx.h</a>
+</li>
+<li>FT_SetDataCharacteristics()
+: <a class="el" href="ftd2xx_8h.html#a7f0bdde1f2aae09c3a9e9531f9b87165">ftd2xx.h</a>
+</li>
+<li>FT_SetDeadmanTimeout()
+: <a class="el" href="ftd2xx_8h.html#a03511477a6bfcd7e263be4b63e381d7e">ftd2xx.h</a>
+</li>
+<li>FT_SetDivisor()
+: <a class="el" href="ftd2xx_8h.html#acd81819aae9d79b559a950053e4c00ad">ftd2xx.h</a>
+</li>
+<li>FT_SetDtr()
+: <a class="el" href="ftd2xx_8h.html#aaeb8bb58260f086294be87fff4188527">ftd2xx.h</a>
+</li>
+<li>FT_SetEventNotification()
+: <a class="el" href="ftd2xx_8h.html#a1851284723856657e7f114d51ec95a86">ftd2xx.h</a>
+</li>
+<li>FT_SetFlowControl()
+: <a class="el" href="ftd2xx_8h.html#af88da72f3267e488d99d35c7bee642b0">ftd2xx.h</a>
+</li>
+<li>FT_SetLatencyTimer()
+: <a class="el" href="ftd2xx_8h.html#a5a3a4527537d179e32831c77e9f325dc">ftd2xx.h</a>
+</li>
+<li>FT_SetResetPipeRetryCount()
+: <a class="el" href="ftd2xx_8h.html#ad1f76b8aa7f33ed0b7eebd34a22e3a5c">ftd2xx.h</a>
+</li>
+<li>FT_SetRts()
+: <a class="el" href="ftd2xx_8h.html#a91c6af959fdfb5a2d631caf1e945b065">ftd2xx.h</a>
+</li>
+<li>FT_SetTimeouts()
+: <a class="el" href="ftd2xx_8h.html#a644d8350893480ef39c6aed4492249be">ftd2xx.h</a>
+</li>
+<li>FT_SetUSBParameters()
+: <a class="el" href="ftd2xx_8h.html#a71f7062bee44b59ed30fecfb195af2c5">ftd2xx.h</a>
+</li>
+<li>FT_SetWaitMask()
+: <a class="el" href="ftd2xx_8h.html#a37f355d078478f722ceecaf03e78dcb2">ftd2xx.h</a>
+</li>
+<li>FT_STATUS
+: <a class="el" href="ftd2xx_8h.html#a61e5e58382c1d302533317f81d6bc781">ftd2xx.h</a>
+</li>
+<li>FT_STOP_BITS_1
+: <a class="el" href="ftd2xx_8h.html#afce0e40cde79ffd6a9924a65ef64dbed">ftd2xx.h</a>
+</li>
+<li>FT_STOP_BITS_2
+: <a class="el" href="ftd2xx_8h.html#a54e17c6302641232680fe99c5f25159f">ftd2xx.h</a>
+</li>
+<li>FT_StopInTask()
+: <a class="el" href="ftd2xx_8h.html#ae1ee9df5faecdf98edf2812fc0452b09">ftd2xx.h</a>
+</li>
+<li>FT_SUCCESS
+: <a class="el" href="ftd2xx_8h.html#a76b2daa5245fb8fe86aa3a7a0d5fc7fd">ftd2xx.h</a>
+</li>
+<li>FT_W32_CancelIo()
+: <a class="el" href="ftd2xx_8h.html#a1a3cea400cc914dd89fc3568aed9c1cb">ftd2xx.h</a>
+</li>
+<li>FT_W32_ClearCommBreak()
+: <a class="el" href="ftd2xx_8h.html#aaa8d195fc0aca1c262380d93358c1b7f">ftd2xx.h</a>
+</li>
+<li>FT_W32_ClearCommError()
+: <a class="el" href="ftd2xx_8h.html#aa9cfb890418cc075ff118eea5723ca7c">ftd2xx.h</a>
+</li>
+<li>FT_W32_CloseHandle()
+: <a class="el" href="ftd2xx_8h.html#a3ae3747f578394f18fdfda6f6fb4b85d">ftd2xx.h</a>
+</li>
+<li>FT_W32_CreateFile()
+: <a class="el" href="ftd2xx_8h.html#a15957bdc7d2c392a344f5af66519c489">ftd2xx.h</a>
+</li>
+<li>FT_W32_EscapeCommFunction()
+: <a class="el" href="ftd2xx_8h.html#ad45a28862450610c788829a903f40420">ftd2xx.h</a>
+</li>
+<li>FT_W32_GetCommMask()
+: <a class="el" href="ftd2xx_8h.html#abd8c78d624b1c7594d34dee2823e3ff7">ftd2xx.h</a>
+</li>
+<li>FT_W32_GetCommModemStatus()
+: <a class="el" href="ftd2xx_8h.html#aede7dc44dafaad417f1de4dba0887be0">ftd2xx.h</a>
+</li>
+<li>FT_W32_GetCommState()
+: <a class="el" href="ftd2xx_8h.html#a2e2469c00667d7e83c6cf3b6af187500">ftd2xx.h</a>
+</li>
+<li>FT_W32_GetCommTimeouts()
+: <a class="el" href="ftd2xx_8h.html#abb58e74eef428ec53012cecc01ffa9cf">ftd2xx.h</a>
+</li>
+<li>FT_W32_GetLastError()
+: <a class="el" href="ftd2xx_8h.html#ad3d3d8ce04aa9488861be53c90cfe596">ftd2xx.h</a>
+</li>
+<li>FT_W32_GetOverlappedResult()
+: <a class="el" href="ftd2xx_8h.html#ac84e28457fa4eddc9e034dfe376f99be">ftd2xx.h</a>
+</li>
+<li>FT_W32_PurgeComm()
+: <a class="el" href="ftd2xx_8h.html#a4577e81358446669e0f09cb589c37b62">ftd2xx.h</a>
+</li>
+<li>FT_W32_ReadFile()
+: <a class="el" href="ftd2xx_8h.html#a38370899c60ffbe0920f24c52cc09930">ftd2xx.h</a>
+</li>
+<li>FT_W32_SetCommBreak()
+: <a class="el" href="ftd2xx_8h.html#afdfd2939ead5253abf1eab515075d8e5">ftd2xx.h</a>
+</li>
+<li>FT_W32_SetCommMask()
+: <a class="el" href="ftd2xx_8h.html#a082001279f7bebba623937b94b4ab981">ftd2xx.h</a>
+</li>
+<li>FT_W32_SetCommState()
+: <a class="el" href="ftd2xx_8h.html#a662d2252f2357117e867ff4e6761093a">ftd2xx.h</a>
+</li>
+<li>FT_W32_SetCommTimeouts()
+: <a class="el" href="ftd2xx_8h.html#a909f6ca40fcc7236614faff6299af35e">ftd2xx.h</a>
+</li>
+<li>FT_W32_SetupComm()
+: <a class="el" href="ftd2xx_8h.html#abd54ffd821033453cb70ee142cb712f0">ftd2xx.h</a>
+</li>
+<li>FT_W32_WaitCommEvent()
+: <a class="el" href="ftd2xx_8h.html#a8de4f35f1cf683aafb706e7137f8c929">ftd2xx.h</a>
+</li>
+<li>FT_W32_WriteFile()
+: <a class="el" href="ftd2xx_8h.html#a6781611579d3815bd7d83c82885f1e0f">ftd2xx.h</a>
+</li>
+<li>FT_WaitOnMask()
+: <a class="el" href="ftd2xx_8h.html#a3f7f7d8c890a76a981c4f052a0d963f3">ftd2xx.h</a>
+</li>
+<li>FT_Write()
+: <a class="el" href="ftd2xx_8h.html#a7d26ea8569aa879a9a263542c11f09c1">ftd2xx.h</a>
+</li>
+<li>FT_WriteEE()
+: <a class="el" href="ftd2xx_8h.html#a24368c41e776d27c60598d631c30fbed">ftd2xx.h</a>
+</li>
+<li>FTCOMSTAT
+: <a class="el" href="ftd2xx_8h.html#ab326e0c33eb37d4642b1dce955ec307d">ftd2xx.h</a>
+</li>
+<li>FTD2XX_API
+: <a class="el" href="ftd2xx_8h.html#aa0d811719a1be00aa1486a70d34e7ef5">ftd2xx.h</a>
+</li>
+<li>FTDCB
+: <a class="el" href="ftd2xx_8h.html#a633dbf288d8bd033933e3e0771c0b725">ftd2xx.h</a>
+</li>
+<li>FTTIMEOUTS
+: <a class="el" href="ftd2xx_8h.html#a779511857d8ed94e04f9929801291ca4">ftd2xx.h</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>LPFTCOMSTAT
+: <a class="el" href="ftd2xx_8h.html#a1f5349d05f9219ca26b97e97fb345cb3">ftd2xx.h</a>
+</li>
+<li>LPFTDCB
+: <a class="el" href="ftd2xx_8h.html#a2e9080fe9ecd5c2db204a24c5f169c4b">ftd2xx.h</a>
+</li>
+<li>LPFTTIMEOUTS
+: <a class="el" href="ftd2xx_8h.html#a4cfbb43e220e1453c43e30278b7c3d6e">ftd2xx.h</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>MIN
+: <a class="el" href="port__usb__functions_8h.html#a3acffbd305ee72dcd4593c0d8af64a4f">port_usb_functions.h</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>PFT_EVENT_HANDLER
+: <a class="el" href="ftd2xx_8h.html#a6a910f39c71ed4d8eab22156b575e3b5">ftd2xx.h</a>
+</li>
+<li>PFT_PROGRAM_DATA
+: <a class="el" href="ftd2xx_8h.html#acbebd7f5804c142d322cd81d2a77d755">ftd2xx.h</a>
+</li>
+<li>PORT_COM
+: <a class="el" href="serialCommunicator_8h.html#afa2b839dfaf9f60bb42d19c744cbd75f">serialCommunicator.h</a>
+</li>
+<li>PORT_USB
+: <a class="el" href="serialCommunicator_8h.html#a48da1855a5b3c05e6100556ba5c7c658">serialCommunicator.h</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>saturate10Bits()
+: <a class="el" href="serialCommunicator_8cpp.html#a1a69776e8ac6aaa9ccbb78211d3257a1">serialCommunicator.cpp</a>
+</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Dimanche Mars 13 2016 22:02:34 pour serial_communicator par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

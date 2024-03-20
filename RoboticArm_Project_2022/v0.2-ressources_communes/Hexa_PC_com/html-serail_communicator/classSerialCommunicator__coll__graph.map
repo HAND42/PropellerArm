@@ -1,0 +1,12 @@
+<map id="SerialCommunicator" name="SerialCommunicator">
+<area shape="rect" id="node2" href="$structserialComms_1_1DebugLabelElement.html" title="serialComms::DebugLabelElement" alt="" coords="302,12,525,39"/>
+<area shape="rect" id="node3" href="$structserialComms_1_1DebugData.html" title="serialComms::DebugData" alt="" coords="328,63,499,89"/>
+<area shape="rect" id="node4" href="$structserialComms_1_1s__MK__Debug.html" title="serialComms::s_MK_Debug" alt="" coords="5,63,189,89"/>
+<area shape="rect" id="node5" href="$classport__usb__functions_1_1port__usb.html" title="port_usb_functions\l::port_usb" alt="" coords="348,114,479,155"/>
+<area shape="rect" id="node6" href="$structserialComms_1_1RCState.html" title="serialComms::RCState" alt="" coords="336,180,491,207"/>
+<area shape="rect" id="node7" href="$structserialComms_1_1str__PPMData.html" title="serialComms::str_PPMData" alt="" coords="5,180,189,207"/>
+<area shape="rect" id="node8" href="$classport__com.html" title="port_com" alt="" coords="375,231,451,257"/>
+<area shape="rect" id="node9" href="$structserialComms_1_1HILSMotorCommands.html" title="serialComms::HILSMotorCommands" alt="" coords="297,281,530,308"/>
+<area shape="rect" id="node10" href="$structserialComms_1_1HILSSensorPack.html" title="serialComms::HILSSensorPack" alt="" coords="311,335,516,361"/>
+<area shape="rect" id="node11" href="$structserialComms_1_1TransmissionDataPacket.html" title="serialComms::Transmission\lDataPacket" alt="" coords="322,386,505,427"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="communicationThread::receiver" name="communicationThread::receiver">
+<area shape="rect" id="node2" href="$classSerialCommunicator.html#a9e6b1be065fc55f2ef2762b45c2e5876" title="SerialCommunicator\l::SerialRx" alt="" coords="245,209,384,250"/>
+<area shape="rect" id="node14" href="$classSerialCommunicator.html#a63f47ba2e4cdae3891c4d3a4d25ce899" title="SerialCommunicator\l::getReceiverThreadSleepTime_ms" alt="" coords="203,274,426,315"/>
+<area shape="rect" id="node3" href="$classport__usb__functions_1_1port__usb.html#a0093f7f137b1dba2e85aeca5a644cf47" title="port_usb_functions\l::port_usb::ReadAvailable" alt="" coords="475,114,645,155"/>
+<area shape="rect" id="node8" href="$classport__com.html#a8204be3bdb9ea5e54d582f1f26bd6a29" title="port_com::ReadAvailable" alt="" coords="477,216,643,243"/>
+<area shape="rect" id="node9" href="$classSerialCommunicator.html#a3a2d90e36ac74e89ec2715bd6951affb" title="SerialCommunicator\l::USART_ProcessRxData" alt="" coords="475,286,645,327"/>
+<area shape="rect" id="node4" href="$classport__usb__functions_1_1port__usb.html#ac5c84532a3a0627a5bd4973e2637794f" title="port_usb_functions\l::port_usb::lock" alt="" coords="707,5,837,46"/>
+<area shape="rect" id="node5" href="$ftd2xx_8h.html#a6418e012a85928c31ad3b6e144fac31a" title="FT_GetQueueStatus" alt="" coords="701,71,843,97"/>
+<area shape="rect" id="node6" href="$ftd2xx_8h.html#abe77b78e2658d559850369fc024c8b7a" title="FT_Read" alt="" coords="735,121,809,148"/>
+<area shape="rect" id="node7" href="$classport__usb__functions_1_1port__usb.html#a6685abd5beded6824d180d54a42bdbbc" title="port_usb_functions\l::port_usb::unlock" alt="" coords="707,173,837,214"/>
+<area shape="rect" id="node10" href="$classSerialCommunicator.html#a23232d6d455e6cc57437824affdc28d5" title="SerialCommunicator\l::interpretCommonData" alt="" coords="694,238,850,279"/>
+<area shape="rect" id="node12" href="$classSerialCommunicator.html#ae0905148887265287ba68035e9d5afa8" title="SerialCommunicator\l::interpretDataFromFC" alt="" coords="697,303,847,345"/>
+<area shape="rect" id="node13" href="$classSerialCommunicator.html#a5cb0f232210f0a1437addc62418c7758" title="SerialCommunicator\l::interpretDataFromNC" alt="" coords="696,369,848,410"/>
+<area shape="rect" id="node11" href="$namespaceToolBox.html#a68af2d3752e633fbc818d1eebaf0136b" title="ToolBox::Decode64" alt="" coords="899,311,1034,337"/>
+</map>

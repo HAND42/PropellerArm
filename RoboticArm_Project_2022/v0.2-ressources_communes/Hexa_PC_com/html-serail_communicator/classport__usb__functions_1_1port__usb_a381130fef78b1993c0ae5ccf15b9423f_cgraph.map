@@ -1,0 +1,6 @@
+<map id="port_usb_functions::port_usb::start" name="port_usb_functions::port_usb::start">
+<area shape="rect" id="node2" href="$ftd2xx_8h.html#a706bccadc094e6da104864908c0f352f" title="FT_OpenEx" alt="" coords="228,5,319,32"/>
+<area shape="rect" id="node3" href="$ftd2xx_8h.html#a644d8350893480ef39c6aed4492249be" title="FT_SetTimeouts" alt="" coords="215,56,332,83"/>
+<area shape="rect" id="node4" href="$ftd2xx_8h.html#ab319e07afc99d9a293789a5235e8d1b1" title="FT_SetBaudRate" alt="" coords="213,107,334,133"/>
+<area shape="rect" id="node5" href="$ftd2xx_8h.html#a7f0bdde1f2aae09c3a9e9531f9b87165" title="FT_SetDataCharacteristics" alt="" coords="184,157,363,184"/>
+</map>

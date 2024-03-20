@@ -1,0 +1,10 @@
+<map id="SerialCommunicator::SendData" name="SerialCommunicator::SendData">
+<area shape="rect" id="node2" href="$classSerialCommunicator.html#a7d25dd26da557d9f25c31c3cf83bf892" title="SerialCommunicator\l::sendLastPacket" alt="" coords="220,5,359,46"/>
+<area shape="rect" id="node4" href="$classSerialCommunicator.html#a282775592884ee7f53ef51fb77f938ec" title="SerialCommunicator\l::sendRCStateRequestNow" alt="" coords="199,70,379,111"/>
+<area shape="rect" id="node5" href="$classSerialCommunicator.html#aa4c3ed5649c6592ee1cefb324eafd584" title="SerialCommunicator\l::sendDebugDataRequestNow" alt="" coords="192,135,387,177"/>
+<area shape="rect" id="node7" href="$classSerialCommunicator.html#a92b5bc2faf9f1ad26f165859f064908c" title="SerialCommunicator\l::sendStopRequestNow" alt="" coords="210,201,369,242"/>
+<area shape="rect" id="node8" href="$classSerialCommunicator.html#a303e91cbd173bf4e86e564f1698d8a20" title="SerialCommunicator\l::sendHILSDataNow" alt="" coords="220,266,359,307"/>
+<area shape="rect" id="node3" href="$namespacecommunicationThread.html#a1ab5ff4d04d8c5c5821edd131a7753cf" title="communicationThread\l::generalTransmitter" alt="" coords="463,5,612,46"/>
+<area shape="rect" id="node6" href="$namespacecommunicationThread.html#a5dfcbffe56821e9dc4a903dcdb944cc0" title="communicationThread\l::debugDataRequestTransmitter" alt="" coords="435,135,640,177"/>
+<area shape="rect" id="node9" href="$namespacecommunicationThread.html#a191ba217351080b34eed7d025682d749" title="communicationThread\l::HILSSensorDataTransmitter" alt="" coords="442,266,633,307"/>
+</map>

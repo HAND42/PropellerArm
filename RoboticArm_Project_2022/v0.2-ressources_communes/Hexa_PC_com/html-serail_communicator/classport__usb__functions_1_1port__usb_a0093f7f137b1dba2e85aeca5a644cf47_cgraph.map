@@ -1,0 +1,6 @@
+<map id="port_usb_functions::port_usb::ReadAvailable" name="port_usb_functions::port_usb::ReadAvailable">
+<area shape="rect" id="node2" href="$classport__usb__functions_1_1port__usb.html#ac5c84532a3a0627a5bd4973e2637794f" title="port_usb_functions\l::port_usb::lock" alt="" coords="229,5,360,46"/>
+<area shape="rect" id="node3" href="$ftd2xx_8h.html#a6418e012a85928c31ad3b6e144fac31a" title="FT_GetQueueStatus" alt="" coords="224,71,365,97"/>
+<area shape="rect" id="node4" href="$ftd2xx_8h.html#abe77b78e2658d559850369fc024c8b7a" title="FT_Read" alt="" coords="257,121,332,148"/>
+<area shape="rect" id="node5" href="$classport__usb__functions_1_1port__usb.html#a6685abd5beded6824d180d54a42bdbbc" title="port_usb_functions\l::port_usb::unlock" alt="" coords="229,173,360,214"/>
+</map>

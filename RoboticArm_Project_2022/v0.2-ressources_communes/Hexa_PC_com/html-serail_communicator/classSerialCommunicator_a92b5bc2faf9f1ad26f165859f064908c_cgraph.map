@@ -1,0 +1,12 @@
+<map id="SerialCommunicator::sendStopRequestNow" name="SerialCommunicator::sendStopRequestNow">
+<area shape="rect" id="node2" href="$classSerialCommunicator.html#a3ce2708b71ff31bde729eaa2835997e8" title="SerialCommunicator\l::SendData" alt="" coords="213,145,352,186"/>
+<area shape="rect" id="node9" href="$classSerialCommunicator.html#a32259d59c0731af958945a34cc223f69" title="SerialCommunicator\l::makePacket" alt="" coords="213,210,352,251"/>
+<area shape="rect" id="node3" href="$classport__usb__functions_1_1port__usb.html#a7d38d344de84811d93a5ef9d1a7ce021" title="port_usb_functions\l::port_usb::Write" alt="" coords="403,93,533,134"/>
+<area shape="rect" id="node7" href="$classport__com.html#aaafbd843f12f8c94158b2a5dcb0a4654" title="port_com::Write" alt="" coords="411,159,525,185"/>
+<area shape="rect" id="node4" href="$classport__usb__functions_1_1port__usb.html#ac5c84532a3a0627a5bd4973e2637794f" title="port_usb_functions\l::port_usb::lock" alt="" coords="609,5,740,46"/>
+<area shape="rect" id="node5" href="$ftd2xx_8h.html#a7d26ea8569aa879a9a263542c11f09c1" title="FT_Write" alt="" coords="637,71,712,97"/>
+<area shape="rect" id="node6" href="$classport__usb__functions_1_1port__usb.html#a6685abd5beded6824d180d54a42bdbbc" title="port_usb_functions\l::port_usb::unlock" alt="" coords="609,122,740,163"/>
+<area shape="rect" id="node8" href="$classport__com.html#a26dd512755dc88276ba43e77ad961e48" title="port_com::WriteCommByte" alt="" coords="585,188,765,215"/>
+<area shape="rect" id="node10" href="$namespaceToolBox.html#a0d648beb65d99278f448fcf1d43c9e78" title="ToolBox::Encode64" alt="" coords="401,213,535,240"/>
+<area shape="rect" id="node11" href="$namespaceToolBox.html#a10e153078c33ad93f51e502cb9f7f05b" title="ToolBox::AddCRC" alt="" coords="405,264,531,291"/>
+</map>

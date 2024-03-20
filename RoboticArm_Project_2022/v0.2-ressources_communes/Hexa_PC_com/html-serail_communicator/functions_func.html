@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>serial_communicator: Membres de classe - Fonctions</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">serial_communicator
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="namespaces.html"><span>Espaces&#160;de&#160;nommage</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
+      <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
+      <li class="current"><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow3" class="tabs2">
+    <ul class="tablist">
+      <li><a href="functions.html"><span>Tout</span></a></li>
+      <li class="current"><a href="functions_func.html"><span>Fonctions</span></a></li>
+      <li><a href="functions_vars.html"><span>Variables</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li><a href="#index_a"><span>a</span></a></li>
+      <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_g"><span>g</span></a></li>
+      <li><a href="#index_i"><span>i</span></a></li>
+      <li><a href="#index_l"><span>l</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
+      <li><a href="#index_o"><span>o</span></a></li>
+      <li><a href="#index_p"><span>p</span></a></li>
+      <li><a href="#index_r"><span>r</span></a></li>
+      <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_t"><span>t</span></a></li>
+      <li><a href="#index_u"><span>u</span></a></li>
+      <li><a href="#index_w"><span>w</span></a></li>
+      <li><a href="#index_0x7e"><span>~</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Espaces de nommage</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="contents">
+&#160;
+
+<h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>addPacket()
+: <a class="el" href="classSerialCommunicator.html#a8e4f1bde95d6314fb692b44081de882f">SerialCommunicator</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>close()
+: <a class="el" href="classport__com.html#a7a8cb061ceb44ceab8f79583dc37e951">port_com</a>
+, <a class="el" href="classport__usb__functions_1_1port__usb.html#aa6e6c89ae3ae6b26f1eeccbd0bc0f555">port_usb_functions::port_usb</a>
+</li>
+<li>close_port()
+: <a class="el" href="classSerialCommunicator.html#a0f301f30424a34fa446788934148dced">SerialCommunicator</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>getConfirmRequestTimeout_ms()
+: <a class="el" href="classSerialCommunicator.html#a73bb5c4d32cf5926cd1e30b45b5cc9cc">SerialCommunicator</a>
+</li>
+<li>GetConnectedDeviceInfos()
+: <a class="el" href="classport__usb__functions_1_1port__usb.html#aa909384c2e2cb65d7af8f7b3032e1605">port_usb_functions::port_usb</a>
+</li>
+<li>getDebugDataSleepTime_ms()
+: <a class="el" href="classSerialCommunicator.html#a4408c507a85a49f58dd1a5971e33e825">SerialCommunicator</a>
+</li>
+<li>getDebugLabel()
+: <a class="el" href="classSerialCommunicator.html#ace1f34666609f111fabc2db9d8f2692c">SerialCommunicator</a>
+</li>
+<li>getErrorString()
+: <a class="el" href="classSerialCommunicator.html#a3124073b0b57d6662e130f8f534c6b8f">SerialCommunicator</a>
+</li>
+<li>getHaveNewMotorData()
+: <a class="el" href="classSerialCommunicator.html#af14a7491b46d5778cfce7bc78349d3ae">SerialCommunicator</a>
+</li>
+<li>getHaveNewSensorData()
+: <a class="el" href="classSerialCommunicator.html#ae099218ad462f3d48f75c0d1a01e08d0">SerialCommunicator</a>
+</li>
+<li>getHILSTransmitSleepTime_ms()
+: <a class="el" href="classSerialCommunicator.html#a9a03d5496ab4c5a8288962cfcc32b786">SerialCommunicator</a>
+</li>
+<li>getLastA2DData()
+: <a class="el" href="classSerialCommunicator.html#a0a0cabd79129d7bca7e38baa5643c471">SerialCommunicator</a>
+</li>
+<li>getLastDebugData()
+: <a class="el" href="classSerialCommunicator.html#a110b62c081c7d275370697933b3858af">SerialCommunicator</a>
+</li>
+<li>getLastDebugDataAnalog()
+: <a class="el" href="classSerialCommunicator.html#a2c590d2869babc50327ea0aca2b80bf9">SerialCommunicator</a>
+</li>
+<li>getLastDebugDataTimeReceived()
+: <a class="el" href="classSerialCommunicator.html#ab93ab64b0afbbd6de8e8e90baadb7404">SerialCommunicator</a>
+</li>
+<li>getLastHILSMotorCommands()
+: <a class="el" href="classSerialCommunicator.html#aa1546280d261465d4454b873ca6b38f9">SerialCommunicator</a>
+</li>
+<li>getLastHILSSensorPacketNumber()
+: <a class="el" href="classSerialCommunicator.html#ad6c1854206f648a0b353a7a4c26de5ad">SerialCommunicator</a>
+</li>
+<li>getLastHILSState()
+: <a class="el" href="classSerialCommunicator.html#a37fbadd8a20341909e83677838ed914c">SerialCommunicator</a>
+</li>
+<li>getLastVersionInfo()
+: <a class="el" href="classSerialCommunicator.html#aa37b65cafc1d7f1b6fcb9f995438e1a6">SerialCommunicator</a>
+</li>
+<li>getMessage()
+: <a class="el" href="classSerialCommunicator.html#a86eb5a79e2c879176ae9f5c1b125ac35">SerialCommunicator</a>
+</li>
+<li>getMotorCommandsSensorPacketNumber()
+: <a class="el" href="classSerialCommunicator.html#add6f6b182d25006542e2f50c9be25f6f">SerialCommunicator</a>
+</li>
+<li>getNumberOfHILSMotorCommandsReceived()
+: <a class="el" href="classSerialCommunicator.html#aae9de364f7dbace0829586fbab8651f6">SerialCommunicator</a>
+</li>
+<li>getNumberOfUnknownPackets()
+: <a class="el" href="classSerialCommunicator.html#ac45dbf634845b27f2fb88fa25ab9d9ec">SerialCommunicator</a>
+</li>
+<li>getRcCheckSleepTime_ms()
+: <a class="el" href="classSerialCommunicator.html#a04f397a81363742e6d4efd5a3835b6c1">SerialCommunicator</a>
+</li>
+<li>getReceiverThreadSleepTime_ms()
+: <a class="el" href="classSerialCommunicator.html#a63f47ba2e4cdae3891c4d3a4d25ce899">SerialCommunicator</a>
+</li>
+<li>getResourceLockedSleepTime_ms()
+: <a class="el" href="classSerialCommunicator.html#ac570e92bfd8c4b0a79f2d54e11d66ee6">SerialCommunicator</a>
+</li>
+<li>getResourceLockedTimeout_ms()
+: <a class="el" href="classSerialCommunicator.html#a4a033d22c10c0d0fc3572e7de1a2e658">SerialCommunicator</a>
+</li>
+<li>getTotalNumberOfPacketsReceived()
+: <a class="el" href="classSerialCommunicator.html#ab9abce261d8687e4a935caa81223a8ca">SerialCommunicator</a>
+</li>
+<li>getTransmitterThreadSleepTime_ms()
+: <a class="el" href="classSerialCommunicator.html#af8916cc70dae873bbb6c2f8aebb3a2f9">SerialCommunicator</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
+<li>interpretCommonData()
+: <a class="el" href="classSerialCommunicator.html#a23232d6d455e6cc57437824affdc28d5">SerialCommunicator</a>
+</li>
+<li>interpretDataFromFC()
+: <a class="el" href="classSerialCommunicator.html#ae0905148887265287ba68035e9d5afa8">SerialCommunicator</a>
+</li>
+<li>interpretDataFromNC()
+: <a class="el" href="classSerialCommunicator.html#a5cb0f232210f0a1437addc62418c7758">SerialCommunicator</a>
+</li>
+<li>is_open()
+: <a class="el" href="classport__com.html#a2ec795f3fef9fb0431b4259ab3cd8d5f">port_com</a>
+, <a class="el" href="classport__usb__functions_1_1port__usb.html#abe53124e868b529c73b77acee8f157e5">port_usb_functions::port_usb</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>lock()
+: <a class="el" href="classport__usb__functions_1_1port__usb.html#ac5c84532a3a0627a5bd4973e2637794f">port_usb_functions::port_usb</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>makePacket()
+: <a class="el" href="classSerialCommunicator.html#a32259d59c0731af958945a34cc223f69">SerialCommunicator</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>NumBytesRx()
+: <a class="el" href="classport__usb__functions_1_1port__usb.html#a0329f9276196fc58b64812324d096f22">port_usb_functions::port_usb</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
+<li>open_port()
+: <a class="el" href="classport__com.html#a8f638e6e27264954e1562e3b1d1ccfae">port_com</a>
+, <a class="el" href="classSerialCommunicator.html#ad575820dc78ef113d4b5c37ed237f785">SerialCommunicator</a>
+, <a class="el" href="classport__usb__functions_1_1port__usb.html#a97734dff009ad553b538a796e3353862">port_usb_functions::port_usb</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>port_com()
+: <a class="el" href="classport__com.html#a93f0b0fc1f96751edf06b71557a1f331">port_com</a>
+</li>
+<li>port_select()
+: <a class="el" href="classSerialCommunicator.html#a06dc8e1c1ea5c2fa8af9e75d5161e57f">SerialCommunicator</a>
+</li>
+<li>port_usb()
+: <a class="el" href="classport__usb__functions_1_1port__usb.html#abc1021bc586c3259ca11bd59c76fb46d">port_usb_functions::port_usb</a>
+</li>
+<li>portSuccessfullyOpened()
+: <a class="el" href="classSerialCommunicator.html#a8858e4c942d157b8cbb50f5fd49db43b">SerialCommunicator</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
+<li>Read()
+: <a class="el" href="classport__usb__functions_1_1port__usb.html#a66ba4d256aff9549c7e395489f1469d6">port_usb_functions::port_usb</a>
+</li>
+<li>ReadAvailable()
+: <a class="el" href="classport__com.html#a8204be3bdb9ea5e54d582f1f26bd6a29">port_com</a>
+, <a class="el" href="classport__usb__functions_1_1port__usb.html#a0093f7f137b1dba2e85aeca5a644cf47">port_usb_functions::port_usb</a>
+</li>
+<li>requestA2DSensorValues()
+: <a class="el" href="classSerialCommunicator.html#ad1be2ff385b0ec98e04920f52fe32aae">SerialCommunicator</a>
+</li>
+<li>requestChangeHILSState()
+: <a class="el" href="classSerialCommunicator.html#a082bda7ce1bbd503a9357bfae2fdd69e">SerialCommunicator</a>
+</li>
+<li>requestChangePrintInfoStrings()
+: <a class="el" href="classSerialCommunicator.html#a7c4f3dedd21a9d3900d277c156a50907">SerialCommunicator</a>
+</li>
+<li>requestConfirmedA2DValues()
+: <a class="el" href="classSerialCommunicator.html#ad9494ca6b53fe3bdf1239978ae7e9cd3">SerialCommunicator</a>
+</li>
+<li>requestConfirmedChangeHILSState()
+: <a class="el" href="classSerialCommunicator.html#a892363a74da718d2d12c2ef1b95bc37d">SerialCommunicator</a>
+</li>
+<li>requestConfirmedDebugLabel()
+: <a class="el" href="classSerialCommunicator.html#acf972a0cc0609d128653bf55efc09587">SerialCommunicator</a>
+</li>
+<li>requestConfirmedGetHILSState()
+: <a class="el" href="classSerialCommunicator.html#a5b419b9319d2115b2961d8ebb6390768">SerialCommunicator</a>
+</li>
+<li>requestDebugData()
+: <a class="el" href="classSerialCommunicator.html#a3db871a93c9dadc08262b9b47532adee">SerialCommunicator</a>
+</li>
+<li>requestDebugLabel()
+: <a class="el" href="classSerialCommunicator.html#ab6a01d0947b2107ba1e13488909390c6">SerialCommunicator</a>
+</li>
+<li>requestDebugLabelsAll()
+: <a class="el" href="classSerialCommunicator.html#ad8647c3f5d6d818476d7acb6d804179b">SerialCommunicator</a>
+</li>
+<li>requestEngineTest()
+: <a class="el" href="classSerialCommunicator.html#ad9a25a7b04ea6c7c7fd8f40f9d88a592">SerialCommunicator</a>
+</li>
+<li>requestExternalControl()
+: <a class="el" href="classSerialCommunicator.html#acfec63243c57f30e37c56347c0fa7d45">SerialCommunicator</a>
+</li>
+<li>requestHILSState()
+: <a class="el" href="classSerialCommunicator.html#ad08c7596741b73d47032a4d4ab4a8803">SerialCommunicator</a>
+</li>
+<li>requestPPMChannels()
+: <a class="el" href="classSerialCommunicator.html#a127de74bb3e016a5a6635e559539c8ae">SerialCommunicator</a>
+</li>
+<li>resetNumberOfHILSMotorCommandsReceived()
+: <a class="el" href="classSerialCommunicator.html#a5de013f5dc1557c6756c3d8bccce20d4">SerialCommunicator</a>
+</li>
+<li>resetTotalNumberOfPacketReceived()
+: <a class="el" href="classSerialCommunicator.html#acab35f4ee728a500ad48a78af91c623f">SerialCommunicator</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>SendData()
+: <a class="el" href="classSerialCommunicator.html#a3ce2708b71ff31bde729eaa2835997e8">SerialCommunicator</a>
+</li>
+<li>sendDebugDataRequestNow()
+: <a class="el" href="classSerialCommunicator.html#aa4c3ed5649c6592ee1cefb324eafd584">SerialCommunicator</a>
+</li>
+<li>sendHILSDataNow()
+: <a class="el" href="classSerialCommunicator.html#a303e91cbd173bf4e86e564f1698d8a20">SerialCommunicator</a>
+</li>
+<li>sendLastPacket()
+: <a class="el" href="classSerialCommunicator.html#a7d25dd26da557d9f25c31c3cf83bf892">SerialCommunicator</a>
+</li>
+<li>sendRCStateRequestNow()
+: <a class="el" href="classSerialCommunicator.html#a282775592884ee7f53ef51fb77f938ec">SerialCommunicator</a>
+</li>
+<li>sendStopRequestNow()
+: <a class="el" href="classSerialCommunicator.html#a92b5bc2faf9f1ad26f165859f064908c">SerialCommunicator</a>
+</li>
+<li>SerialCommunicator()
+: <a class="el" href="classSerialCommunicator.html#a11ad08fc6fb58a9d44dbcbd042002733">SerialCommunicator</a>
+</li>
+<li>SerialRx()
+: <a class="el" href="classSerialCommunicator.html#a9e6b1be065fc55f2ef2762b45c2e5876">SerialCommunicator</a>
+</li>
+<li>setConfirmRequestTimeout_ms()
+: <a class="el" href="classSerialCommunicator.html#ac8f4b192657498c25c902d8ca473989c">SerialCommunicator</a>
+</li>
+<li>setDebugDataSleepTime_ms()
+: <a class="el" href="classSerialCommunicator.html#a2a1c3f3a099e068ec940a034fa03a43b">SerialCommunicator</a>
+</li>
+<li>setHILSSensorData()
+: <a class="el" href="classSerialCommunicator.html#ad1f64f7b3c3bdfeb9cd1c14f377027e7">SerialCommunicator</a>
+</li>
+<li>setHILSTransmitSleepTime_ms()
+: <a class="el" href="classSerialCommunicator.html#a6fdcef413b56e871780572bf88f4da12">SerialCommunicator</a>
+</li>
+<li>SetLatencyTimer()
+: <a class="el" href="classport__usb__functions_1_1port__usb.html#a32f08d369b58f975e8c2218fc57fc073">port_usb_functions::port_usb</a>
+</li>
+<li>setOutputFiles()
+: <a class="el" href="classSerialCommunicator.html#ace2b9cd1cb7b9cf08424af224e0c6faf">SerialCommunicator</a>
+</li>
+<li>setRcCheckSleepTime_ms()
+: <a class="el" href="classSerialCommunicator.html#aca4f487a188fa5563c829d8f050079c5">SerialCommunicator</a>
+</li>
+<li>setReceiverThreadSleepTime_ms()
+: <a class="el" href="classSerialCommunicator.html#ab7ceb714e90f1d0a6040be513ce978a2">SerialCommunicator</a>
+</li>
+<li>setResourceLockedSleepTime_ms()
+: <a class="el" href="classSerialCommunicator.html#ad7c377dde20d1b82e1b02d9c5a6351d9">SerialCommunicator</a>
+</li>
+<li>setResourceLockedTimeout_ms()
+: <a class="el" href="classSerialCommunicator.html#ac8f956188d71dd7a0d0b0dd7fa900c5c">SerialCommunicator</a>
+</li>
+<li>setTransmitterThreadSleepTime_ms()
+: <a class="el" href="classSerialCommunicator.html#af6d9e81c33dbd5836d7a2c1b77b23a4b">SerialCommunicator</a>
+</li>
+<li>setUnlockTransmitter()
+: <a class="el" href="classSerialCommunicator.html#a4f6e0d420ce76d2c2250b949e53b6992">SerialCommunicator</a>
+</li>
+<li>start()
+: <a class="el" href="classport__usb__functions_1_1port__usb.html#a381130fef78b1993c0ae5ccf15b9423f">port_usb_functions::port_usb</a>
+</li>
+<li>start_communication()
+: <a class="el" href="classSerialCommunicator.html#a3d0bdb291d62165b9cac1a8b7fd0038f">SerialCommunicator</a>
+</li>
+<li>switchIntoHILSMode()
+: <a class="el" href="classSerialCommunicator.html#ab7fb519baca83d8b73a8c98c584ed0f6">SerialCommunicator</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>tryToLockTransmitter()
+: <a class="el" href="classSerialCommunicator.html#a6ad2c04819095530b9f832f8f5277ffc">SerialCommunicator</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
+<li>unlock()
+: <a class="el" href="classport__usb__functions_1_1port__usb.html#a6685abd5beded6824d180d54a42bdbbc">port_usb_functions::port_usb</a>
+</li>
+<li>USART_ProcessRxData()
+: <a class="el" href="classSerialCommunicator.html#a3a2d90e36ac74e89ec2715bd6951affb">SerialCommunicator</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
+<li>Write()
+: <a class="el" href="classport__com.html#aaafbd843f12f8c94158b2a5dcb0a4654">port_com</a>
+, <a class="el" href="classport__usb__functions_1_1port__usb.html#a7d38d344de84811d93a5ef9d1a7ce021">port_usb_functions::port_usb</a>
+</li>
+<li>WriteCommByte()
+: <a class="el" href="classport__com.html#a26dd512755dc88276ba43e77ad961e48">port_com</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_0x7e"></a>- ~ -</h3><ul>
+<li>~port_com()
+: <a class="el" href="classport__com.html#ae8ab7a59d53a81014ca46d630fd07759">port_com</a>
+</li>
+<li>~port_usb()
+: <a class="el" href="classport__usb__functions_1_1port__usb.html#a02e5fa2cb554d434fbed8385a25dcbc5">port_usb_functions::port_usb</a>
+</li>
+<li>~SerialCommunicator()
+: <a class="el" href="classSerialCommunicator.html#a591630c3e832911a8054658e21d3be5a">SerialCommunicator</a>
+</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Dimanche Mars 13 2016 22:02:34 pour serial_communicator par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

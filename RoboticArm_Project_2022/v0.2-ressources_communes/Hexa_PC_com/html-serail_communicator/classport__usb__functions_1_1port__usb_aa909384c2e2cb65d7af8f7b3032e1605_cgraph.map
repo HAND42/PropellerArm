@@ -1,0 +1,4 @@
+<map id="port_usb_functions::port_usb::GetConnectedDeviceInfos" name="port_usb_functions::port_usb::GetConnectedDeviceInfos">
+<area shape="rect" id="node2" href="$ftd2xx_8h.html#a8d452a978313dbebcc600a5b1c3cbf65" title="FT_CreateDeviceInfoList" alt="" coords="265,5,426,32"/>
+<area shape="rect" id="node3" href="$ftd2xx_8h.html#acbeeb2a0da3a34b1b61b9841ddd26974" title="FT_GetDeviceInfoList" alt="" coords="273,56,417,83"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="FT_Read" name="FT_Read">
+<area shape="rect" id="node2" href="$classport__usb__functions_1_1port__usb.html#a0093f7f137b1dba2e85aeca5a644cf47" title="port_usb_functions\l::port_usb::ReadAvailable" alt="" coords="129,5,298,46"/>
+<area shape="rect" id="node5" href="$classport__usb__functions_1_1port__usb.html#a66ba4d256aff9549c7e395489f1469d6" title="port_usb_functions\l::port_usb::Read" alt="" coords="148,70,279,111"/>
+<area shape="rect" id="node3" href="$classSerialCommunicator.html#a9e6b1be065fc55f2ef2762b45c2e5876" title="SerialCommunicator\l::SerialRx" alt="" coords="347,5,485,46"/>
+<area shape="rect" id="node4" href="$namespacecommunicationThread.html#a20194d69f5d03e3fa597fb69ac471686" title="communicationThread\l::receiver" alt="" coords="533,5,683,46"/>
+</map>

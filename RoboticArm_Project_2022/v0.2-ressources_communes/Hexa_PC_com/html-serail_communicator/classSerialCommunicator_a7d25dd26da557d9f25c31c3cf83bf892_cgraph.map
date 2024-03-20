@@ -1,0 +1,9 @@
+<map id="SerialCommunicator::sendLastPacket" name="SerialCommunicator::sendLastPacket">
+<area shape="rect" id="node2" href="$classSerialCommunicator.html#a3ce2708b71ff31bde729eaa2835997e8" title="SerialCommunicator\l::SendData" alt="" coords="192,115,331,157"/>
+<area shape="rect" id="node3" href="$classport__usb__functions_1_1port__usb.html#a7d38d344de84811d93a5ef9d1a7ce021" title="port_usb_functions\l::port_usb::Write" alt="" coords="379,78,509,119"/>
+<area shape="rect" id="node7" href="$classport__com.html#aaafbd843f12f8c94158b2a5dcb0a4654" title="port_com::Write" alt="" coords="387,159,501,185"/>
+<area shape="rect" id="node4" href="$classport__usb__functions_1_1port__usb.html#ac5c84532a3a0627a5bd4973e2637794f" title="port_usb_functions\l::port_usb::lock" alt="" coords="583,5,713,46"/>
+<area shape="rect" id="node5" href="$ftd2xx_8h.html#a7d26ea8569aa879a9a263542c11f09c1" title="FT_Write" alt="" coords="611,71,685,97"/>
+<area shape="rect" id="node6" href="$classport__usb__functions_1_1port__usb.html#a6685abd5beded6824d180d54a42bdbbc" title="port_usb_functions\l::port_usb::unlock" alt="" coords="583,122,713,163"/>
+<area shape="rect" id="node8" href="$classport__com.html#a26dd512755dc88276ba43e77ad961e48" title="port_com::WriteCommByte" alt="" coords="558,188,738,215"/>
+</map>

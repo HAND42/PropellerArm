@@ -1,0 +1,7 @@
+<map id="ftd2xx.h" name="ftd2xx.h">
+<area shape="rect" id="node2" href="$port__usb__functions_8h.html" title="port_usb_functions.h" alt="" coords="99,80,241,107"/>
+<area shape="rect" id="node3" href="$port__usb__functions_8cpp.html" title="port_usb_functions.cpp" alt="" coords="5,155,160,181"/>
+<area shape="rect" id="node4" href="$serialCommunicator_8h.html" title="serialCommunicator.h" alt="" coords="185,155,332,181"/>
+<area shape="rect" id="node5" href="$serialCommunicator_8cpp.html" title="serialCommunicator.cpp" alt="" coords="89,229,252,256"/>
+<area shape="rect" id="node6" href="$threadFunctions_8cpp.html" title="threadFunctions.cpp" alt="" coords="277,229,416,256"/>
+</map>

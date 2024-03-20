@@ -1,0 +1,150 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: a b, abc, LIC=8VRJ7-ESLWV-UHX8H-W0VTQ-WBZK3-GTEMT
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\Hugo\Desktop\prop-arm\uvision_project\Propeller_Arm_Keil_test_registers_project_src - v2\PropArm_src.uvprojx
+Project File Date:  03/20/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+compiling Gyro.c...
+compiling StringUtilities.c...
+compiling UART.c...
+compiling Angles_Estimation.c...
+01-Acc&Gyro_lb\Angles_Estimation.c(14): warning:  #940-D: missing return statement at end of non-void function "TiltCompensateThetaEstimation" 
+  }
+01-Acc&Gyro_lb\Angles_Estimation.c(17): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	return asin(*accX/G)*180/M_PI;
+01-Acc&Gyro_lb\Angles_Estimation.c(35): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*accX = *accX*G;			//Convert G in M/S2
+01-Acc&Gyro_lb\Angles_Estimation.c(39): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*accY = *accY*G;			//Convert G in M/S2
+01-Acc&Gyro_lb\Angles_Estimation.c(43): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	*accZ = *accZ*G;			//Convert G in M/S2
+compiling I2C.c...
+compiling main.c...
+motor_pwm.h(12): warning:  #1-D: last line of file ends without a newline
+  //This file header is not working for now I'm not able to make a PWM on a LED, you can see my configuration here ad if you find the bug I'm interested.
+main.c(104): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			for(float i = 0.7; i < 1; i+=0.01){
+main.c(118): warning:  #111-D: statement is unreachable
+  	return 0;
+main.c: 3 warnings, 0 errors
+compiling System_Config.c...
+compiling Led.c...
+compiling i2c-lcd.c...
+compiling Delay.c...
+compiling motor_pwm.c...
+motor_pwm.h(12): warning:  #1-D: last line of file ends without a newline
+  //This file header is not working for now I'm not able to make a PWM on a LED, you can see my configuration here ad if you find the bug I'm interested.
+motor_pwm.c(146): warning:  #1-D: last line of file ends without a newline
+  }
+motor_pwm.c: 2 warnings, 0 errors
+compiling DisplayData.c...
+compiling Accelerometer.c...
+assembling startup_stm32f411xe.s...
+compiling stm32f4xx_hal_pwr_ex.c...
+compiling stm32f4xx_hal_cortex.c...
+compiling stm32f4xx_hal_rcc_ex.c...
+compiling stm32f4xx_hal_gpio.c...
+compiling stm32f4xx_hal_pwr.c...
+compiling system_stm32f4xx.c...
+compiling stm32f4xx_hal_rcc.c...
+compiling stm32f4xx_hal.c...
+linking...
+Program Size: Code=18094 RO-data=1226 RW-data=16 ZI-data=5632  
+".\Objects\Timer.axf" - 0 Error(s), 10 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.1.pack
+                Keil.STM32F4xx_DFP.2.17.1
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: STM32Cube Framework Version: 1.0.0
+   * Component: Classic Version: 1.8.1
+   * Component: Common Version: 1.8.1
+   * Component: Cortex Version: 1.8.1
+   * Component: GPIO Version: 1.8.1
+   * Component: PWR Version: 1.8.1
+   * Component: RCC Version: 1.8.1
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F411VETx
+  ./RTE/_Target_1
+  C:/Users/Hugo/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  C:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Inc
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::Device:STM32Cube Framework:1.0.0 (API)
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:STM32Cube Framework:Classic:1.8.1
+      Source file:   MDK/Templates/Src/stm32f4xx_hal_msp.c
+      Source file:   MDK/Templates/Src/main.c
+      Include file:  CMSIS/Driver/Config/RTE_Device.h
+      Include file:  MDK/Templates/Inc/main.h
+      Include file:  MDK/Templates/Inc/stm32f4xx_it.h
+      Source file:   MDK/Templates_LL/Src/main.c
+      Source file:   MDK/Templates/Src/stm32f4xx_it.c
+      Include file:  MDK/Templates/Inc/stm32f4xx_hal_conf.h
+      Include file:  MDK/Templates_LL/Inc/main.h
+
+   * Component: Keil::Device:STM32Cube HAL:Common:1.8.1
+      Include file:  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
+
+   * Component: Keil::Device:STM32Cube HAL:Cortex:1.8.1
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
+
+   * Component: Keil::Device:STM32Cube HAL:GPIO:1.8.1
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
+
+   * Component: Keil::Device:STM32Cube HAL:PWR:1.8.1
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
+
+   * Component: Keil::Device:STM32Cube HAL:RCC:1.8.1
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+      Source file:   Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F411xx_OPT.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f411xe.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

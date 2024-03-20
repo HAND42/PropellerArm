@@ -1,0 +1,4 @@
+<map id="port_com::is_open" name="port_com::is_open">
+<area shape="rect" id="node2" href="$classSerialCommunicator.html#ad575820dc78ef113d4b5c37ed237f785" title="SerialCommunicator\l::open_port" alt="" coords="200,5,339,46"/>
+<area shape="rect" id="node3" href="$classSerialCommunicator.html#a8858e4c942d157b8cbb50f5fd49db43b" title="SerialCommunicator\l::portSuccessfullyOpened" alt="" coords="184,70,355,111"/>
+</map>

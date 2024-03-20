@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['fabortonerror',['fAbortOnError',['../struct__FTDCB.html#a507847cee5b863ccdb1949b8897940e1',1,'_FTDCB']]],
+  ['fbinary',['fBinary',['../struct__FTDCB.html#a66a920f15680e8bc01bc4b9d7e1e442a',1,'_FTDCB']]],
+  ['fctshold',['fCtsHold',['../struct__FTCOMSTAT.html#ad78060ad831dfa35a9e2db1103a54c3f',1,'_FTCOMSTAT']]],
+  ['fdsrhold',['fDsrHold',['../struct__FTCOMSTAT.html#a63c6ff1a00dd690b0bf9347c949a59c8',1,'_FTCOMSTAT']]],
+  ['fdsrsensitivity',['fDsrSensitivity',['../struct__FTDCB.html#a18de82101e19a3c2be9226489e7df0b2',1,'_FTDCB']]],
+  ['fdtrcontrol',['fDtrControl',['../struct__FTDCB.html#a770cbe04afe4551d954b460e15bc253e',1,'_FTDCB']]],
+  ['fdummy2',['fDummy2',['../struct__FTDCB.html#a14be508970e6bf12df194454e7d77583',1,'_FTDCB']]],
+  ['feof',['fEof',['../struct__FTCOMSTAT.html#a2a4cdfc245e72f74b032f7a5cc220fd3',1,'_FTCOMSTAT']]],
+  ['ferrorchar',['fErrorChar',['../struct__FTDCB.html#a3d6289c590aebe652fbbdf4f173b16af',1,'_FTDCB']]],
+  ['finx',['fInX',['../struct__FTDCB.html#a478569c6c3f26180e3f6326f7d123959',1,'_FTDCB']]],
+  ['flags',['Flags',['../struct__ft__device__list__info__node.html#a721b47fa89702eff50b231f17c4298e6',1,'_ft_device_list_info_node']]],
+  ['fnull',['fNull',['../struct__FTDCB.html#a96cdd935996bf8ebdfc841db6a526159',1,'_FTDCB']]],
+  ['foutx',['fOutX',['../struct__FTDCB.html#ad69a6d309c4e2f95588179e818a87c9d',1,'_FTDCB']]],
+  ['foutxctsflow',['fOutxCtsFlow',['../struct__FTDCB.html#a3e5166713d0405820849e27ba554ba7d',1,'_FTDCB']]],
+  ['foutxdsrflow',['fOutxDsrFlow',['../struct__FTDCB.html#af5ce76c2d358a419e028f8879aca3dcb',1,'_FTDCB']]],
+  ['fparity',['fParity',['../struct__FTDCB.html#a8a81323a9b1ba34bd0cc2ae97d898c73',1,'_FTDCB']]],
+  ['freserved',['fReserved',['../struct__FTCOMSTAT.html#a567f611e7f3dc193ff94ac4c44fbc500',1,'_FTCOMSTAT']]],
+  ['frlsdhold',['fRlsdHold',['../struct__FTCOMSTAT.html#afb2b9a88896f528efbe6c9ff73b7744c',1,'_FTCOMSTAT']]],
+  ['frtscontrol',['fRtsControl',['../struct__FTDCB.html#a482e77565cf032ba8024948e3546b31b',1,'_FTDCB']]],
+  ['fthandle',['ftHandle',['../struct__ft__device__list__info__node.html#a3a26fc5e6180c4f87dec4ebf1951d100',1,'_ft_device_list_info_node']]],
+  ['ftinfo',['ftinfo',['../structport__usb__functions_1_1DeviceInfo.html#a5a0e3d995e6bc633f72dd0f06c69219e',1,'port_usb_functions::DeviceInfo']]],
+  ['ftxcontinueonxoff',['fTXContinueOnXoff',['../struct__FTDCB.html#afa27d3f28cd9154df261cd643df33497',1,'_FTDCB']]],
+  ['ftxim',['fTxim',['../struct__FTCOMSTAT.html#a04853d07abaf4fb47891a3bbdd78be8d',1,'_FTCOMSTAT']]],
+  ['fxoffhold',['fXoffHold',['../struct__FTCOMSTAT.html#a5b2fd786cc95e60df49aa55f7d4d7d5a',1,'_FTCOMSTAT']]],
+  ['fxoffsent',['fXoffSent',['../struct__FTCOMSTAT.html#a5a28cf3c2aea49110593931c78934416',1,'_FTCOMSTAT']]]
+];

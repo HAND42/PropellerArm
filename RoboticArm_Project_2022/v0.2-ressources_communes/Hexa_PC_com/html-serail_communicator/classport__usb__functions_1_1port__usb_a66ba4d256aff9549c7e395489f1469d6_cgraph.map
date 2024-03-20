@@ -1,0 +1,5 @@
+<map id="port_usb_functions::port_usb::Read" name="port_usb_functions::port_usb::Read">
+<area shape="rect" id="node2" href="$classport__usb__functions_1_1port__usb.html#ac5c84532a3a0627a5bd4973e2637794f" title="port_usb_functions\l::port_usb::lock" alt="" coords="184,5,315,46"/>
+<area shape="rect" id="node3" href="$ftd2xx_8h.html#abe77b78e2658d559850369fc024c8b7a" title="FT_Read" alt="" coords="212,71,287,97"/>
+<area shape="rect" id="node4" href="$classport__usb__functions_1_1port__usb.html#a6685abd5beded6824d180d54a42bdbbc" title="port_usb_functions\l::port_usb::unlock" alt="" coords="184,122,315,163"/>
+</map>
