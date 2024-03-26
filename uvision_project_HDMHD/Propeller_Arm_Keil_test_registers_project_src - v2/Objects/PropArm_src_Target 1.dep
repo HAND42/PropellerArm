@@ -1,0 +1,403 @@
+Dependencies for Project 'PropArm_src', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (.\main.c)(0x66027E8F)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (.\00_MyCustomHAL_register_lb\System_Config.h)(0x65294EE8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (.\00_MyCustomHAL_register_lb\Delay.h)(0x650EA622)
+I (.\00_MyCustomHAL_register_lb\Led.h)(0x65266CAE)
+I (.\01-Acc&Gyro_lb\Accelerometer.h)(0x65241658)
+I (.\01-Acc&Gyro_lb\Angles_Estimation.h)(0x6526688E)
+I (.\01-Acc&Gyro_lb\Gyro.h)(0x6513E1B4)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x602577D8)
+I (.\00_MyCustomHAL_register_lb\DisplayData.h)(0x652E6060)
+I (.\00_MyCustomHAL_register_lb\StringUtilities.h)(0x65246FDC)
+I (.\00_MyCustomHAL_register_lb\UART.h)(0x652B7D50)
+I (.\04_LCD1602_I2C_NOHAL\i2c-lcd.h)(0x65286548)
+I (motor_pwm.h)(0x6530E8EA)
+I (.\00_MyCustomHAL_register_lb\RegisterAddresses.h)(0x6530E71C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602577D4)
+F (.\00_MyCustomHAL_register_lb\Delay.c)(0x652CE2E0)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\delay.o --omf_browse .\objects\delay.crf --depend .\objects\delay.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (00_MyCustomHAL_register_lb\Delay.h)(0x650EA622)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (00_MyCustomHAL_register_lb\System_Config.h)(0x65294EE8)
+F (.\00_MyCustomHAL_register_lb\DisplayData.c)(0x652E637C)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\displaydata.o --omf_browse .\objects\displaydata.crf --depend .\objects\displaydata.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (.\01-Acc&Gyro_lb\Accelerometer.h)(0x65241658)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (.\01-Acc&Gyro_lb\Gyro.h)(0x6513E1B4)
+I (00_MyCustomHAL_register_lb\DisplayData.h)(0x652E6060)
+I (00_MyCustomHAL_register_lb\StringUtilities.h)(0x65246FDC)
+I (.\01-Acc&Gyro_lb\Angles_Estimation.h)(0x6526688E)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x602577D8)
+I (00_MyCustomHAL_register_lb\UART.h)(0x652B7D50)
+I (00_MyCustomHAL_register_lb\Delay.h)(0x650EA622)
+I (.\04_LCD1602_I2C_NOHAL\i2c-lcd.h)(0x65286548)
+I (.\00_MyCustomHAL_register_lb\System_Config.h)(0x65294EE8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602577D4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x602577D6)
+F (.\00_MyCustomHAL_register_lb\StringUtilities.c)(0x65246FEE)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\stringutilities.o --omf_browse .\objects\stringutilities.crf --depend .\objects\stringutilities.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+F (.\00_MyCustomHAL_register_lb\UART.c)(0x658C1185)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (00_MyCustomHAL_register_lb\RegisterAddresses.h)(0x6530E71C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602577D4)
+I (00_MyCustomHAL_register_lb\UART.h)(0x652B7D50)
+F (.\00_MyCustomHAL_register_lb\Delay.h)(0x650EA622)()
+F (.\00_MyCustomHAL_register_lb\DisplayData.h)(0x652E6060)()
+F (.\00_MyCustomHAL_register_lb\RegisterAddresses.h)(0x6530E71C)()
+F (.\00_MyCustomHAL_register_lb\StringUtilities.h)(0x65246FDC)()
+F (.\00_MyCustomHAL_register_lb\UART.h)(0x652B7D50)()
+F (.\00_MyCustomHAL_register_lb\Led.h)(0x65266CAE)()
+F (.\00_MyCustomHAL_register_lb\Led.c)(0x652966E8)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (00_MyCustomHAL_register_lb\Led.h)(0x65266CAE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (00_MyCustomHAL_register_lb\Delay.h)(0x650EA622)
+F (.\00_MyCustomHAL_register_lb\System_Config.c)(0x6530E45A)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\system_config.o --omf_browse .\objects\system_config.crf --depend .\objects\system_config.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (00_MyCustomHAL_register_lb\System_Config.h)(0x65294EE8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (00_MyCustomHAL_register_lb\Delay.h)(0x650EA622)
+I (00_MyCustomHAL_register_lb\DisplayData.h)(0x652E6060)
+I (00_MyCustomHAL_register_lb\StringUtilities.h)(0x65246FDC)
+I (.\01-Acc&Gyro_lb\Angles_Estimation.h)(0x6526688E)
+I (.\01-Acc&Gyro_lb\Accelerometer.h)(0x65241658)
+I (.\01-Acc&Gyro_lb\Gyro.h)(0x6513E1B4)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x602577D8)
+I (00_MyCustomHAL_register_lb\UART.h)(0x652B7D50)
+F (.\00_MyCustomHAL_register_lb\System_Config.h)(0x65294EE8)()
+F (.\01-Acc&Gyro_lb\Accelerometer.c)(0x6530E818)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\accelerometer.o --omf_browse .\objects\accelerometer.crf --depend .\objects\accelerometer.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (.\00_MyCustomHAL_register_lb\RegisterAddresses.h)(0x6530E71C)
+I (01-Acc&Gyro_lb\Accelerometer.h)(0x65241658)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (.\00_MyCustomHAL_register_lb\DisplayData.h)(0x652E6060)
+I (.\00_MyCustomHAL_register_lb\StringUtilities.h)(0x65246FDC)
+I (.\01-Acc&Gyro_lb\Angles_Estimation.h)(0x6526688E)
+I (.\01-Acc&Gyro_lb\Gyro.h)(0x6513E1B4)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x602577D8)
+I (.\00_MyCustomHAL_register_lb\UART.h)(0x652B7D50)
+F (.\01-Acc&Gyro_lb\Gyro.c)(0x6513DCE4)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\gyro.o --omf_browse .\objects\gyro.crf --depend .\objects\gyro.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (.\00_MyCustomHAL_register_lb\RegisterAddresses.h)(0x6530E71C)
+F (.\01-Acc&Gyro_lb\Accelerometer.h)(0x65241658)()
+F (.\01-Acc&Gyro_lb\Gyro.h)(0x6513E1B4)()
+F (.\01-Acc&Gyro_lb\Angles_Estimation.c)(0x65266890)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\angles_estimation.o --omf_browse .\objects\angles_estimation.crf --depend .\objects\angles_estimation.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (01-Acc&Gyro_lb\Angles_Estimation.h)(0x6526688E)
+I (01-Acc&Gyro_lb\Accelerometer.h)(0x65241658)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (01-Acc&Gyro_lb\Gyro.h)(0x6513E1B4)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x602577D8)
+F (.\01-Acc&Gyro_lb\Angles_Estimation.h)(0x6526688E)()
+F (.\04_LCD1602_I2C_NOHAL\i2c-lcd.h)(0x65286548)()
+F (.\04_LCD1602_I2C_NOHAL\i2c-lcd.c)(0x6524683A)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\i2c-lcd.o --omf_browse .\objects\i2c-lcd.crf --depend .\objects\i2c-lcd.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (04_LCD1602_I2C_NOHAL\i2c-lcd.h)(0x65286548)
+I (.\00_MyCustomHAL_register_lb\System_Config.h)(0x65294EE8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (.\00_MyCustomHAL_register_lb\i2c.h)(0x651E9252)
+I (.\00_MyCustomHAL_register_lb\Delay.h)(0x650EA622)
+I (.\01-Acc&Gyro_lb\Accelerometer.h)(0x65241658)
+F (.\motor_pwm.c)(0x652E6EAA)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\motor_pwm.o --omf_browse .\objects\motor_pwm.crf --depend .\objects\motor_pwm.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (motor_pwm.h)(0x6530E8EA)
+I (.\00_MyCustomHAL_register_lb\System_Config.h)(0x65294EE8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+F (.\motor_pwm.h)(0x6530E8EA)()
+F (.\00_MyCustomHAL_register_lb\I2C.c)(0x6530E7D8)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\i2c.o --omf_browse .\objects\i2c.crf --depend .\objects\i2c.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (00_MyCustomHAL_register_lb\I2C.h)(0x651E9252)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (00_MyCustomHAL_register_lb\System_Config.h)(0x65294EE8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+F (C:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c)(0x63749E86)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\stm32f4xx_hal.o --omf_browse .\objects\stm32f4xx_hal.crf --depend .\objects\stm32f4xx_hal.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x63749E86)
+I (.\RTE\Device\STM32F411VETx\stm32f4xx_hal_conf.h)(0x63777BBE)
+I (.\RTE\_Target_1\RTE_Components.h)(0x66029B09)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h)(0x63776DAE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x63749E86)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x63749E86)
+F (C:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c)(0x63749E86)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\stm32f4xx_hal_cortex.o --omf_browse .\objects\stm32f4xx_hal_cortex.crf --depend .\objects\stm32f4xx_hal_cortex.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x63749E86)
+I (.\RTE\Device\STM32F411VETx\stm32f4xx_hal_conf.h)(0x63777BBE)
+I (.\RTE\_Target_1\RTE_Components.h)(0x66029B09)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h)(0x63776DAE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x63749E86)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x63749E86)
+F (C:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c)(0x63749E86)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\stm32f4xx_hal_gpio.o --omf_browse .\objects\stm32f4xx_hal_gpio.crf --depend .\objects\stm32f4xx_hal_gpio.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x63749E86)
+I (.\RTE\Device\STM32F411VETx\stm32f4xx_hal_conf.h)(0x63777BBE)
+I (.\RTE\_Target_1\RTE_Components.h)(0x66029B09)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h)(0x63776DAE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x63749E86)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x63749E86)
+F (C:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c)(0x63749E86)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\stm32f4xx_hal_pwr.o --omf_browse .\objects\stm32f4xx_hal_pwr.crf --depend .\objects\stm32f4xx_hal_pwr.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x63749E86)
+I (.\RTE\Device\STM32F411VETx\stm32f4xx_hal_conf.h)(0x63777BBE)
+I (.\RTE\_Target_1\RTE_Components.h)(0x66029B09)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h)(0x63776DAE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x63749E86)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x63749E86)
+F (C:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c)(0x63749E86)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\stm32f4xx_hal_pwr_ex.o --omf_browse .\objects\stm32f4xx_hal_pwr_ex.crf --depend .\objects\stm32f4xx_hal_pwr_ex.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x63749E86)
+I (.\RTE\Device\STM32F411VETx\stm32f4xx_hal_conf.h)(0x63777BBE)
+I (.\RTE\_Target_1\RTE_Components.h)(0x66029B09)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h)(0x63776DAE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x63749E86)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x63749E86)
+F (C:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c)(0x63749E86)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\stm32f4xx_hal_rcc.o --omf_browse .\objects\stm32f4xx_hal_rcc.crf --depend .\objects\stm32f4xx_hal_rcc.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x63749E86)
+I (.\RTE\Device\STM32F411VETx\stm32f4xx_hal_conf.h)(0x63777BBE)
+I (.\RTE\_Target_1\RTE_Components.h)(0x66029B09)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h)(0x63776DAE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x63749E86)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x63749E86)
+F (C:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c)(0x63749E86)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\stm32f4xx_hal_rcc_ex.o --omf_browse .\objects\stm32f4xx_hal_rcc_ex.crf --depend .\objects\stm32f4xx_hal_rcc_ex.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x63749E86)
+I (.\RTE\Device\STM32F411VETx\stm32f4xx_hal_conf.h)(0x63777BBE)
+I (.\RTE\_Target_1\RTE_Components.h)(0x66029B09)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h)(0x63776DAE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x63749E86)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x63749E86)
+F (RTE/Device/STM32F411VETx/RTE_Device.h)(0x5D36F898)()
+F (RTE/Device/STM32F411VETx/startup_stm32f411xe.s)(0x6374AC5A)(--cpu Cortex-M4.fp.sp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc--pd "__UVISION_VERSION SETA 538" --pd "_RTE_ SETA 1" --pd "STM32F411xE SETA 1" --pd "_RTE_ SETA 1"--list .\listings\startup_stm32f411xe.lst --xref -o .\objects\startup_stm32f411xe.o --depend .\objects\startup_stm32f411xe.d)
+F (RTE/Device/STM32F411VETx/stm32f4xx_hal_conf.h)(0x63777BBE)()
+F (RTE/Device/STM32F411VETx/system_stm32f4xx.c)(0x6374AC5A)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\00_MyCustomHAL_register_lb -I .\01-Acc&Gyro_lb -I .\02_STM32-LCD_fatay_lb -I .\03_STM32-LCD_eng-edison_lb -I .\04_LCD1602_I2C_NOHAL-I.\RTE\Device\STM32F411VETx-I.\RTE\_Target_1-IC:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include-IC:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_ -DHSE_VALUE="8000000"  --preinclude="Pre_Include_Global.h"-o .\objects\system_stm32f4xx.o --omf_browse .\objects\system_stm32f4xx.crf --depend .\objects\system_stm32f4xx.d)
+I (.\RTE\_Target_1\Pre_Include_Global.h)(0x66029B09)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F9F3E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F9F3E)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x63749E86)
+I (.\RTE\Device\STM32F411VETx\stm32f4xx_hal_conf.h)(0x63777BBE)
+I (.\RTE\_Target_1\RTE_Components.h)(0x66029B09)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h)(0x63776DAE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x63749E86)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x602577DE)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x63749E86)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x63749E86)
