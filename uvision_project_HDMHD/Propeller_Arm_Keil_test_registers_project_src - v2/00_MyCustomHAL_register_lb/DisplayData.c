@@ -83,8 +83,7 @@ void PrintConsole(SeverityLevel severity, const char *format, ...) {
 }
 
 
-void DisplayFloatValue(float value)
-{
+void DisplayFloatValue(float value){
     // Convert the float number to string
     char valueAsString[12]; // Adjust the size as needed
     snprintf(valueAsString, sizeof(valueAsString), "%lf", value); // "%.5f" formats the float with 5 decimal places
@@ -105,8 +104,7 @@ void DisplayFloatValue(float value)
 }
 
 
-void DisplayIntegerValue(short value)
-{
+void DisplayIntegerValue(short value){
 	// Convert the number to string
 	char valueAsString[12];
 	IntegerToString(value, valueAsString, BASE_10);
@@ -127,16 +125,14 @@ void DisplayIntegerValue(short value)
 	SendString(valueAsString);
 }
 
-void DisplayAxisValue(char* label, short accel, short gyro)
-{
+void DisplayAxisValue(char* label, short accel, short gyro){
 	SendString(label);
 	SendString(":");
 	DisplayFloatValue(accel); 
 	DisplayFloatValue(gyro); 
 }
 
-void DisplayAxisValues()
-{
+void DisplayAxisValues(){
 	float accX, accY, accZ;
 	GetAccelerometerValuesInMS2(&accX, &accY, &accZ);
 	

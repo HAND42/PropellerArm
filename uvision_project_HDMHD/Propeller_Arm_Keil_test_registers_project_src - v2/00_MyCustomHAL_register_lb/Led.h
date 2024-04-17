@@ -18,8 +18,8 @@ typedef enum {
 void GPIO_Config (void);
 void Led_Trigger(Choose_Led ledNum, uint16_t time);
 void Testing_Toggle_4Led (void);
-void Power_On(void);
-void Power_Off(void);
+void Power_Led_On(void);
+void Power_Led_Off(void);
 
 
 

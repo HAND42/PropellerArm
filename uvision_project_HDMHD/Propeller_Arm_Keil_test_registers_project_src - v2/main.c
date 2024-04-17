@@ -27,7 +27,10 @@ The system Clock is configured as follow :
   *            PLL_N                          = 100
   *            PLL_P                          = 2
  
- 
+ PuTTY communication :
+	// TXD --> PA3
+	// RXD --> PA2
+	
  UART2 communication :
 	// USART2 TX --> PA2 // Write
 	// USART2 RX --> PA3 // Read
@@ -59,6 +62,8 @@ SLAVE_ADDRESS_LCD 0x4E
 
 void InitializeGyro(void);
 void InitializeAccel(void);
+void MainOG(void);
+void MainNewHugo(void);
 
 int main (void)
 {
@@ -75,12 +80,13 @@ int main (void)
 	MotorPWM_BPort_PinSetup();
 	MotorPWM_TIM3_Start(50);
 	
+	PrintConsole(DEFAULT,"\x0C");
+	
 	InitializeGyro();
 	InitializeAccel();
-	
 	lcd_init ();
 	
-	PrintConsole(DEFAULT,"\x0C");
+	
 	
 	//Initialize the LCD, if it does print the Init done Press start we have to reset the mcu.
 	lcd_clear();
@@ -96,12 +102,29 @@ int main (void)
 
 	while(1)
 	{
-		//Avoid with the counter the oscillations frequencies followed by the press of the button
+		MainOG();
+	}
+	return 0;
+}
+
+void InitializeGyro(){
+	SendString("Initializing Gyroscope\r\n");
+	GyroInit();
+}
+
+void InitializeAccel(){
+	SendString("Initializing Accelerometer\r\n");
+	AccelerometerInit();
+}
+
+void MainOG(void){
+	//Avoid with the counter the oscillations frequencies followed by the press of the button
 		if (count>0){
 			count--;
 		}
+		
 		if (power_on){
-			Power_On();
+			Power_Led_On();
 			
 			/*Displays the values of the accelerometer and gyrometer data*/
 			DisplayAxisValues();
@@ -112,24 +135,45 @@ int main (void)
 		}
 		
 		else {
-			Power_Off();
+			Power_Led_Off();
 			lcd_clear();
+			lcd_put_cur (0,0);
+			lcd_send_string("Pause activated");
+			lcd_put_cur (1,0);
+			lcd_send_string("Press Start");
 			delay_ms(200);
 		}
 		
+}
+
+void MainNewHugo (){
+		//Change of state by pressing the push button: running - stop
+	/*
+	if int push = 1{
+		if pushButton == true{
+			pushButton = false;
+		}
+		if pushButton == false{
+			pushButton = true;
+		}
 	}
-
-	return 0;
-}
-
-void InitializeGyro()
-{
-	SendString("Initializing Gyroscope\r\n");
-	GyroInit();
-}
-
-void InitializeAccel()
-{
-	SendString("Initializing Accelerometer\r\n");
-	AccelerometerInit();
+	
+	if pushButton == true{
+		Power_Led_On();
+		//Displays the values of the accelerometer and gyrometer data
+		DisplayAxisValues();
+		for(float i = 0.7; i < 1; i+=0.01){
+			MotorPWM_TIM3_Start(i);
+		}
+	}
+	
+	else if pushButton == false{
+		Power_Led_Off();
+		lcd_clear();
+		lcd_put_cur (0,0);
+		lcd_send_string("Pause activated");
+		lcd_put_cur (1,0);
+		lcd_send_string("Press Start");
+	}
+	*/
 }

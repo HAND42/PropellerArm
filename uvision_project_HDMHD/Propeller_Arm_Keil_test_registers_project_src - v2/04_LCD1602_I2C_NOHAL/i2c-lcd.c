@@ -21,6 +21,7 @@
 #include "i2c.h"
 #include "Delay.h"
 #include "Accelerometer.h"
+#include "UART.h"
 
 #define SLAVE_ADDRESS_LCD 0x4E // change this according to ur setup
 
@@ -33,8 +34,7 @@
 	I2C_Stop ();
 }*/
 
-void LCD_Write (uint8_t Address, uint8_t *Data, int size)
-{
+void LCD_Write (uint8_t Address, uint8_t *Data, int size){
 	I2CWaitIfBusy();
 	I2CEnableAcknowledge();
 	I2CStartRestart();
@@ -44,8 +44,7 @@ void LCD_Write (uint8_t Address, uint8_t *Data, int size)
 	I2CStop ();
 }
 
-void lcd_send_cmd (char cmd)
-{
+void lcd_send_cmd (char cmd){
   char data_u, data_l;
 	uint8_t data_t[4];
 	data_u = (cmd&0xf0);
@@ -57,8 +56,7 @@ void lcd_send_cmd (char cmd)
 	LCD_Write (SLAVE_ADDRESS_LCD,(uint8_t *) data_t, 4);
 }
 
-void lcd_send_data (char data)
-{
+void lcd_send_data (char data){
 	char data_u, data_l;
 	uint8_t data_t[4];
 	data_u = (data&0xf0);
@@ -70,8 +68,7 @@ void lcd_send_data (char data)
 	LCD_Write (SLAVE_ADDRESS_LCD,(uint8_t *) data_t, 4);
 }
 
-void lcd_clear (void)
-{
+void lcd_clear (void){
 	lcd_send_cmd (0x80);
 	for (int i=0; i<70; i++)
 	{
@@ -79,8 +76,7 @@ void lcd_clear (void)
 	}
 }
 
-void lcd_put_cur(int row, int col)
-{
+void lcd_put_cur(int row, int col){
     switch (row)
     {
         case 0:
@@ -95,8 +91,8 @@ void lcd_put_cur(int row, int col)
 }
 
 
-void lcd_init (void)
-{
+void lcd_init (void){
+	SendString("Initializing Screen\r\n");
 	// 4 bit initialisation
 	delay_ms(50);  // wait for >40ms
 	lcd_send_cmd (0x30);
@@ -121,7 +117,6 @@ void lcd_init (void)
 	lcd_send_cmd (0x0C); //Display on/off control --> D = 1, C and B = 0. (Cursor and blink, last two bits)
 }
 
-void lcd_send_string (char *str)
-{
+void lcd_send_string (char *str){
 	while (*str) lcd_send_data (*str++);
 }
