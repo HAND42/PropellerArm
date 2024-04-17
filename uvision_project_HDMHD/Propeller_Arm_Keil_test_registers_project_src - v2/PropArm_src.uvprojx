@@ -10,9 +10,9 @@
       <TargetName>Target 1</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pArmCC>6210000::V6.21::ARMCLANG</pArmCC>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
-      <uAC6>1</uAC6>
+      <pArmCC>5060960::V5.06 update 7 (build 960)::.\ARMCC</pArmCC>
+      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
+      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F411VETx</Device>
@@ -324,7 +324,7 @@
             <PlainCh>0</PlainCh>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
-            <wLevel>3</wLevel>
+            <wLevel>2</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
@@ -383,7 +383,7 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Source Group 1</GroupName>
+          <GroupName>main</GroupName>
           <Files>
             <File>
               <FileName>main.c</FileName>
@@ -401,49 +401,14 @@
               <FilePath>.\00_MyCustomHAL_register_lb\Delay.c</FilePath>
             </File>
             <File>
-              <FileName>DisplayData.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\00_MyCustomHAL_register_lb\DisplayData.c</FilePath>
-            </File>
-            <File>
-              <FileName>StringUtilities.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\00_MyCustomHAL_register_lb\StringUtilities.c</FilePath>
-            </File>
-            <File>
-              <FileName>UART.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\00_MyCustomHAL_register_lb\UART.c</FilePath>
-            </File>
-            <File>
               <FileName>Delay.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\00_MyCustomHAL_register_lb\Delay.h</FilePath>
             </File>
             <File>
-              <FileName>DisplayData.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\00_MyCustomHAL_register_lb\DisplayData.h</FilePath>
-            </File>
-            <File>
               <FileName>RegisterAddresses.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\00_MyCustomHAL_register_lb\RegisterAddresses.h</FilePath>
-            </File>
-            <File>
-              <FileName>StringUtilities.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\00_MyCustomHAL_register_lb\StringUtilities.h</FilePath>
-            </File>
-            <File>
-              <FileName>UART.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\00_MyCustomHAL_register_lb\UART.h</FilePath>
-            </File>
-            <File>
-              <FileName>Led.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\00_MyCustomHAL_register_lb\Led.h</FilePath>
             </File>
             <File>
               <FileName>Led.c</FileName>
@@ -476,35 +441,20 @@
               <FilePath>.\01-Acc&amp;Gyro_lb\Gyro.c</FilePath>
             </File>
             <File>
-              <FileName>Accelerometer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\01-Acc&amp;Gyro_lb\Accelerometer.h</FilePath>
+              <FileName>Angles_Estimation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\01-Acc&amp;Gyro_lb\Angles_Estimation.c</FilePath>
             </File>
             <File>
               <FileName>Gyro.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\01-Acc&amp;Gyro_lb\Gyro.h</FilePath>
             </File>
-            <File>
-              <FileName>Angles_Estimation.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\01-Acc&amp;Gyro_lb\Angles_Estimation.c</FilePath>
-            </File>
-            <File>
-              <FileName>Angles_Estimation.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\01-Acc&amp;Gyro_lb\Angles_Estimation.h</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>LCD</GroupName>
           <Files>
-            <File>
-              <FileName>i2c-lcd.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\04_LCD1602_I2C_NOHAL\i2c-lcd.h</FilePath>
-            </File>
             <File>
               <FileName>i2c-lcd.c</FileName>
               <FileType>1</FileType>
@@ -520,11 +470,6 @@
               <FileType>1</FileType>
               <FilePath>.\motor_pwm.c</FilePath>
             </File>
-            <File>
-              <FileName>motor_pwm.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\motor_pwm.h</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -534,6 +479,41 @@
               <FileName>I2C.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\00_MyCustomHAL_register_lb\I2C.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Display_UART</GroupName>
+          <Files>
+            <File>
+              <FileName>DisplayData.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\00_MyCustomHAL_register_lb\DisplayData.c</FilePath>
+            </File>
+            <File>
+              <FileName>StringUtilities.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\00_MyCustomHAL_register_lb\StringUtilities.c</FilePath>
+            </File>
+            <File>
+              <FileName>UART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\00_MyCustomHAL_register_lb\UART.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Potentiometer</GroupName>
+          <Files>
+            <File>
+              <FileName>Potentiometer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Potentiometer.c</FilePath>
+            </File>
+            <File>
+              <FileName>Potentiometer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Potentiometer.h</FilePath>
             </File>
           </Files>
         </Group>

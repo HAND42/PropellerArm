@@ -83,7 +83,7 @@ void PrintConsole(SeverityLevel severity, const char *format, ...) {
 }
 
 
-void DisplayFloatValue(float value)
+void DisplayFloatValue(float value) 
 {
     // Convert the float number to string
     char valueAsString[12]; // Adjust the size as needed
@@ -140,46 +140,37 @@ void DisplayAxisValues()
 	float accX, accY, accZ;
 	GetAccelerometerValuesInMS2(&accX, &accY, &accZ);
 	
-	float theta = GetThetaAcc(&accX);
-	float phi = GetPhiAcc(&accY,&theta);
-	
 	short gyroX, gyroY, gyroZ;
 	GetGyroValues(&gyroX, &gyroY, &gyroZ);
 	
-	float display_gyro_X, display_gyro_Y, display_gyro_Z;
+//	float display_gyro_X, display_gyro_Y, display_gyro_Z;
+//	
+//	display_gyro_X = gyroX;
+//	display_gyro_Y = gyroY;
+//	display_gyro_Z = gyroZ;
 	
-	display_gyro_X = gyroX;
-	display_gyro_Y = gyroY;
-	display_gyro_Z = gyroZ;
-	
-	
-	
+	SendString("\r");
 	PrintConsole(INFO,"    Accel       Gyro");
 	SendString("\r");
-	PrintConsole(INFO, "X: %lf   %lf",accX, display_gyro_X);
+	PrintConsole(INFO, "X: %lf   %d",accX, gyroX);
 	SendString("\r");
-	PrintConsole(INFO, "Y: %lf   %lf",accY, display_gyro_Y);
+	PrintConsole(INFO, "Y: %lf   %d",accY, gyroY);
 	SendString("\r");
-	PrintConsole(INFO, "Z: %lf   %lf",accZ, display_gyro_Z);
+	PrintConsole(INFO, "Z: %lf   %d",accZ, gyroZ);
 	SendString("\r");
-	lcd_clear();
-	lcd_put_cur (0,0);
-	lcd_send_string("Theta in degree");
-	lcd_put_cur (1,0);
+//	lcd_clear();
+//	lcd_put_cur (0,0);
+//	lcd_send_string("Theta in degree");
+//	lcd_put_cur (1,0);
 	
-	char display_theta[256];
-	snprintf(display_theta, sizeof(display_theta),"%lf",theta);
-	lcd_send_string(display_theta);
+//	char display_theta[256];
+//	snprintf(display_theta, sizeof(display_theta),"%lf",theta);
+//	lcd_send_string(display_theta);
 	
-	
-	SendString("\r\n");
-	PrintConsole(INFO,"Theta = %lf", theta);
 	SendString("\r");
 	PrintConsole(QT, "%lf", theta);
-	SendString("\r\n");
-	PrintConsole(INFO,"Phi = %lf", phi);
 	delay_ms(200);
 
-	SendString("\033[8A");  // Makes cursor got up to lines
+	SendString("\033[6A");  // Makes cursor got up to lines
 	SendString("\r");       // Return cursor to the beginning of the line
 }

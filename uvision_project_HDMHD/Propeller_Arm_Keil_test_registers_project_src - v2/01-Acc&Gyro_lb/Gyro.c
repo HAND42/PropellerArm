@@ -162,3 +162,8 @@ void GetGyroValues(short* x, short* y, short* z)
 	*y = GetAxisValue(0x2A, 0x2B);
 	*z = GetAxisValue(0x2C, 0x2D);
 }
+
+void GetGyroY(short* y)
+{
+	*y = GetAxisValue(0x2A, 0x2B);
+}

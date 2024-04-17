@@ -30,7 +30,8 @@ typedef struct {
 
 void SysClockConfig(void);
 void Sys_PowerMode_Config(void);
-void getSystemClockSpeed(void);
+ClockConfig getSystemClockSpeed(void);
+int convertPPRE(int ppre_bits);
 
 #endif /* SYSTEM_CONFIG_H */
 

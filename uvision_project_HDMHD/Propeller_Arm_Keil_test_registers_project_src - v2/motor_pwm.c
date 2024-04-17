@@ -1,146 +1,114 @@
 #include "motor_pwm.h"
 
+void MotorPWM_PIN_Init(void){
+    // Enable clock for GPIOD
+    RCC->AHB1ENR |= RCC_AHB1ENR_GPIODEN;
 
+    // Alternating functions for pins
+    GPIOD->AFR[1] |= (2 << (4 * 4)) | (2 << (4 * 5)); // Pins 12 and 13 are AF2 (TIM4)
 
-void MotorPWM_EPort_PinSetup(void){
+    // Set pins
+    GPIOD->MODER |= (2 << (12 * 2)) | (2 << (13 * 2)); // Pins 12 and 13 are AF mode
+    GPIOD->OTYPER &= ~(GPIO_OTYPER_OT_12 | GPIO_OTYPER_OT_13); // Push-pull
+    GPIOD->OSPEEDR |= (3 << (12 * 2)) | (3 << (13 * 2)); // High speed
+    GPIOD->PUPDR &= ~((3 << (12 * 2)) | (3 << (13 * 2))); // No pull-up, no pull-down
+}
+
+void MotorPWM_TIMER_Init(void) {
+    // Enable clock for TIM4
+    RCC->APB1ENR |= RCC_APB1ENR_TIM4EN;
+
+    // Set timer prescaler
+    TIM4->PSC = 999;
+
+    // Count up
+    TIM4->CR1 &= ~TIM_CR1_DIR;
+
+    // Set timer period
+    TIM4->ARR = 1999;
+
+    // Initialize TIM4
+    TIM4->EGR = TIM_EGR_UG; // Generate update event to load the prescaler value to the counter
+    TIM4->CR1 |= TIM_CR1_CEN; // Start timer
+}
+
+void MotorPWM_PWM_Init() {
+    // PWM mode 2 = Clear on compare match
+    TIM4->CCMR1 |= (6 << TIM_CCMR1_OC1M_Pos) | (6 << TIM_CCMR1_OC2M_Pos); // PWM mode 2 for channels 1 and 2
+
+    // Enable output for channels 1 and 2
+    TIM4->CCER |= TIM_CCER_CC1E | TIM_CCER_CC2E;
+
+    // Set PWM duty cycle by 0 to initialize the CCR1&2
+    TIM4->CCR1 = 0; // pin12
+    TIM4->CCR2 = 0; // pin13
+
+    // Enable preload for channels 1 and 2
+    TIM4->CCMR1 |= TIM_CCMR1_OC1PE | TIM_CCMR1_OC2PE;
+
+    // Generate update event to load new CCR values
+    TIM4->EGR = TIM_EGR_UG;
+}
+
+void MotorPWM_ESC_calibration(int min_val,int max_val){
 	
-	// Enable the clock for GPIOE
-    RCC->AHB1ENR |= (1 << 4);  // 4 corresponds to GPIOE
+	/**
+	Before being able to turn the motor it is needed to calibrate the ESC.
+	Merci à ce site: https://controllerstech.com/how-to-interface-bldc-motor-with-stm32/
 
-    // Configure pins PE13 and PE14 as alternate function
-    GPIOE->MODER |= ((2 << 26) | (2 << 28));  // Set PE13 and PE14 to alternate function mode
-
-
-    // Set pins to use alternate function mode
-    GPIOE->AFR[1] |= (1<<20); // GPIO_AF1_TIM1 for Pin 13
-    GPIOE->AFR[1] |= (1<<24); // GPIO_AF1_TIM1 for Pin 14
-
-    // Configure pins as push-pull outputs
-    GPIOE->OTYPER &= ~(1 << 14 | 1 << 13);
-
-    // No pull-up or pull-down
-    GPIOE->PUPDR &= ~(3 << 26 | 3 << 28);
-
-    // Set pins to high-speed mode
-    GPIOE->OSPEEDR |= (3 << 26 | 3 << 28);
-}
-
-void MotorPWM_BPort_PinSetup(void){
+	Here we set the maximum pulse (2ms). The ESC will sound beep indicating it has been calibrated for the maximum pulse.
+	Then we send the minimum pulse (1ms) and wait for the ESC to sound the beep again.
+	Once it does that it means the calibration is complete.
+	**/
 	
-	// Enable the clock for GPIOB
-    RCC->AHB1ENR |= (1 << 1);  // 1 corresponds to GPIOB
-
-    // Configure pins PE13 and PE14 as alternate function
-    GPIOB->MODER |= ((2 << 0) | (2 << 2));  // Set PB0 and PB1 to alternate function mode
-
-
-    // Set pins to use alternate function mode
-    GPIOB->AFR[0] |= (2<<0); // GPIO_AF2_TIM3 for Pin 0
-    GPIOB->AFR[0] |= (2<<4); // GPIO_AF2_TIM3 for Pin 1
-
-    // Configure pins as push-pull outputs
-    GPIOB->OTYPER &= ~(1 << 1 | 1 << 0);
-
-    // No pull-up or pull-down
-    GPIOB->PUPDR &= ~(3 << 2 | 3 << 0);
-
-    // Set pins to high-speed mode
-    GPIOB->OSPEEDR |= (3 << 2 | 3 << 0);
+	TIM4->CCR1 = max_val;
+	TIM4->CCR2 = max_val;
+	delay_ms(2000);
+	TIM4->CCR1 = min_val;
+	TIM4->CCR2 = min_val;
+	delay_ms(1000);
+	
 }
 
-void MotorPWM_Timer1Setup(void){
-	//
-	// Enable the clock for TIM3
-    RCC->APB2ENR |= 1<<0;
+ 
 
-    // Set the prescaler
-    TIM1->PSC = 999;
-
-    // Configure the timer in up-counting mode
-    TIM1->CR1 &= ~TIM_CR1_DIR;
-
-    // Set the period for a 50Hz PWM signal
-    TIM1->ARR = 1999; // 50 Hz
-
-    // Update event source (UEVS) to generate update interrupt
-    //TIM1->EGR |= TIM_EGR_UG;
-
-    // Enable TIM3
-    TIM1->CR1 |= TIM_CR1_CEN;
+void o_MotorPWM_Initialization_o(void){
+	
+	/*
+	* To be called in the main to initialize the pwm signals, calibrates the ESC
+	*/
+	
+	MotorPWM_PIN_Init();
+	MotorPWM_TIMER_Init();
+	MotorPWM_PWM_Init();
+	
+	int min_val = 100;   //-> 1ms
+	int max_val = 200; 	//-> 2ms
+	
+	MotorPWM_ESC_calibration(min_val, max_val);
+	delay_ms(10);
+	MotorPWM_Set(150,150);  // To put to 0 again after debugging
+	
 }
 
-void MotorPWM_Timer3Setup(void){
-	//
-	// Enable the clock for TIM3
-    RCC->APB1ENR |= 1<<1;
-
-    // Set the prescaler
-    TIM3->PSC = 999;
-
-    // Configure the timer in up-counting mode
-    TIM3->CR1 &= ~TIM_CR1_DIR;
-
-    // Set the period for a 50Hz PWM signal
-    TIM3->ARR = 1999; // 50 Hz
-
-    // Update event source (UEVS) to generate update interrupt
-    //TIM3->EGR |= TIM_EGR_UG;
-
-    // Enable TIM3
-    TIM3->CR1 |= TIM_CR1_CEN;
+int saturate(int input, int min_val, int max_val) {
+	/**
+		* Function to perform saturation using arithmetic operations
+		* Use for the MotorPWM_Set function to ensure the pwm to be between a fix range;
+		* No matter what the user provid in input
+	**/
+	
+    return (input < min_val) * min_val + (input >= min_val && input <= max_val) * input + (input > max_val) * max_val;
 }
 
-void MotorPWM_TIM1_Start(double dutyCyclePercent) {
-     // Ensure the duty cycle is within the valid range (0-100)
-    if (dutyCyclePercent > 100) {
-        dutyCyclePercent = 100;
-    }
-	 
-	 dutyCyclePercent = 50.0;
-
-    // Enable the clock for TIM1
-    RCC->APB2ENR |= RCC_APB2ENR_TIM1EN;
-
-    // Set the timer mode to PWM mode 1 (Set on Compare Match) for channel 3 (PE13)
-    TIM1->CCMR2 = (TIM1->CCMR2 & ~TIM_CCMR2_OC3M) | TIM_CCMR2_OC3M_0;
-
-    // Calculate the pulse length based on duty cycle
-    uint16_t pulse = (uint16_t)((TIM1->ARR + 1) * (dutyCyclePercent / 100.0)) - 1;
-
-    // Set the duty cycle for channel 3 (PE13)
-    TIM1->CCR3 = pulse; // Duty cycle for Channel 3 (PE13)
-
-    // Enable preload for CCR3: Set to 1, it changes the duty cycle in the active register at each update event and not immediately.
-    // TIM1->CCMR2 |= TIM_CCMR2_OC3PE;
-
-    // Start the timer
-    TIM1->CR1 |= TIM_CR1_CEN;
-}
-
-
-void MotorPWM_TIM3_Start(double dutyCyclePercent) {
-     // Ensure the duty cycle is within the valid range (0-100)
-    if (dutyCyclePercent > 100) {
-        dutyCyclePercent = 100;
-    }
-	 
-	 dutyCyclePercent = 50.0;
-
-    // Enable the clock for TIM3
-    RCC->APB1ENR |= RCC_APB1ENR_TIM3EN;
-
-    // Set the timer mode to PWM mode 1 (Set on Compare Match) for channel 3 (PE13)
-    TIM3->CCMR2 = (TIM3->CCMR2 & ~TIM_CCMR2_OC3M) | TIM_CCMR2_OC3M_0;
-
-    // Calculate the pulse length based on duty cycle
-    uint16_t pulse = (uint16_t)((TIM3->ARR + 1) * (dutyCyclePercent / 100.0)) - 1;
-
-    // Set the duty cycle for channel 3 (PE13)
-    TIM3->CCR3 = pulse; // Duty cycle for Channel 3 (PE13)
-
-    // Enable preload for CCR3: Set to 1, it changes the duty cycle in the active register at each update event and not immediately.
-    // TIM3->CCMR2 |= TIM_CCMR2_OC3PE;
-
-    // Start the timer
-    TIM3->CR1 |= TIM_CR1_CEN;
-}
+void MotorPWM_Set(int g, int d){
+	
+	/**
+		* /!\ Range of the CCR1&2 PWM to control the motors are from 100 to 200
+	**/
+	
+	// saturate(int input, int min_val, int max_val)
+	TIM4->CCR1 = saturate(g,100, 200);
+	TIM4->CCR2 = saturate(d,100, 200);
+	
+} 

@@ -1,12 +1,13 @@
 #pragma once
 #include "System_Config.h"
+#include "Delay.h"
 
-void MotorPWM_EPort_PinSetup(void);
-void MotorPWM_BPort_PinSetup(void);
-void MotorPWM_Timer1Setup(void);
-void MotorPWM_Timer3Setup(void);
-void MotorPWM_TIM1_Start(double dutyCyclePercent);
-void MotorPWM_TIM3_Start(double dutyCyclePercent);
-void Start_PWM(void);
+void MotorPWM_PIN_Init(void);
+void MotorPWM_TIMER_Init(void);
+void MotorPWM_PWM_Init(void);
 
-//This file header is not working for now I'm not able to make a PWM on a LED, you can see my configuration here ad if you find the bug I'm interested.
+void o_MotorPWM_Initialization_o(void);
+
+int saturate(int input, int min_val, int max_val);
+void MotorPWM_Set(int g, int d);
+void MotorPWM_ESC_calibration(int min_val, int max_val);

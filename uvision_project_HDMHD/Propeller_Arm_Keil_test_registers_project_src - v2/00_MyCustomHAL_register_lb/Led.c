@@ -1,6 +1,6 @@
 #include "Led.h"
 
-void GPIO_Config (void){
+void LED_GPIO_Config (void){
 	//1.Enable the GPIO clock
 	RCC->AHB1ENR |= (1<<3); // Enable the clock of port D of the GPIO
 	
@@ -9,17 +9,6 @@ void GPIO_Config (void){
 	GPIOD->MODER |= (1<<24);
 	GPIOD->MODER |= (1<<28);
 	GPIOD->MODER |= (1<<30);
-	
-	
-	//3. Configure the OUTPUT MODE
-	//GPIOD->OTYPER &=~(1<<12); 
-	//GPIOD->OSPEEDR |= (1<<25);
-	//GPIOD->PUPDR &= ~(1<<25);
-	//GPIOD->PUPDR &= ~(1<<24);
-	
-	
-	// Set the initial state of the LED (turn it off)
-   //GPIOD->BSRR = GPIO_BSRR_BR_12; // Reset the bit for Pin 12
 	
 }
 

@@ -131,7 +131,7 @@ void EXTI1_IRQHandler(void)
 	}
 }
 
-void getSystemClockSpeed(void) {
+ClockConfig getSystemClockSpeed(void) {
 	
 	//The function is not entirely correct, some problem with the prescaler apb1
 	
@@ -142,8 +142,9 @@ void getSystemClockSpeed(void) {
 
     // Read the APB1 and APB2 clock configuration
     uint32_t ahbPrescaler = ((RCC->CFGR & RCC_CFGR_HPRE) >> 4) + 1;
-    uint32_t apb1Prescaler = ((RCC->CFGR & RCC_CFGR_PPRE1) >> 10) + 1;
-    uint32_t apb2Prescaler = ((RCC->CFGR & RCC_CFGR_PPRE2) >> 13) + 1;
+    int PPRE1 = ((RCC->CFGR & RCC_CFGR_PPRE1) >> 10) + 1;
+	 uint32_t apb1Prescaler = convertPPRE(PPRE1);
+	 uint32_t apb2Prescaler = ((RCC->CFGR & RCC_CFGR_PPRE2) >> 13) + 1;
 
     // Read the RCC clock configuration registers to determine the system clock speed
     uint32_t systemClockSpeed = 0;
@@ -192,13 +193,33 @@ void getSystemClockSpeed(void) {
 	 PrintConsole(WARNING, "The system Clock is configured as follow :\n\r");
 	 
     PrintConsole(WARNING, "HSE Frequency: %lu Hz\n\r", 		config.hseFrequency);
-	 PrintConsole(WARNING, "APB1 Prescaler: %lu Hz\n\r", 		apb1Prescaler);
-    PrintConsole(WARNING, "APB2 Prescaler: %lu Hz\n\r",		apb2Prescaler);
+	 PrintConsole(WARNING, "APB1 Prescaler: %lu \n\r", 		apb1Prescaler);
+    PrintConsole(WARNING, "APB2 Prescaler: %lu \n\r",		apb2Prescaler);
     PrintConsole(WARNING, "APB1 Frequency: %lu Hz\n\r", 		config.apb1Frequency);
     PrintConsole(WARNING, "APB2 Frequency: %lu Hz\n\r", 		config.apb2Frequency);
     PrintConsole(WARNING, "System Frequency: %lu Hz\n\r", 	config.systemFrequency);
     PrintConsole(WARNING, "PLLM: %lu\n\r", 						config.pllm);
     PrintConsole(WARNING, "PLLN: %lu\n\r", 						config.plln);
     PrintConsole(WARNING, "PLLP: %lu\n\r", 						config.pllp);
+	 
+	 
+	 return config;
  }
+
+ int convertPPRE(int ppre_bits) {
+    switch (ppre_bits) {
+        case 0:
+            return 1; // HCLK not divided
+        case 0b100:
+            return 2; // HCLK divided by 2
+        case 0b101:
+            return 4; // HCLK divided by 4
+        case 0b110:
+            return 8; // HCLK divided by 8
+        case 0b111:
+            return 16; // HCLK divided by 16
+        default:
+            return -1; // Invalid bits
+    }
+}
 

@@ -10,12 +10,12 @@ typedef enum {
     LED = 0,
     YELLOW =12,
 	 ORANGE =13,
-	RED=14,
-	BLUE=15,
+	 RED=14,
+	 BLUE=15,
     LED_INDEX = 20
 } Choose_Led;
 
-void GPIO_Config (void);
+void LED_GPIO_Config (void);
 void Led_Trigger(Choose_Led ledNum, uint16_t time);
 void Testing_Toggle_4Led (void);
 void Power_On(void);

@@ -30,3 +30,4 @@
 
 void GyroInit(void);
 void GetGyroValues(short* x, short* y, short* z);
+void GetGyroY(short* y);
