@@ -1,0 +1,5 @@
+<map id="SerialCommunicator::close_port" name="SerialCommunicator::close_port">
+<area shape="rect" id="node2" href="$classport__usb__functions_1_1port__usb.html#aa6e6c89ae3ae6b26f1eeccbd0bc0f555" title="port_usb_functions\l::port_usb::close" alt="" coords="192,5,323,46"/>
+<area shape="rect" id="node4" href="$classport__com.html#a7a8cb061ceb44ceab8f79583dc37e951" title="port_com::close" alt="" coords="200,71,315,97"/>
+<area shape="rect" id="node3" href="$ftd2xx_8h.html#a62c31590fa78d9fe4e46fc1fbc71ce7e" title="FT_Close" alt="" coords="371,12,448,39"/>
+</map>

@@ -1,6 +1,16 @@
 #include "motor_pwm.h"
+#include "Delay.h"
 
-void MotorPWM_PIN_Init(void){
+
+void o_Motor_Initialization_o(void){
+	
+	MotorPWM_PIN_Init();
+	MotorPWM_TIMER_Init();
+	MotorPWM_PWM_Init();
+	ESC_Calibration();
+}
+
+void MotorPWM_PIN_Init(void) {
     // Enable clock for GPIOD
     RCC->AHB1ENR |= RCC_AHB1ENR_GPIODEN;
 
@@ -8,7 +18,9 @@ void MotorPWM_PIN_Init(void){
     GPIOD->AFR[1] |= (2 << (4 * 4)) | (2 << (4 * 5)); // Pins 12 and 13 are AF2 (TIM4)
 
     // Set pins
+    GPIOD->MODER &= ~((3 << (12 * 2)) | (3 << (13 * 2))); // Clear MODER bits for PD12 and PD13
     GPIOD->MODER |= (2 << (12 * 2)) | (2 << (13 * 2)); // Pins 12 and 13 are AF mode
+
     GPIOD->OTYPER &= ~(GPIO_OTYPER_OT_12 | GPIO_OTYPER_OT_13); // Push-pull
     GPIOD->OSPEEDR |= (3 << (12 * 2)) | (3 << (13 * 2)); // High speed
     GPIOD->PUPDR &= ~((3 << (12 * 2)) | (3 << (13 * 2))); // No pull-up, no pull-down
@@ -50,47 +62,27 @@ void MotorPWM_PWM_Init() {
     TIM4->EGR = TIM_EGR_UG;
 }
 
-void MotorPWM_ESC_calibration(int min_val,int max_val){
+void ESC_Calibration(void){
 	
-	/**
-	Before being able to turn the motor it is needed to calibrate the ESC.
-	Merci à ce site: https://controllerstech.com/how-to-interface-bldc-motor-with-stm32/
-
-	Here we set the maximum pulse (2ms). The ESC will sound beep indicating it has been calibrated for the maximum pulse.
-	Then we send the minimum pulse (1ms) and wait for the ESC to sound the beep again.
-	Once it does that it means the calibration is complete.
-	**/
+	// https://controllerstech.com/how-to-interface-bldc-motor-with-stm32/
+   /**
+		Here we set the maximum pulse (2ms). The ESC will sound beep indicating it has been calibrated for the maximum pulse.
+		Then we send the minimum pulse and wait for the ESC to sound the beep again.
+		Once it does that it means the calibration is complete.
 	
-	TIM4->CCR1 = max_val;
-	TIM4->CCR2 = max_val;
-	delay_ms(2000);
-	TIM4->CCR1 = min_val;
-	TIM4->CCR2 = min_val;
-	delay_ms(1000);
+  **/
+  int max = 200;
+  int min = 100;
+	
+  MotorPWM_Set(max, max);  // Set the maximum pulse (2ms)
+  delay_ms(2000);  // wait for 1 beep
+  MotorPWM_Set(min, min);   // Set the minimum Pulse (1ms)
+  delay_ms(1000);  // wait for 2 beeps
+  MotorPWM_Set(0,0);    // reset to 0, so it can be controlled via ADC
 	
 }
 
  
-
-void o_MotorPWM_Initialization_o(void){
-	
-	/*
-	* To be called in the main to initialize the pwm signals, calibrates the ESC
-	*/
-	
-	MotorPWM_PIN_Init();
-	MotorPWM_TIMER_Init();
-	MotorPWM_PWM_Init();
-	
-	int min_val = 100;   //-> 1ms
-	int max_val = 200; 	//-> 2ms
-	
-	MotorPWM_ESC_calibration(min_val, max_val);
-	delay_ms(10);
-	MotorPWM_Set(150,150);  // To put to 0 again after debugging
-	
-}
-
 int saturate(int input, int min_val, int max_val) {
 	/**
 		* Function to perform saturation using arithmetic operations

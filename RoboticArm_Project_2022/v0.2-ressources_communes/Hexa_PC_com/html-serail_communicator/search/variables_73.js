@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['selfpowered',['SelfPowered',['../structft__program__data.html#ad714af31e3592d4c3be2742ae9612616',1,'ft_program_data']]],
+  ['sensordata',['sensorData',['../structserialComms_1_1HILSSensorPack.html#abaed3c860a9af5df31d8656f2de60e70',1,'serialComms::HILSSensorPack']]],
+  ['serial_5flink_5ftest_5fchar_5f0',['SERIAL_LINK_TEST_CHAR_0',['../namespaceserialComms.html#a3f8155051fd8c6877019c0403637cd30',1,'serialComms']]],
+  ['serial_5flink_5ftest_5fchar_5f1',['SERIAL_LINK_TEST_CHAR_1',['../namespaceserialComms.html#a550384e1ca235e85391bc16f666cde01',1,'serialComms']]],
+  ['seriallinktestpassed',['serialLinkTestPassed',['../classSerialCommunicator.html#a81d6169fe7fea62735da82308ee51b01',1,'SerialCommunicator']]],
+  ['serialnum',['serialNum',['../structport__usb__functions_1_1DeviceInfo.html#a6add879859a113f329ea18df5ba2e374',1,'port_usb_functions::DeviceInfo']]],
+  ['serialnumber',['SerialNumber',['../structft__program__data.html#ae8dbafd18df4c0ac4548f9b2e1ba7758',1,'ft_program_data::SerialNumber()'],['../struct__ft__device__list__info__node.html#a8cd158ee3ee8f3cc63c24f0479184f5d',1,'_ft_device_list_info_node::SerialNumber()']]],
+  ['sernumenable',['SerNumEnable',['../structft__program__data.html#a4b2ef7f478af34cea6af64d0b0506c1e',1,'ft_program_data']]],
+  ['sernumenable5',['SerNumEnable5',['../structft__program__data.html#a45d2edb9ee08c9d92c3d5d0d0ac79fd7',1,'ft_program_data']]],
+  ['sernumenable7',['SerNumEnable7',['../structft__program__data.html#aced3a798466e623045b4c1cc891dcb93',1,'ft_program_data']]],
+  ['sernumenable8',['SerNumEnable8',['../structft__program__data.html#ae2a623e2fc32537111ae317b4079fd2f',1,'ft_program_data']]],
+  ['sernumenabler',['SerNumEnableR',['../structft__program__data.html#ae793566abd42704cd6bdf04b77c84f73',1,'ft_program_data']]],
+  ['signature1',['Signature1',['../structft__program__data.html#a6b26e04c691ec5944d2fffec797c399a',1,'ft_program_data']]],
+  ['signature2',['Signature2',['../structft__program__data.html#ab28a0f4509093050f1927f1e946f3d9f',1,'ft_program_data']]],
+  ['size',['size',['../structserialComms_1_1sResend.html#aac071479acf58c3a27dbc72c8527cccd',1,'serialComms::sResend::size()'],['../structserialComms_1_1TransmissionDataPacket.html#aa69c24ec372f6779ca9d35dc668de5ae',1,'serialComms::TransmissionDataPacket::size()']]],
+  ['start',['start',['../structserialComms_1_1sResend.html#accdf324ce6215655d3dd5a68cdda7b86',1,'serialComms::sResend']]],
+  ['starttimeticks',['startTimeTicks',['../classSerialCommunicator.html#a044c9bed35ce65d005846cc2f0d7f83e',1,'SerialCommunicator']]],
+  ['stopbits',['StopBits',['../struct__FTDCB.html#a26a8414df8e94f282714833f9776319a',1,'_FTDCB']]],
+  ['swmajor',['SWMajor',['../structserialComms_1_1str__VersionInfo.html#a2dc59a8889f32fa35a8f4ba9c970eaf1',1,'serialComms::str_VersionInfo']]],
+  ['swminor',['SWMinor',['../structserialComms_1_1str__VersionInfo.html#af4f70ac6c985f77e3dc7734922c27669',1,'serialComms::str_VersionInfo']]],
+  ['swpatch',['SWPatch',['../structserialComms_1_1str__VersionInfo.html#acfcd68714ba6455bc8b321fc8b0d23f6',1,'serialComms::str_VersionInfo']]]
+];

@@ -138,7 +138,11 @@ ClockConfig getSystemClockSpeed(void) {
     ClockConfig config;
 
     // Read the HSE clock configuration
-    config.hseFrequency = (RCC->CR & RCC_CR_HSERDY) ? HSE_VALUE : 0;
+    if (RCC->CR & RCC_CR_HSERDY) {
+		config.hseFrequency = HSE_VALUE;
+	 } else {
+		config.hseFrequency = 0;
+}
 
     // Read the APB1 and APB2 clock configuration
     uint32_t ahbPrescaler = ((RCC->CFGR & RCC_CFGR_HPRE) >> 4) + 1;
@@ -190,6 +194,7 @@ ClockConfig getSystemClockSpeed(void) {
     config.apb2Frequency = systemClockSpeed / apb2Prescaler;
 
     // Print the clock configurations
+	 SendString("\r");
 	 PrintConsole(WARNING, "The system Clock is configured as follow :\n\r");
 	 
     PrintConsole(WARNING, "HSE Frequency: %lu Hz\n\r", 		config.hseFrequency);
@@ -222,4 +227,3 @@ ClockConfig getSystemClockSpeed(void) {
             return -1; // Invalid bits
     }
 }
-

@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['saturate10bits',['saturate10Bits',['../serialCommunicator_8cpp.html#a1a69776e8ac6aaa9ccbb78211d3257a1',1,'serialCommunicator.cpp']]],
+  ['senddata',['SendData',['../classSerialCommunicator.html#a3ce2708b71ff31bde729eaa2835997e8',1,'SerialCommunicator::SendData(UINT8 packet[serialComms::RXD_BUFFER_LEN], UINT8 size)'],['../classSerialCommunicator.html#aee1dd51f7dd6370c98ca078db2d45ec5',1,'SerialCommunicator::SendData(serialComms::TransmissionDataPacket dataIn)']]],
+  ['senddebugdatarequestnow',['sendDebugDataRequestNow',['../classSerialCommunicator.html#aa4c3ed5649c6592ee1cefb324eafd584',1,'SerialCommunicator']]],
+  ['sendhilsdatanow',['sendHILSDataNow',['../classSerialCommunicator.html#a303e91cbd173bf4e86e564f1698d8a20',1,'SerialCommunicator']]],
+  ['sendlastpacket',['sendLastPacket',['../classSerialCommunicator.html#a7d25dd26da557d9f25c31c3cf83bf892',1,'SerialCommunicator']]],
+  ['sendrcstaterequestnow',['sendRCStateRequestNow',['../classSerialCommunicator.html#a282775592884ee7f53ef51fb77f938ec',1,'SerialCommunicator']]],
+  ['sendstoprequestnow',['sendStopRequestNow',['../classSerialCommunicator.html#a92b5bc2faf9f1ad26f165859f064908c',1,'SerialCommunicator']]],
+  ['serialcommunicator',['SerialCommunicator',['../classSerialCommunicator.html#a11ad08fc6fb58a9d44dbcbd042002733',1,'SerialCommunicator']]],
+  ['serialrx',['SerialRx',['../classSerialCommunicator.html#a9e6b1be065fc55f2ef2762b45c2e5876',1,'SerialCommunicator']]],
+  ['setconfirmrequesttimeout_5fms',['setConfirmRequestTimeout_ms',['../classSerialCommunicator.html#ac8f4b192657498c25c902d8ca473989c',1,'SerialCommunicator']]],
+  ['setdebugdatasleeptime_5fms',['setDebugDataSleepTime_ms',['../classSerialCommunicator.html#a2a1c3f3a099e068ec940a034fa03a43b',1,'SerialCommunicator']]],
+  ['sethilssensordata',['setHILSSensorData',['../classSerialCommunicator.html#ad1f64f7b3c3bdfeb9cd1c14f377027e7',1,'SerialCommunicator']]],
+  ['sethilstransmitsleeptime_5fms',['setHILSTransmitSleepTime_ms',['../classSerialCommunicator.html#a6fdcef413b56e871780572bf88f4da12',1,'SerialCommunicator']]],
+  ['setlatencytimer',['SetLatencyTimer',['../classport__usb__functions_1_1port__usb.html#a32f08d369b58f975e8c2218fc57fc073',1,'port_usb_functions::port_usb']]],
+  ['setoutputfiles',['setOutputFiles',['../classSerialCommunicator.html#ace2b9cd1cb7b9cf08424af224e0c6faf',1,'SerialCommunicator']]],
+  ['setrcchecksleeptime_5fms',['setRcCheckSleepTime_ms',['../classSerialCommunicator.html#aca4f487a188fa5563c829d8f050079c5',1,'SerialCommunicator']]],
+  ['setreceiverthreadsleeptime_5fms',['setReceiverThreadSleepTime_ms',['../classSerialCommunicator.html#ab7ceb714e90f1d0a6040be513ce978a2',1,'SerialCommunicator']]],
+  ['setresourcelockedsleeptime_5fms',['setResourceLockedSleepTime_ms',['../classSerialCommunicator.html#ad7c377dde20d1b82e1b02d9c5a6351d9',1,'SerialCommunicator']]],
+  ['setresourcelockedtimeout_5fms',['setResourceLockedTimeout_ms',['../classSerialCommunicator.html#ac8f956188d71dd7a0d0b0dd7fa900c5c',1,'SerialCommunicator']]],
+  ['settransmitterthreadsleeptime_5fms',['setTransmitterThreadSleepTime_ms',['../classSerialCommunicator.html#af6d9e81c33dbd5836d7a2c1b77b23a4b',1,'SerialCommunicator']]],
+  ['setunlocktransmitter',['setUnlockTransmitter',['../classSerialCommunicator.html#a4f6e0d420ce76d2c2250b949e53b6992',1,'SerialCommunicator']]],
+  ['start',['start',['../classport__usb__functions_1_1port__usb.html#a381130fef78b1993c0ae5ccf15b9423f',1,'port_usb_functions::port_usb']]],
+  ['start_5fcommunication',['start_communication',['../classSerialCommunicator.html#a3d0bdb291d62165b9cac1a8b7fd0038f',1,'SerialCommunicator']]],
+  ['switchintohilsmode',['switchIntoHILSMode',['../classSerialCommunicator.html#ab7fb519baca83d8b73a8c98c584ed0f6',1,'SerialCommunicator']]]
+];

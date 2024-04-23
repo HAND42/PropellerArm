@@ -2,7 +2,7 @@
 
 /**
 
-Must be initialize after the initialization of the timer as it depends from it on one line.
+The following code needs the implementation of the timer to be initialized.
 
 **/
 
@@ -26,7 +26,7 @@ void ADC_Init(void){
 	ADC->CCR |= (1<<16);	  // PCLK2 divide by 4 --> Maxfrq 36MHz with VDDA = 3.3V set by default & APB2_clk/presc = 100MHz/4 = 25MHz < 36MHz (see Datasheet STM32F411)
 	
 	// 3. Set the Scan Mode and Resolution in the Control Register 1 (CR1)
-	ADC1->CR1 &= ~(1<<24); // 12 bit RES
+	ADC1->CR1 &= ~(3<<24); // 12 bit RES
 	//ADC1->CR1 &= ~(3 << 24); //6 bit RES
 	ADC1->CR1 &= ~(1<<8);  // SCAN mode disabled -> only one channel to control.
 	
@@ -42,7 +42,7 @@ void ADC_Init(void){
 	ADC1->SQR1 |= (1<<20);   // SQR1_L =1 for 2 conversions
 	
 	//7. Set the Respective GPIO PINs in the Analog Mode	
-	GPIOA->MODER |= (3<<8);  // analog mode for PA 4 (channel 4)
+	GPIOA->MODER |= (3<<8);  // analog mode for PA4 (channel 4)
 	
 }
 
@@ -105,6 +105,11 @@ float o_Read_Potentiometer_o(int channel){
 	
 	ADC_Start (channel);
 	ADC_WaitForConv ();
-	return ADC_GetVal();
+	
+	// Assume that we want to control our system between -45° and 45°
+	int read_val = ADC_GetVal();
+	
+	// y = ax + b and as the potentiometer goes from 0 to 4095 so a = 90/4095 and b = -45° 
+	return read_val*90.0/4095.0 -45.0;
 	
 }

@@ -1,0 +1,4 @@
+<map id="port_usb_functions::port_usb::close" name="port_usb_functions::port_usb::close">
+<area shape="rect" id="node2" href="$classSerialCommunicator.html#a591630c3e832911a8054658e21d3be5a" title="SerialCommunicator\l::~SerialCommunicator" alt="" coords="184,5,339,46"/>
+<area shape="rect" id="node3" href="$classSerialCommunicator.html#a0f301f30424a34fa446788934148dced" title="SerialCommunicator\l::close_port" alt="" coords="192,70,331,111"/>
+</map>

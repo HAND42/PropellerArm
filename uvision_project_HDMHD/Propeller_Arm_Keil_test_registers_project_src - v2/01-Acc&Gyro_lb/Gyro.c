@@ -25,6 +25,7 @@
  */
 
 #include "RegisterAddresses.h"
+#include "Gyro.h"
 
 void WaitForSPI1RXReady()
 {

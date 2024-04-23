@@ -1,0 +1,8 @@
+<map id="SerialCommunicator::requestDebugData" name="SerialCommunicator::requestDebugData">
+<area shape="rect" id="node2" href="$classSerialCommunicator.html#a8e4f1bde95d6314fb692b44081de882f" title="SerialCommunicator\l::addPacket" alt="" coords="192,89,331,130"/>
+<area shape="rect" id="node3" href="$classSerialCommunicator.html#a32259d59c0731af958945a34cc223f69" title="SerialCommunicator\l::makePacket" alt="" coords="387,23,525,65"/>
+<area shape="rect" id="node6" href="$classSerialCommunicator.html#a6ad2c04819095530b9f832f8f5277ffc" title="SerialCommunicator\l::tryToLockTransmitter" alt="" coords="380,89,532,130"/>
+<area shape="rect" id="node7" href="$classSerialCommunicator.html#a4f6e0d420ce76d2c2250b949e53b6992" title="SerialCommunicator\l::setUnlockTransmitter" alt="" coords="379,154,533,195"/>
+<area shape="rect" id="node4" href="$namespaceToolBox.html#a0d648beb65d99278f448fcf1d43c9e78" title="ToolBox::Encode64" alt="" coords="582,5,717,32"/>
+<area shape="rect" id="node5" href="$namespaceToolBox.html#a10e153078c33ad93f51e502cb9f7f05b" title="ToolBox::AddCRC" alt="" coords="586,56,713,83"/>
+</map>

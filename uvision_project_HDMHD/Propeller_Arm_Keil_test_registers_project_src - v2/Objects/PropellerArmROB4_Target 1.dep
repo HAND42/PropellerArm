@@ -1,0 +1,208 @@
+Dependencies for Project 'PropellerArmROB4', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6190000::V6.19::ARMCLANG
+F (.\main.c)(0x6627DA43)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./00_MyCustomHAL_register_lb -I ./01-Acc&Gyro_lb -I ./04_LCD1602_I2C_NOHAL-I./RTE/_Target_1-IC:/Users/Hugo/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/main.o -MD)
+I (00_MyCustomHAL_register_lb\System_Config.h)(0x6627CCBB)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm4.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (00_MyCustomHAL_register_lb\Delay.h)(0x650EA622)
+I (00_MyCustomHAL_register_lb\Led.h)(0x661FD7F1)
+I (01-Acc&Gyro_lb\Accelerometer.h)(0x6627C992)
+I (01-Acc&Gyro_lb\Angles_Estimation.h)(0x662813BE)
+I (01-Acc&Gyro_lb\Gyro.h)(0x6627CC33)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x63889D68)
+I (00_MyCustomHAL_register_lb\DisplayData.h)(0x6627C7F7)
+I (00_MyCustomHAL_register_lb\StringUtilities.h)(0x65246FDC)
+I (00_MyCustomHAL_register_lb\UART.h)(0x652B7D50)
+I (04_LCD1602_I2C_NOHAL\i2c-lcd.h)(0x65286548)
+I (motor_pwm.h)(0x6627D339)
+I (Potentiometer.h)(0x661A3AF3)
+I (00_MyCustomHAL_register_lb\RegisterAddresses.h)(0x6530E71C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x63889D68)
+F (.\00_MyCustomHAL_register_lb\System_Config.c)(0x6627DC55)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./00_MyCustomHAL_register_lb -I ./01-Acc&Gyro_lb -I ./04_LCD1602_I2C_NOHAL-I./RTE/_Target_1-IC:/Users/Hugo/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/system_config.o -MD)
+I (00_MyCustomHAL_register_lb\System_Config.h)(0x6627CCBB)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm4.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (00_MyCustomHAL_register_lb\Delay.h)(0x650EA622)
+I (00_MyCustomHAL_register_lb\DisplayData.h)(0x6627C7F7)
+I (00_MyCustomHAL_register_lb\StringUtilities.h)(0x65246FDC)
+I (01-Acc&Gyro_lb\Angles_Estimation.h)(0x662813BE)
+I (01-Acc&Gyro_lb\Accelerometer.h)(0x6627C992)
+I (01-Acc&Gyro_lb\Gyro.h)(0x6627CC33)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x63889D68)
+I (00_MyCustomHAL_register_lb\Led.h)(0x661FD7F1)
+I (00_MyCustomHAL_register_lb\UART.h)(0x652B7D50)
+F (.\00_MyCustomHAL_register_lb\RegisterAddresses.h)(0x6530E71C)()
+F (.\00_MyCustomHAL_register_lb\Delay.c)(0x652CE2E0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./00_MyCustomHAL_register_lb -I ./01-Acc&Gyro_lb -I ./04_LCD1602_I2C_NOHAL-I./RTE/_Target_1-IC:/Users/Hugo/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/delay.o -MD)
+I (00_MyCustomHAL_register_lb\Delay.h)(0x650EA622)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm4.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (00_MyCustomHAL_register_lb\System_Config.h)(0x6627CCBB)
+F (.\00_MyCustomHAL_register_lb\Led.c)(0x661FD7F1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./00_MyCustomHAL_register_lb -I ./01-Acc&Gyro_lb -I ./04_LCD1602_I2C_NOHAL-I./RTE/_Target_1-IC:/Users/Hugo/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/led.o -MD)
+I (00_MyCustomHAL_register_lb\Led.h)(0x661FD7F1)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm4.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (00_MyCustomHAL_register_lb\Delay.h)(0x650EA622)
+F (.\01-Acc&Gyro_lb\Accelerometer.c)(0x6627C992)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./00_MyCustomHAL_register_lb -I ./01-Acc&Gyro_lb -I ./04_LCD1602_I2C_NOHAL-I./RTE/_Target_1-IC:/Users/Hugo/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/accelerometer.o -MD)
+I (00_MyCustomHAL_register_lb\RegisterAddresses.h)(0x6530E71C)
+I (01-Acc&Gyro_lb\Accelerometer.h)(0x6627C992)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm4.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (00_MyCustomHAL_register_lb\DisplayData.h)(0x6627C7F7)
+I (00_MyCustomHAL_register_lb\StringUtilities.h)(0x65246FDC)
+I (01-Acc&Gyro_lb\Angles_Estimation.h)(0x662813BE)
+I (01-Acc&Gyro_lb\Gyro.h)(0x6627CC33)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x63889D68)
+I (00_MyCustomHAL_register_lb\System_Config.h)(0x6627CCBB)
+I (00_MyCustomHAL_register_lb\Led.h)(0x661FD7F1)
+I (00_MyCustomHAL_register_lb\Delay.h)(0x650EA622)
+I (00_MyCustomHAL_register_lb\UART.h)(0x652B7D50)
+F (.\01-Acc&Gyro_lb\Angles_Estimation.c)(0x6627DB42)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./00_MyCustomHAL_register_lb -I ./01-Acc&Gyro_lb -I ./04_LCD1602_I2C_NOHAL-I./RTE/_Target_1-IC:/Users/Hugo/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/angles_estimation.o -MD)
+I (01-Acc&Gyro_lb\Angles_Estimation.h)(0x662813BE)
+I (01-Acc&Gyro_lb\Accelerometer.h)(0x6627C992)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm4.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (01-Acc&Gyro_lb\Gyro.h)(0x6627CC33)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x63889D68)
+I (00_MyCustomHAL_register_lb\System_Config.h)(0x6627CCBB)
+I (00_MyCustomHAL_register_lb\DisplayData.h)(0x6627C7F7)
+I (00_MyCustomHAL_register_lb\StringUtilities.h)(0x65246FDC)
+I (00_MyCustomHAL_register_lb\UART.h)(0x652B7D50)
+I (00_MyCustomHAL_register_lb\Led.h)(0x661FD7F1)
+I (00_MyCustomHAL_register_lb\Delay.h)(0x650EA622)
+F (.\01-Acc&Gyro_lb\Gyro.c)(0x6627CC24)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./00_MyCustomHAL_register_lb -I ./01-Acc&Gyro_lb -I ./04_LCD1602_I2C_NOHAL-I./RTE/_Target_1-IC:/Users/Hugo/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/gyro.o -MD)
+I (00_MyCustomHAL_register_lb\RegisterAddresses.h)(0x6530E71C)
+I (01-Acc&Gyro_lb\Gyro.h)(0x6627CC33)
+F (.\00_MyCustomHAL_register_lb\I2C.c)(0x6530E7D8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./00_MyCustomHAL_register_lb -I ./01-Acc&Gyro_lb -I ./04_LCD1602_I2C_NOHAL-I./RTE/_Target_1-IC:/Users/Hugo/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/i2c.o -MD)
+I (00_MyCustomHAL_register_lb\I2C.h)(0x651E9252)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (00_MyCustomHAL_register_lb\System_Config.h)(0x6627CCBB)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm4.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+F (.\04_LCD1602_I2C_NOHAL\i2c-lcd.c)(0x6524683A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./00_MyCustomHAL_register_lb -I ./01-Acc&Gyro_lb -I ./04_LCD1602_I2C_NOHAL-I./RTE/_Target_1-IC:/Users/Hugo/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/i2c-lcd.o -MD)
+I (04_LCD1602_I2C_NOHAL\i2c-lcd.h)(0x65286548)
+I (00_MyCustomHAL_register_lb\System_Config.h)(0x6627CCBB)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm4.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (00_MyCustomHAL_register_lb\i2c.h)(0x651E9252)
+I (00_MyCustomHAL_register_lb\Delay.h)(0x650EA622)
+I (01-Acc&Gyro_lb\Accelerometer.h)(0x6627C992)
+F (.\00_MyCustomHAL_register_lb\UART.c)(0x6627CDBE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./00_MyCustomHAL_register_lb -I ./01-Acc&Gyro_lb -I ./04_LCD1602_I2C_NOHAL-I./RTE/_Target_1-IC:/Users/Hugo/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/uart.o -MD)
+I (00_MyCustomHAL_register_lb\RegisterAddresses.h)(0x6530E71C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x63889D68)
+I (00_MyCustomHAL_register_lb\UART.h)(0x652B7D50)
+F (.\00_MyCustomHAL_register_lb\StringUtilities.c)(0x65246FEE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./00_MyCustomHAL_register_lb -I ./01-Acc&Gyro_lb -I ./04_LCD1602_I2C_NOHAL-I./RTE/_Target_1-IC:/Users/Hugo/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/stringutilities.o -MD)
+F (.\00_MyCustomHAL_register_lb\DisplayData.c)(0x66281317)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./00_MyCustomHAL_register_lb -I ./01-Acc&Gyro_lb -I ./04_LCD1602_I2C_NOHAL-I./RTE/_Target_1-IC:/Users/Hugo/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/displaydata.o -MD)
+I (01-Acc&Gyro_lb\Accelerometer.h)(0x6627C992)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm4.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (01-Acc&Gyro_lb\Gyro.h)(0x6627CC33)
+I (00_MyCustomHAL_register_lb\DisplayData.h)(0x6627C7F7)
+I (00_MyCustomHAL_register_lb\StringUtilities.h)(0x65246FDC)
+I (01-Acc&Gyro_lb\Angles_Estimation.h)(0x662813BE)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x63889D68)
+I (00_MyCustomHAL_register_lb\System_Config.h)(0x6627CCBB)
+I (00_MyCustomHAL_register_lb\Led.h)(0x661FD7F1)
+I (00_MyCustomHAL_register_lb\Delay.h)(0x650EA622)
+I (00_MyCustomHAL_register_lb\UART.h)(0x652B7D50)
+I (04_LCD1602_I2C_NOHAL\i2c-lcd.h)(0x65286548)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x63889D68)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x63889D68)
+F (.\Potentiometer.c)(0x6627D94C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./00_MyCustomHAL_register_lb -I ./01-Acc&Gyro_lb -I ./04_LCD1602_I2C_NOHAL-I./RTE/_Target_1-IC:/Users/Hugo/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/potentiometer.o -MD)
+I (Potentiometer.h)(0x661A3AF3)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm4.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (00_MyCustomHAL_register_lb\Delay.h)(0x650EA622)
+F (.\motor_pwm.c)(0x6627D4BC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./00_MyCustomHAL_register_lb -I ./01-Acc&Gyro_lb -I ./04_LCD1602_I2C_NOHAL-I./RTE/_Target_1-IC:/Users/Hugo/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/motor_pwm.o -MD)
+I (motor_pwm.h)(0x6627D339)
+I (00_MyCustomHAL_register_lb\System_Config.h)(0x6627CCBB)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm4.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)
+I (00_MyCustomHAL_register_lb\Delay.h)(0x650EA622)
+F (RTE/Device/STM32F411VETx/startup_stm32f411xe.s)(0x6374AC5A)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4-I./RTE/_Target_1-IC:/Users/Hugo/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 538" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32F411xE SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_stm32f411xe.o)
+F (RTE/Device/STM32F411VETx/system_stm32f4xx.c)(0x6374AC5A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O1 -ffunction-sections -w -I ./00_MyCustomHAL_register_lb -I ./01-Acc&Gyro_lb -I ./04_LCD1602_I2C_NOHAL-I./RTE/_Target_1-IC:/Users/Hugo/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/Hugo/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.1/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F411xE -D_RTE_-o ./objects/system_stm32f4xx.o -MD)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f411xe.h)(0x63749E4A)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\core_cm4.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_version.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\cmsis_compiler.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x658034A8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x63889D68)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x658034A8)
+I (C:\Users\Hugo\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x63749E4A)

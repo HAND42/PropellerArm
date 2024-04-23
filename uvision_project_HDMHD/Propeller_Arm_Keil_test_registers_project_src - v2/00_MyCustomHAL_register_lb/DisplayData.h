@@ -1,3 +1,5 @@
+#pragma once
+
 /*
  * STM32 Projects
  *

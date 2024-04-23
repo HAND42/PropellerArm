@@ -1,10 +1,7 @@
-
 #include "Angles_Estimation.h"
-#include "System_Config.h"
-#include "DisplayData.h"
-#include "Led.h"
 
-float T = 0.2;  // The time taken to acquire accelerometer data is approximately 0.02977 seconds.
+
+float T = 0.08;  // The time taken to acquire accelerometer data is approximately 0.02977 seconds.
 float pre_theta = 0;
 float pre_pre_theta = 0;
 float theta = 0;
@@ -13,9 +10,9 @@ float theta_acc = 0;
 float pre_theta_acc = 0;
 float pre_pre_theta_acc = 0;
 
-float gyro_y_dot = 0;
-float pre_gyro_y_dot = 0;
-float pre_pre_gyro_y_dot = 0;
+float gyro_y = 0;
+float pre_gyro_y = 0;
+float pre_pre_gyro_y = 0;
 
 void Timer3InterruptInit(float sampling_period){
 	
@@ -90,7 +87,7 @@ void Timer3InterruptInit(float sampling_period){
 void Timer3InterruptEnable(void){
 	
 	//11. Enable the timer
-   //TIM3->CR1 |= TIM_CR1_CEN;
+   TIM3->CR1 |= TIM_CR1_CEN;
 		
 }
 
@@ -106,115 +103,69 @@ void TIM3_IRQHandler( void ){
 		TIM3->SR &= ~TIM_SR_UIF;
 
 		Led_Trigger(BLUE, 0);
-		PrintConsole(INFO, "\r\nTheta: %lf",theta); //this is the theta estimation
+		DisplayAxisValues();
+		//PrintConsole(INFO, "\r\nTheta: %lf",theta); //this is the theta estimation
 		//---> Compute the reference theta_ref
-		TiltCompensatedThetaEstimation2();
+		TiltCompensatedThetaEstimation();
 		
 	}
 }
 
-float HomeMadeThetaEstimation(void){
-	
-	theta_acc = GetThetaAcc();
-   gyro_y_dot = GetRollTurnRateGyro();
-	
-	theta = theta_acc;
-	
-	return theta;
-
-}
-
-
 float TiltCompensatedThetaEstimation(void){
 	
-   theta_acc = GetThetaAcc();
-   gyro_y_dot = GetRollTurnRateGyro();
+   theta_acc = GetThetaAcc_rad();
+   gyro_y = GetThetaGyro_rad();
 	
-//	float accX, accY, accZ;
-//	GetAccelerometerValuesInMS2(&accX, &accY, &accZ);
-//	
-//	theta_acc = asin(accX/G)*180/M_PI;
-//	
-   PrintConsole(INFO, "\r\nTheta_acc: %lf",theta_acc);
+	theta = Ko*pre_theta + T*gyro_y + T*Ko*(theta_acc - pre_theta_acc) ;
+	theta = theta / (Ko + T);
 	
-	
-	theta = pre_theta + ( gyro_y_dot - 2 * pre_gyro_y_dot  + pre_pre_gyro_y_dot)/T + Ko* T * theta_acc;
-	theta = theta / (Ko * T + 1);
-	
-	pre_pre_gyro_y_dot = pre_gyro_y_dot;
-	pre_gyro_y_dot = gyro_y_dot;
 	pre_theta = theta;
-	
-	return theta;
-}
-
-void TiltCompensatedThetaEstimation2(void){
-	
-	theta_acc = GetThetaAcc();
-   gyro_y_dot = GetRollTurnRateGyro();
-	
-	theta = pre_theta*(Ko + 2*Ki/T) - pre_pre_theta*(Ki/T) + gyro_y_dot - pre_gyro_y_dot + Ko*theta_acc - pre_theta_acc*(Ko +2*Ki/T) + pre_pre_theta_acc*Ki/T;
-	theta = theta / (T + Ko + Ki/T);
-	
-	pre_gyro_y_dot = gyro_y_dot;
-	
-	pre_pre_theta = pre_theta;
-	pre_theta = theta;
-	
-	pre_pre_theta_acc = pre_theta_acc;
 	pre_theta_acc = theta_acc;
 	
-	//PrintConsole(INFO, "\r\nTheta: %lf",theta);
-	
-}
-
-float TiltCompensatedThetaEstimation3(void){
-	
-	theta_acc = GetThetaAcc();
-   gyro_y_dot = GetRollTurnRateGyro();
-	
-	theta = theta_acc*(Ko + (Ki/T)) + gyro_y_dot - pre_gyro_y_dot 
-	                                + (2*(Ki/T) + Ko)*(pre_theta - pre_theta_acc) 
-										     + (Ki/T)*(pre_pre_theta_acc - pre_pre_theta); 
-	
-	theta = theta / (T* (1 + Ko + (Ki/T)));
-	
-	pre_gyro_y_dot = gyro_y_dot;
-	
-	pre_pre_theta = pre_theta;
-	pre_theta = theta;
-	
-	pre_pre_theta_acc = pre_theta_acc;
-	pre_theta_acc = theta_acc;
-	
-	//PrintConsole(INFO, "\r\nTheta: %lf",theta);
 	return theta;
-	
 }
 
 float GetRollTurnRateGyro(void){
 	
 	short Y;
 	GetGyroY(&Y);
-	float gyroY;
-	gyroY = Y;
+	float gyroY = Y;
 	return gyroY;
 	
 }
 
-float GetThetaAcc(void){
+float GetThetaGyro_rad(void){
+	short Y;
+	GetGyroY(&Y);
+	float gyroY= pre_gyro_y + Y*T;
+	return gyroY;
+}
+
+float GetThetaAcc_rad(void){
 	float accX, accY, accZ;
 	GetAccelerometerValuesInMS2(&accX, &accY, &accZ);
-	
+	return asin(accX/G);
+}
+
+float GetThetaAcc_deg(void){
+	float accX, accY, accZ;
+	GetAccelerometerValuesInMS2(&accX, &accY, &accZ);
 	return asin(accX/G)*180/M_PI;
 }
 
-float GetPhiAcc(void){
+
+float GetPhiAcc_rad(void){
 	float accX, accY, accZ;
 	GetAccelerometerValuesInMS2(&accX, &accY, &accZ);
-	
+	return atan (-(accY)/(accZ));
+}
+
+float GetPhiAcc_deg(void){
+	float accX, accY, accZ;
+	GetAccelerometerValuesInMS2(&accX, &accY, &accZ);
 	return atan (-(accY)/(accZ))*180/M_PI;
 }
+
 
 void GetAccelerometerValuesInMS2(float* accX, float* accY, float* accZ){
 	short accelX, accelY, accelZ;
@@ -237,7 +188,6 @@ void GetAccelerometerValuesInMS2(float* accX, float* accY, float* accZ){
 	*accZ = *accZ*G;			//Convert G in M/S2
 	
 }
-
 
 
 

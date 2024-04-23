@@ -1,0 +1,18 @@
+PC CONTROLLER
+controller_type = cascade
+k1 = 4.44288
+k2 = 8.88577
+a1 = 1
+a2 = 0
+b1 = 5.83
+b2 = -5.33
+b3 = 0
+
+SAMPLE TIME
+time_step = 25
+simulation_step = 4
+controller_step = 2
+graph_step = 4
+
+TIME
+time_desired = 3

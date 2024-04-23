@@ -1,0 +1,4 @@
+<map id="SerialCommunicator::requestChangeHILSState" name="SerialCommunicator::requestChangeHILSState">
+<area shape="rect" id="node2" href="$classSerialCommunicator.html#a892363a74da718d2d12c2ef1b95bc37d" title="SerialCommunicator\l::requestConfirmedChangeHILSState" alt="" coords="229,5,464,46"/>
+<area shape="rect" id="node3" href="$classSerialCommunicator.html#ab7fb519baca83d8b73a8c98c584ed0f6" title="SerialCommunicator\l::switchIntoHILSMode" alt="" coords="513,5,661,46"/>
+</map>

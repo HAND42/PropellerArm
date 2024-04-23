@@ -1,0 +1,15 @@
+<map id="SerialCommunicator::setUnlockTransmitter" name="SerialCommunicator::setUnlockTransmitter">
+<area shape="rect" id="node2" href="$classSerialCommunicator.html#a8e4f1bde95d6314fb692b44081de882f" title="SerialCommunicator\l::addPacket" alt="" coords="213,135,352,177"/>
+<area shape="rect" id="node14" href="$namespacecommunicationThread.html#a1ab5ff4d04d8c5c5821edd131a7753cf" title="communicationThread\l::generalTransmitter" alt="" coords="208,201,357,242"/>
+<area shape="rect" id="node3" href="$classSerialCommunicator.html#ad1be2ff385b0ec98e04920f52fe32aae" title="SerialCommunicator\l::requestA2DSensorValues" alt="" coords="405,5,584,46"/>
+<area shape="rect" id="node5" href="$classSerialCommunicator.html#a3db871a93c9dadc08262b9b47532adee" title="SerialCommunicator\l::requestDebugData" alt="" coords="425,70,564,111"/>
+<area shape="rect" id="node6" href="$classSerialCommunicator.html#ab6a01d0947b2107ba1e13488909390c6" title="SerialCommunicator\l::requestDebugLabel" alt="" coords="424,135,565,177"/>
+<area shape="rect" id="node9" href="$classSerialCommunicator.html#a082bda7ce1bbd503a9357bfae2fdd69e" title="SerialCommunicator\l::requestChangeHILSState" alt="" coords="407,201,583,242"/>
+<area shape="rect" id="node12" href="$classSerialCommunicator.html#ad08c7596741b73d47032a4d4ab4a8803" title="SerialCommunicator\l::requestHILSState" alt="" coords="425,266,564,307"/>
+<area shape="rect" id="node4" href="$classSerialCommunicator.html#ad9494ca6b53fe3bdf1239978ae7e9cd3" title="SerialCommunicator\l::requestConfirmedA2DValues" alt="" coords="651,5,847,46"/>
+<area shape="rect" id="node7" href="$classSerialCommunicator.html#ad8647c3f5d6d818476d7acb6d804179b" title="SerialCommunicator\l::requestDebugLabelsAll" alt="" coords="668,70,831,111"/>
+<area shape="rect" id="node8" href="$classSerialCommunicator.html#acf972a0cc0609d128653bf55efc09587" title="SerialCommunicator\l::requestConfirmedDebugLabel" alt="" coords="650,135,849,177"/>
+<area shape="rect" id="node10" href="$classSerialCommunicator.html#a892363a74da718d2d12c2ef1b95bc37d" title="SerialCommunicator\l::requestConfirmedChangeHILSState" alt="" coords="632,201,867,242"/>
+<area shape="rect" id="node11" href="$classSerialCommunicator.html#ab7fb519baca83d8b73a8c98c584ed0f6" title="SerialCommunicator\l::switchIntoHILSMode" alt="" coords="915,234,1063,275"/>
+<area shape="rect" id="node13" href="$classSerialCommunicator.html#a5b419b9319d2115b2961d8ebb6390768" title="SerialCommunicator\l::requestConfirmedGetHILSState" alt="" coords="644,266,855,307"/>
+</map>

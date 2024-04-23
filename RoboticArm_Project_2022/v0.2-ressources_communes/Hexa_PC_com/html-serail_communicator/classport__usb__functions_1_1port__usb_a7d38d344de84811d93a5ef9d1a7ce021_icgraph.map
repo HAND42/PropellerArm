@@ -1,0 +1,11 @@
+<map id="port_usb_functions::port_usb::Write" name="port_usb_functions::port_usb::Write">
+<area shape="rect" id="node2" href="$classSerialCommunicator.html#a3ce2708b71ff31bde729eaa2835997e8" title="SerialCommunicator\l::SendData" alt="" coords="184,135,323,177"/>
+<area shape="rect" id="node3" href="$classSerialCommunicator.html#a7d25dd26da557d9f25c31c3cf83bf892" title="SerialCommunicator\l::sendLastPacket" alt="" coords="399,5,537,46"/>
+<area shape="rect" id="node5" href="$classSerialCommunicator.html#a282775592884ee7f53ef51fb77f938ec" title="SerialCommunicator\l::sendRCStateRequestNow" alt="" coords="378,70,558,111"/>
+<area shape="rect" id="node6" href="$classSerialCommunicator.html#aa4c3ed5649c6592ee1cefb324eafd584" title="SerialCommunicator\l::sendDebugDataRequestNow" alt="" coords="371,135,565,177"/>
+<area shape="rect" id="node8" href="$classSerialCommunicator.html#a92b5bc2faf9f1ad26f165859f064908c" title="SerialCommunicator\l::sendStopRequestNow" alt="" coords="389,201,547,242"/>
+<area shape="rect" id="node9" href="$classSerialCommunicator.html#a303e91cbd173bf4e86e564f1698d8a20" title="SerialCommunicator\l::sendHILSDataNow" alt="" coords="399,266,537,307"/>
+<area shape="rect" id="node4" href="$namespacecommunicationThread.html#a1ab5ff4d04d8c5c5821edd131a7753cf" title="communicationThread\l::generalTransmitter" alt="" coords="641,5,791,46"/>
+<area shape="rect" id="node7" href="$namespacecommunicationThread.html#a5dfcbffe56821e9dc4a903dcdb944cc0" title="communicationThread\l::debugDataRequestTransmitter" alt="" coords="613,135,819,177"/>
+<area shape="rect" id="node10" href="$namespacecommunicationThread.html#a191ba217351080b34eed7d025682d749" title="communicationThread\l::HILSSensorDataTransmitter" alt="" coords="621,266,811,307"/>
+</map>

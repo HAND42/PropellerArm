@@ -1,0 +1,5 @@
+<map id="port_com::close" name="port_com::close">
+<area shape="rect" id="node2" href="$classport__com.html#ae8ab7a59d53a81014ca46d630fd07759" title="port_com::~port_com" alt="" coords="168,5,315,32"/>
+<area shape="rect" id="node3" href="$classSerialCommunicator.html#a591630c3e832911a8054658e21d3be5a" title="SerialCommunicator\l::~SerialCommunicator" alt="" coords="363,23,517,65"/>
+<area shape="rect" id="node4" href="$classSerialCommunicator.html#a0f301f30424a34fa446788934148dced" title="SerialCommunicator\l::close_port" alt="" coords="172,107,311,149"/>
+</map>

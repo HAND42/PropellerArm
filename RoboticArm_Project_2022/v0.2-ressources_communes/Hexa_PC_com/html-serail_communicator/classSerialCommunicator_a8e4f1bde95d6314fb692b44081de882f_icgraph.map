@@ -1,0 +1,13 @@
+<map id="SerialCommunicator::addPacket" name="SerialCommunicator::addPacket">
+<area shape="rect" id="node2" href="$classSerialCommunicator.html#ad1be2ff385b0ec98e04920f52fe32aae" title="SerialCommunicator\l::requestA2DSensorValues" alt="" coords="192,5,371,46"/>
+<area shape="rect" id="node4" href="$classSerialCommunicator.html#a3db871a93c9dadc08262b9b47532adee" title="SerialCommunicator\l::requestDebugData" alt="" coords="212,70,351,111"/>
+<area shape="rect" id="node5" href="$classSerialCommunicator.html#ab6a01d0947b2107ba1e13488909390c6" title="SerialCommunicator\l::requestDebugLabel" alt="" coords="211,135,352,177"/>
+<area shape="rect" id="node8" href="$classSerialCommunicator.html#a082bda7ce1bbd503a9357bfae2fdd69e" title="SerialCommunicator\l::requestChangeHILSState" alt="" coords="193,201,369,242"/>
+<area shape="rect" id="node11" href="$classSerialCommunicator.html#ad08c7596741b73d47032a4d4ab4a8803" title="SerialCommunicator\l::requestHILSState" alt="" coords="212,266,351,307"/>
+<area shape="rect" id="node3" href="$classSerialCommunicator.html#ad9494ca6b53fe3bdf1239978ae7e9cd3" title="SerialCommunicator\l::requestConfirmedA2DValues" alt="" coords="438,5,634,46"/>
+<area shape="rect" id="node6" href="$classSerialCommunicator.html#ad8647c3f5d6d818476d7acb6d804179b" title="SerialCommunicator\l::requestDebugLabelsAll" alt="" coords="455,70,617,111"/>
+<area shape="rect" id="node7" href="$classSerialCommunicator.html#acf972a0cc0609d128653bf55efc09587" title="SerialCommunicator\l::requestConfirmedDebugLabel" alt="" coords="437,135,635,177"/>
+<area shape="rect" id="node9" href="$classSerialCommunicator.html#a892363a74da718d2d12c2ef1b95bc37d" title="SerialCommunicator\l::requestConfirmedChangeHILSState" alt="" coords="419,201,653,242"/>
+<area shape="rect" id="node10" href="$classSerialCommunicator.html#ab7fb519baca83d8b73a8c98c584ed0f6" title="SerialCommunicator\l::switchIntoHILSMode" alt="" coords="702,234,850,275"/>
+<area shape="rect" id="node12" href="$classSerialCommunicator.html#a5b419b9319d2115b2961d8ebb6390768" title="SerialCommunicator\l::requestConfirmedGetHILSState" alt="" coords="431,266,641,307"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="port_usb_functions::port_usb::GetConnectedDeviceInfos" name="port_usb_functions::port_usb::GetConnectedDeviceInfos">
+<area shape="rect" id="node2" href="$classport__usb__functions_1_1port__usb.html#a97734dff009ad553b538a796e3353862" title="port_usb_functions\l::port_usb::open_port" alt="" coords="265,13,410,54"/>
+<area shape="rect" id="node3" href="$classSerialCommunicator.html#ad575820dc78ef113d4b5c37ed237f785" title="SerialCommunicator\l::open_port" alt="" coords="459,13,597,54"/>
+</map>

@@ -7,6 +7,8 @@ typedef int bool;
 #define true 1
 #define false 0
 	
+#define HSE_VALUE ((uint32_t)8000000)
+	
 #if !defined  (HSE_VALUE)
 #define HSE_VALUE 8 000 000
 #endif

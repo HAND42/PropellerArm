@@ -153,7 +153,7 @@ void Uart2DmaInit()
 	ACCESS(DMA1_S5CR) |= 1;
 }
 
-void Uart2Init()
+void Uart2Init(void)
 {
 	Uart2GpioInit();
 

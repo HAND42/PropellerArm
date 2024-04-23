@@ -4,11 +4,14 @@
 #include "Gyro.h"
 #include "math.h"
 #include "stm32f411xe.h"
+#include "System_Config.h"
+#include "DisplayData.h"
+#include "Led.h"
 
 #define G 9.80665
 #define M_PI 3.14159265359
-#define Ko 10
-#define Ki 20
+#define Ko 20
+#define Ki 99
 
 extern float T;
 
@@ -20,14 +23,17 @@ extern float theta_acc;
 extern float pre_theta_acc;
 extern float pre_pre_theta_acc;
 
-extern float gyro_y_dot;
-extern float pre_gyro_y_dot;
-extern float pre_pre_gyroy__dot;
+extern float gyro_y;
+extern float pre_gyro_y;
+extern float pre_pre_gyroy;
 
 void GetAccelerometerValuesInMS2(float* accX, float* accY, float* accZ);
-float GetThetaAcc(void);
-float GetPhiAcc(void); 
+float GetThetaAcc_deg(void);
+float GetThetaAcc_rad(void);
+float GetPhiAcc_rad(void); 
+float GetPhiAcc_deg(void);
 float GetRollTurnRateGyro(void);
+float GetThetaGyro_rad(void);
 void Timer3InterruptInit(float sampling_period);
 void Timer3InterruptEnable(void);
 void Timer3InterruptDisable(void);
@@ -36,4 +42,3 @@ float TiltCompensatedThetaEstimation(void);
 void TiltCompensatedThetaEstimation2(void);
 float TiltCompensatedThetaEstimation3(void);
 float HomeMadeThetaEstimation(void);
-

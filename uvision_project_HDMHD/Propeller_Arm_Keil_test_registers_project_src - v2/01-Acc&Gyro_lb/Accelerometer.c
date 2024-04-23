@@ -24,13 +24,14 @@
  * THE SOFTWARE.
  */
 
-#include "RegisterAddresses.h"
-#include "Accelerometer.h"
-#include "DisplayData.h"
-
 // See page 21 of the LSM303DLHC datasheet for more info about these values
 #define ACCELEROMETER_READ  0x33
 #define ACCELEROMETER_WRITE 0x32
+
+#include "RegisterAddresses.h"
+#include "RegisterAddresses.h"
+#include "Accelerometer.h"
+#include "DisplayData.h"
 
 void I2CStartRestart()
 {
@@ -175,7 +176,7 @@ void AccelerometerInit()
 	
 	ACCESS(GPIOB_OTYPER) |= (1<<6) | (1<<9);  //  Bit8=1, Bit9=1  output open drain
 	
-	GPIOB->PUPDR |= (1<<12) | (1<<18);  // Bits (13:12)= 0:1 --> Pull up for PIN PB6; Bits (19:18)= 0:1 --> pull up for PIN PB9
+	ACCESS(GPIOB_PUPR) |= (1<<12) | (1<<18);  // Bits (13:12)= 0:1 --> Pull up for PIN PB6; Bits (19:18)= 0:1 --> pull up for PIN PB9
 
 	// See pages 21 and 22 of the ST UM1842 document.  It shows the LSM303DLHC uses I2C1.  Then, looking at
 	// page 149 of ST RM0383 shows I2C1 is alternate function 4.  Then looking at pages 160 and 161 shows

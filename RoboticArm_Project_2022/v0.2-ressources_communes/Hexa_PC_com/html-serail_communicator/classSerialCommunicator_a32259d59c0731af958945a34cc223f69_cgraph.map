@@ -1,0 +1,4 @@
+<map id="SerialCommunicator::makePacket" name="SerialCommunicator::makePacket">
+<area shape="rect" id="node2" href="$namespaceToolBox.html#a0d648beb65d99278f448fcf1d43c9e78" title="ToolBox::Encode64" alt="" coords="193,5,327,32"/>
+<area shape="rect" id="node3" href="$namespaceToolBox.html#a10e153078c33ad93f51e502cb9f7f05b" title="ToolBox::AddCRC" alt="" coords="197,56,323,83"/>
+</map>
