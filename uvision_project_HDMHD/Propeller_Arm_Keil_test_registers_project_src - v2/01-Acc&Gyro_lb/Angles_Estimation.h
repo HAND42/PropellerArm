@@ -39,6 +39,4 @@ void Timer3InterruptEnable(void);
 void Timer3InterruptDisable(void);
 void TIM3_IRQHandler( void );
 float TiltCompensatedThetaEstimation(void);
-void TiltCompensatedThetaEstimation2(void);
-float TiltCompensatedThetaEstimation3(void);
-float HomeMadeThetaEstimation(void);
+float TiltCompensatedThetaEstimation2(void);

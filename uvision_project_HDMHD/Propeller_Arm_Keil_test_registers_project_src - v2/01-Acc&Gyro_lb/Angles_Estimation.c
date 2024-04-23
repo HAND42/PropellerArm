@@ -116,10 +116,29 @@ float TiltCompensatedThetaEstimation(void){
    theta_acc = GetThetaAcc_rad();
    gyro_y = GetThetaGyro_rad();
 	
-	theta = Ko*pre_theta + T*gyro_y + T*Ko*(theta_acc - pre_theta_acc) ;
-	theta = theta / (Ko + T);
+	theta = pre_theta + T*(gyro_y - pre_gyro_y) + T*Ko*theta_acc;
+	theta = theta / (Ko*T + 1);
 	
 	pre_theta = theta;
+	pre_gyro_y = gyro_y;
+	pre_theta_acc = theta_acc;
+	
+	return theta;
+}
+
+float TiltCompensatedThetaEstimation2(void){
+	
+   theta_acc = GetThetaAcc_rad();
+   gyro_y = GetThetaGyro_rad();
+	
+	theta =   pre_theta* (2/T + Ko) -1/T*pre_pre_theta + 1/T*(gyro_y - 2*pre_gyro_y + pre_pre_gyro_y) + (Ko + Ki*T)*theta_acc - Ko*pre_theta_acc;
+	theta = theta / (1/T + Ko + Ki*T);
+	
+	pre_pre_theta = pre_theta;
+	pre_theta = theta;
+	
+	pre_pre_gyro_y = pre_gyro_y;
+	pre_gyro_y = gyro_y;
 	pre_theta_acc = theta_acc;
 	
 	return theta;
