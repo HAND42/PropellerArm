@@ -128,14 +128,6 @@ void DisplayIntegerValue(short value)
 	SendString(valueAsString);
 }
 
-void DisplayAxisValue(char* label, short accel, short gyro)
-{
-	SendString(label);
-	SendString(":");
-	DisplayFloatValue(accel); 
-	DisplayFloatValue(gyro); 
-}
-
 void DisplayAxisValues()
 {
 	

@@ -14,6 +14,10 @@ float gyro_y = 0;
 float pre_gyro_y = 0;
 float pre_pre_gyro_y = 0;
 
+float commande = 0;
+
+float theta_ref = 0;
+
 void Timer3InterruptInit(float sampling_period){
 	
 	// We will initialize the timer3 as an update interrupt
@@ -29,8 +33,8 @@ void Timer3InterruptInit(float sampling_period){
 	
 	// https://electroprojecthub.com/blog/stm32-timer-interrupts/   -> for more information on the configuration
 	
-	int arr = getSystemClockSpeed().apb1Frequency * sampling_period;
-	double timer_freq = getSystemClockSpeed().apb1Frequency / (arr+1);
+	int arr = getSystemClockSpeed(false).apb1timFrequency * sampling_period;
+	double timer_freq = getSystemClockSpeed(false).apb1timFrequency / (arr+1);
 	PrintConsole(INFO, "\r\n Freq interrupt timer: %lf",timer_freq);
 	double timer_Ts = 1/timer_freq;
 	PrintConsole(INFO, "\r\n Sampling time: %lf",timer_Ts);
@@ -72,7 +76,7 @@ void Timer3InterruptInit(float sampling_period){
 	IRQn_Type IRQn = TIM3_IRQn;	
 	uint32_t prioritygroup = 0x00U;
 	uint32_t PreemptPriority = 1;
-	uint32_t SubPriority = 0;
+	uint32_t SubPriority = 1;
 	prioritygroup = NVIC_GetPriorityGrouping();
 	NVIC_SetPriority(IRQn, NVIC_EncodePriority(prioritygroup, PreemptPriority, SubPriority));
 
@@ -100,13 +104,21 @@ void Timer3InterruptDisable(void){
 void TIM3_IRQHandler( void ){
 	if ( TIM3->SR & TIM_SR_UIF )
 	{
-		TIM3->SR &= ~TIM_SR_UIF;
+		
 
 		Led_Trigger(BLUE, 0);
 		DisplayAxisValues();
-		//PrintConsole(INFO, "\r\nTheta: %lf",theta); //this is the theta estimation
 		//---> Compute the reference theta_ref
+		theta_ref = 0;
+		
 		TiltCompensatedThetaEstimation();
+		PrintConsole(INFO, "\r\nTheta: %lf",theta); //this is the theta estimation
+//		commande = K2 * (K1 * (theta_ref - theta) - biais - gy);
+//		
+//		PWMg = PWMmoy - coeff_a * J / 2.0 / d * commande;
+//	   PWMd = PWMmoy + coeff_a * J / 2.0 / d * commande;
+		
+		TIM3->SR &= ~TIM_SR_UIF;
 		
 	}
 }

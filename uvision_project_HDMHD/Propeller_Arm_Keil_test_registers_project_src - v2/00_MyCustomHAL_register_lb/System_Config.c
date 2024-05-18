@@ -21,11 +21,30 @@
   * @retval None
   */
   
+/*	Priority Grouping-----------------------------------------------*/
+/**
+
+The priority grouping determines how the 4 bits are split between preemption priority and subpriority. The encoding of priority levels is controlled by the PriorityGroup parameter. Here is a breakdown of how these bits are allocated:
+
+	* Group 0 (NVIC_PRIORITYGROUP_0): 0 bits for preemption priority, 4 bits for subpriority
+	* Group 1 (NVIC_PRIORITYGROUP_1): 1 bit for preemption priority, 3 bits for subpriority
+	* Group 2 (NVIC_PRIORITYGROUP_2): 2 bits for preemption priority, 2 bits for subpriority
+	* Group 3 (NVIC_PRIORITYGROUP_3): 3 bits for preemption priority, 1 bit for subpriority
+	* Group 4 (NVIC_PRIORITYGROUP_4): 4 bits for preemption priority, 0 bits for subpriority
+
+*/
+
+#define PRIORITY_OSCILLATION_TIMER 2
+#define PRIORITY_BUTTON_INTERRUPTION 3
+
 
   
-bool power_on=0;
-int count=0;
-  
+int power_on=0;
+int count=0; //to remove
+
+bool button_pressed = 0;
+
+float oscillation_button_time = 0.5;
   
 void SysClockConfig(void){
 	
@@ -70,6 +89,8 @@ void SysClockConfig(void){
 	
 }
 
+
+
 void Sys_PowerMode_Config(void){
 	
 	/*************>>>>>>> STEPS FOLLOWED <<<<<<<<************
@@ -107,13 +128,32 @@ void Sys_PowerMode_Config(void){
 	
 	EXTI->FTSR &= ~(1<<1);  // Enable Falling Edge Trigger for PA1
 	
-	NVIC_SetPriority (EXTI1_IRQn, 0);  // Set Priority
+	/* Set interrupt priority */
+	IRQn_Type IRQn = EXTI1_IRQn;	
+	uint32_t prioritygroup = 0x00U;
+	uint32_t PreemptPriority = 1;
+	uint32_t SubPriority = PRIORITY_BUTTON_INTERRUPTION;
+	prioritygroup = NVIC_GetPriorityGrouping();
+	NVIC_SetPriority(IRQn, NVIC_EncodePriority(prioritygroup, PreemptPriority, SubPriority));
 	
 	NVIC_EnableIRQ (EXTI1_IRQn);  // Enable Interrupt
 }
 
-void EXTI1_IRQHandler(void)
-{
+void TIM2_IRQHandler(void){
+	
+	if (button_pressed){
+		power_on = !power_on;
+		button_pressed = 0;
+	}
+	
+   //PrintConsole(INFO, "\r\n System Mode: %s",power_on?"ON":"OFF");
+
+	
+    // Don't forget to clear the interrupt flag
+    TIM2->SR &= ~TIM_SR_UIF;
+}
+
+void EXTI1_IRQHandler(void){
 	/*************>>>>>>> STEPS FOLLOWED <<<<<<<<************
 	
 	1. Check the Pin, which trgerred the Interrupt
@@ -123,15 +163,14 @@ void EXTI1_IRQHandler(void)
 	
 	if (EXTI->PR & (1<<1))    // If the PA1 triggered the interrupt
 	{
-		if (count==0){
-		power_on = !power_on;
-		count=3;
-		}
+		
+		button_pressed = 1;
+		
 		EXTI->PR |= (1<<1);  // Clear the interrupt flag by writing a 1 
 	}
 }
 
-ClockConfig getSystemClockSpeed(void) {
+ClockConfig getSystemClockSpeed(bool show) {
 	
 	//The function is not entirely correct, some problem with the prescaler apb1
 	
@@ -146,8 +185,7 @@ ClockConfig getSystemClockSpeed(void) {
 
     // Read the APB1 and APB2 clock configuration
     uint32_t ahbPrescaler = ((RCC->CFGR & RCC_CFGR_HPRE) >> 4) + 1;
-    int PPRE1 = ((RCC->CFGR & RCC_CFGR_PPRE1) >> 10) + 1;
-	 uint32_t apb1Prescaler = convertPPRE(PPRE1);
+	 uint32_t apb1Prescaler = convertPPRE((RCC->CFGR & RCC_CFGR_PPRE1) >> 10);
 	 uint32_t apb2Prescaler = ((RCC->CFGR & RCC_CFGR_PPRE2) >> 13) + 1;
 
     // Read the RCC clock configuration registers to determine the system clock speed
@@ -191,29 +229,116 @@ ClockConfig getSystemClockSpeed(void) {
 
     config.systemFrequency = systemClockSpeed;
     config.apb1Frequency = systemClockSpeed / apb1Prescaler;
+	 config.apb1timFrequency = config.apb1Frequency * 2;
     config.apb2Frequency = systemClockSpeed / apb2Prescaler;
 
     // Print the clock configurations
-	 SendString("\r");
-	 PrintConsole(WARNING, "The system Clock is configured as follow :\n\r");
-	 
-    PrintConsole(WARNING, "HSE Frequency: %lu Hz\n\r", 		config.hseFrequency);
-	 PrintConsole(WARNING, "APB1 Prescaler: %lu \n\r", 		apb1Prescaler);
-    PrintConsole(WARNING, "APB2 Prescaler: %lu \n\r",		apb2Prescaler);
-    PrintConsole(WARNING, "APB1 Frequency: %lu Hz\n\r", 		config.apb1Frequency);
-    PrintConsole(WARNING, "APB2 Frequency: %lu Hz\n\r", 		config.apb2Frequency);
-    PrintConsole(WARNING, "System Frequency: %lu Hz\n\r", 	config.systemFrequency);
-    PrintConsole(WARNING, "PLLM: %lu\n\r", 						config.pllm);
-    PrintConsole(WARNING, "PLLN: %lu\n\r", 						config.plln);
-    PrintConsole(WARNING, "PLLP: %lu\n\r", 						config.pllp);
-	 
+	 if (show){
+		 SendString("\r");
+		 PrintConsole(WARNING, "The system Clock is configured as follow :\n\r");
+		 
+		 PrintConsole(WARNING, "HSE Frequency: %lu Hz\n\r", 				config.hseFrequency);
+		 PrintConsole(WARNING, "APB1 Prescaler: %lu \n\r", 				apb1Prescaler);
+		 PrintConsole(WARNING, "APB2 Prescaler: %lu \n\r",					apb2Prescaler);
+		 PrintConsole(WARNING, "APB1 Frequency: %lu Hz\n\r", 				config.apb1Frequency);
+		 PrintConsole(WARNING, "APB1 	Timer Frequency: %lu Hz\n\r",		config.apb1timFrequency);
+		 PrintConsole(WARNING, "APB2 Frequency: %lu Hz\n\r", 				config.apb2Frequency);
+		 PrintConsole(WARNING, "System Frequency: %lu Hz\n\r", 			config.systemFrequency);
+		 PrintConsole(WARNING, "PLLM: %lu\n\r", 								config.pllm);
+		 PrintConsole(WARNING, "PLLN: %lu\n\r", 								config.plln);
+		 PrintConsole(WARNING, "PLLP: %lu\n\r", 								config.pllp);
+	 }
 	 
 	 return config;
  }
 
+
+ void Timer2InterruptEnable(void){
+	
+	//11. Enable the timer
+   TIM2->CR1 |= TIM_CR1_CEN;
+		
+}
+
+void Timer2InterruptDisable(void){
+    // Clear the timer's interrupt enable bit
+    TIM2->CR1 &= ~TIM_CR1_CEN;
+}
+ 
+void Timer2InterruptInit(float oscillation_button_time){
+	
+	/**
+	*	The role of this timer interrupt is to prevent the hardware oscillation of the button
+	*	To influence his state and get a stable On/Off push-button
+	
+	
+	* The update event happens when:
+
+		Overflow or underflow regarding the repetition counter value and if UDIS is 0 (update event not disabled) in the TIMx_CR1.
+		CNT is reinitialized by software using the UG bit in the TIMx_EGR if URS and UDIS are 0 in the TIMx_CR1.
+	
+	**/
+	
+	// https://electroprojecthub.com/blog/stm32-timer-interrupts/   -> for more information on the configuration
+	
+	int arr = getSystemClockSpeed(false).apb1timFrequency * oscillation_button_time;
+	double timer_freq = getSystemClockSpeed(false).apb1timFrequency / (arr+1);
+	PrintConsole(INFO, "\r\n Freq interrupt timer for push-button osci removal: %lf",timer_freq);
+	double timer_Ts = 1/timer_freq;
+	PrintConsole(INFO, "\r\n Expected time of oscillation: %lf",timer_Ts);
+	
+
+	//! 1. Enable the timer clock source
+	RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
+
+	//! 2. Set the prescaler
+	TIM2->PSC = 0;
+
+	//! 3. Set the auto reload
+	TIM2->ARR = arr - 1;
+
+	//! 4. Set the counter mode
+	TIM2->CR1 &= ~TIM_CR1_DIR; // Configure as upcounter (clear the DIR bit)
+	
+	// 5. Set the Update request source 
+	TIM2->CR1 |= TIM_CR1_URS;    // Only counter overflow/underflow generates an update interrupt and not manually 
+	//(prevent user to change the sampling period)
+	
+	// 6. Enable auto-reload preload
+   TIM2->CR1 |= TIM_CR1_ARPE;  // ARR register buffered, changes made to the ARR register take effect only at the next update event
+
+ 	// 7. Transfer the content of the preload registers to buffers
+	/** 
+	*	 Generating an update event ensures that the buffered values of the prescaler and auto-reload register 
+	*   are updated and synchronized with the hardware registers used by the timer
+	**/
+	TIM2->EGR |= TIM_EGR_UG;
+	
+	// 8. Enable the update interrupt
+	TIM2->DIER |= TIM_DIER_UIE;
+	TIM2->SR &= ~TIM_SR_UIF;    // Clear the interrupt  -> good practice but not mandatory
+	
+	
+	//9. Configure the NVIC to run a callback function when interrupt occur
+	/* Set interrupt priority */
+	IRQn_Type IRQn = TIM2_IRQn;	
+	uint32_t prioritygroup = 0x00U;
+	uint32_t PreemptPriority = 1;
+	uint32_t SubPriority = PRIORITY_OSCILLATION_TIMER;
+	prioritygroup = NVIC_GetPriorityGrouping();
+	NVIC_SetPriority(IRQn, NVIC_EncodePriority(prioritygroup, PreemptPriority, SubPriority));
+
+	//10. Enable interrupt
+	NVIC_EnableIRQ(IRQn);
+
+	//! Optional: Stops the timer when debug is halted
+	DBGMCU->APB1FZ |= DBGMCU_APB1_FZ_DBG_TIM2_STOP;
+		
+}
+
  int convertPPRE(int ppre_bits) {
     switch (ppre_bits) {
-        case 0:
+        case 0b000:
             return 1; // HCLK not divided
         case 0b100:
             return 2; // HCLK divided by 2

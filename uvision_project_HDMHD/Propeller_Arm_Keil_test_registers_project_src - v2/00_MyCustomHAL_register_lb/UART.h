@@ -31,7 +31,7 @@
 
 #pragma once
 
-void Uart1Init(void);
+void Uart6Init(void);
 void Uart2Init(void);
 void SendString(char* string);
 void QTSendFloat(char* value);

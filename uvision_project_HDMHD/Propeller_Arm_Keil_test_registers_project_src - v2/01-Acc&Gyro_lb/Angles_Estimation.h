@@ -13,6 +13,12 @@
 #define Ko 20
 #define Ki 99
 
+#define K1 4
+#define K2 128
+
+#define coeff_a 0.49
+#define coeff_b 1.23
+
 extern float T;
 
 extern float previous_theta;

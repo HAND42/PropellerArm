@@ -9,3 +9,4 @@ void ESC_Calibration(void);
 
 void o_Motor_Initialization_o(void);
 void MotorPWM_Set(int g, int d);
+void TestingThrustMotor(void);

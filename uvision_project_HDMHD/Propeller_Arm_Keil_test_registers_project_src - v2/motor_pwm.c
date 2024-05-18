@@ -1,5 +1,6 @@
 #include "motor_pwm.h"
 #include "Delay.h"
+#include "DisplayData.h"
 
 
 void o_Motor_Initialization_o(void){
@@ -103,4 +104,22 @@ void MotorPWM_Set(int g, int d){
 	TIM4->CCR1 = saturate(g,100, 200);
 	TIM4->CCR2 = saturate(d,100, 200);
 	
-} 
+}
+
+void TestingThrustMotor(void){
+	
+	PrintConsole(DEFAULT,"\r\nTesting...");
+	for (int j=10; j>0; j--){
+		PrintConsole(DEFAULT,"\r\n Start in %d s", j);
+		delay_ms(1000);
+	}
+	int count = 1;
+	
+	for (int i=100; i<200; i++){
+		PrintConsole(DEFAULT,"\r\n %d - PWM Throttle : %d us", count, i*10);
+		MotorPWM_Set(i,i);
+		delay_ms(3000);
+		count++;
+	}
+
+}

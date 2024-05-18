@@ -14,7 +14,7 @@
 #include "RegisterAddresses.h"
 #include <stdio.h>
 
-/* General information
+/* General information pinout mapping...
 
 The system Clock is configured as follow :
   *            System Clock source            = PLL (HSE)
@@ -66,34 +66,33 @@ SLAVE_ADDRESS_LCD 0x4E
 int main (void)
 {
 	
-	SysClockConfig (); 		 // Configuration of the clock frequency -> set to the maximum frequency 100MHz
+	SysClockConfig (); 		 // Configuration of the clock frequency -> set Maximum Frequency 100MHz
 	Uart2Init();
-	//Uart1Init();   			 // Try to implement the usart1 in order to send QTdata and receive commands only for/by the QT interface
+	Uart6Init();   			 // Try to implement the usart1 in order to send QTdata and receive commands only for/by the QT interface
 	TIM5Config ();           // Configuration of the Timer for generating delays
-	GPIO_Config ();		 // PowerMode light indicator / Initilization LED 
+	GPIO_Config ();		    // PowerMode light indicator / Initilization LED 
 	Sys_PowerMode_Config();	 // Configuration of the power mode (Red for power off and Blue for power on)
+	
+	Timer2InterruptInit(oscillation_button_time); // Expected button oscillation 20ms
+	Timer2InterruptEnable();
+	
 	Testing_Toggle_4Led();	 // Testing the 4 LED Yellow Orange Red & Blue
 	
-	Timer3InterruptInit(T);   // Initialization of the Interrupt Tim3 for the PID controller sampling period (Ts=0.02s) config
-	
+	Timer3InterruptInit(T);  // Initialization of the Interrupt Tim3 for the PID controller sampling period (Ts=0.02s) config
 	
 	GyroInit(); 				 // Initialization of the Gyroscope
 	AccelerometerInit();		 // Initialization of the Accelerometer
 	
+	//Timer3InterruptEnable();
 	
-	Timer3InterruptInit(T);
-	Timer3InterruptEnable();
-	
-	o_Motor_Initialization_o();
-	o_Potentiometer_Initialization_o();
-	
-	
-	GyroInit();
-	AccelerometerInit();
+	o_Motor_Initialization_o();              // Timer, Pwm, gpio and ESC calibration
+	//o_Potentiometer_Initialization_o();      // ADC Init
+	//TestingThrustMotor();
 	
 	//lcd_init ();
 	
 	PrintConsole(DEFAULT,"\x0C");
+	PrintConsole(DEFAULT,"\033c");
 	
 	//Initialize the LCD, if it does print the Init done Press start we have to reset the mcu.
 //	lcd_clear();
@@ -105,7 +104,7 @@ int main (void)
 	
 	
 	/*Show my clock speed configuration on Putty*/
-	getSystemClockSpeed();
+	getSystemClockSpeed(true);
 
 	while(1)
 	{
