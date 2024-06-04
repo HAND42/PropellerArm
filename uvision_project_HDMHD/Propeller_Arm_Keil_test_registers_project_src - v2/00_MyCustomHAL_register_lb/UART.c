@@ -373,7 +373,10 @@ void Uart6Init()
 	
 	
 	//Baud Rate = 115,200
-	ACCESS(USART6_BRR) = (4<<0) | (54<<4);
+	//ACCESS(USART6_BRR) = (4<<0) | (54<<4);
+	
+	//Baud Rate = 9,600
+	ACCESS(USART6_BRR) = (7<<0) | (651<<4);
 
 	// Enable USART6 for transmitting data.
 	ACCESS(USART6_CR1) |= ((1 << 3) | (1 << 13));
@@ -387,7 +390,7 @@ void Uart6Init()
 }
 
 
-void QTSendFloat(char* value)
+void QTSendFloat(char* values)
 {
     // Convert the float to a string using a format that suits your needs
     //char floatString[20]; // Adjust the array size as needed
@@ -399,9 +402,9 @@ void QTSendFloat(char* value)
 
     // Copy the string into the DMA buffer and also calculate its length.
     int lengthOfString = 0;
-    while (lengthOfString < MAX_BUFFER_SIZE && value[lengthOfString])
+    while (lengthOfString < MAX_BUFFER_SIZE && values[lengthOfString])
     {
-        dmaBuffer6[lengthOfString] = value[lengthOfString];
+        dmaBuffer6[lengthOfString] = values[lengthOfString];
         ++lengthOfString;
     }
 

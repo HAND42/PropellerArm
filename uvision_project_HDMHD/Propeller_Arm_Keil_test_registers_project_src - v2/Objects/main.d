@@ -15,5 +15,5 @@
   00_MyCustomHAL_register_lb\DisplayData.h \
   00_MyCustomHAL_register_lb\StringUtilities.h \
   00_MyCustomHAL_register_lb\UART.h 04_LCD1602_I2C_NOHAL\i2c-lcd.h \
-  motor_pwm.h Potentiometer.h \
+  01-Acc&Gyro_lb\motor_pwm.h Potentiometer.h \
   00_MyCustomHAL_register_lb\RegisterAddresses.h

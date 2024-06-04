@@ -108,7 +108,7 @@ void MotorPWM_Set(int g, int d){
 
 void TestingThrustMotor(void){
 	
-	PrintConsole(DEFAULT,"\r\nTesting...");
+	PrintConsole(DEFAULT,"\r\n Thrust Motor Test...");
 	for (int j=10; j>0; j--){
 		PrintConsole(DEFAULT,"\r\n Start in %d s", j);
 		delay_ms(1000);
@@ -122,4 +122,24 @@ void TestingThrustMotor(void){
 		count++;
 	}
 
+}
+
+void TestingStepInputResponse(void){
+	
+	PrintConsole(DEFAULT,"\r\nMotor set at 15pc power");
+	MotorPWM_Set(115,115);
+	
+	PrintConsole(DEFAULT,"\r\nStep Input Response Test...");
+	for (int j=10; j>0; j--){
+		PrintConsole(DEFAULT,"\r\n Start in %d s", j);
+		delay_ms(1000);
+	}
+	
+	MotorPWM_Set(150,150);
+	PrintConsole(DEFAULT,"\r\nMotor set at 50pc power");
+	
+	delay_ms(10000);
+	PrintConsole(DEFAULT,"\r\nTest finished");
+	MotorPWM_Set(0,0);
+	while(1);
 }

@@ -19,8 +19,7 @@ typedef int bool;
 #endif
 
 extern int power_on;
-extern int count;
-extern float oscillation_button_time;
+extern float debouncing_check_button_time;
 
 typedef struct {
     uint32_t hseFrequency; // HSE clock frequency (in Hz)

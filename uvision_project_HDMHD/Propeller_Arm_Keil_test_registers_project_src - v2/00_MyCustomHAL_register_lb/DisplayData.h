@@ -15,6 +15,7 @@ typedef enum {
 } SeverityLevel;
 
 void PrintConsole(SeverityLevel severity, const char *format, ...);
+void SendValuesToQT(float theta, float phy, float psi);
 void DisplayAxisValues(void);
 void DisplayFloatValue(float value);
 void DisplayIntegerValue(short value);

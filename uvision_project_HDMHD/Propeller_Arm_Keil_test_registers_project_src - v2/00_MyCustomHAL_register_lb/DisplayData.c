@@ -42,23 +42,19 @@ void FormatString(char *buffer, size_t bufferSize, const char *format, va_list a
 void ApplyLevel(char *formattedString, SeverityLevel severity, char *outputBuffer, size_t outputBufferSize) {
     switch (severity) {
 		 case DEFAULT:
-            snprintf(outputBuffer, outputBufferSize, "%s", formattedString);
+            snprintf(outputBuffer, outputBufferSize, "%s\n\r", formattedString);
             break;
         case INFO:
-            snprintf(outputBuffer, outputBufferSize, "\033[32m%s\033[0m\n", formattedString); // Green text for INFO
+            snprintf(outputBuffer, outputBufferSize, "\033[32m%s\033[0m\n\r", formattedString); // Green text for INFO
             break;
         case WARNING:
-            snprintf(outputBuffer, outputBufferSize, "\033[33m%s\033[0m\n", formattedString); // Yellow text for WARNING
+            snprintf(outputBuffer, outputBufferSize, "\033[33m%s\033[0m\n\r", formattedString); // Yellow text for WARNING
             break;
         case ERROR:
-            snprintf(outputBuffer, outputBufferSize, "\033[31m%s\033[0m\n", formattedString); // Red text for ERROR
+            snprintf(outputBuffer, outputBufferSize, "\033[31m%s\033[0m\n\r", formattedString); // Red text for ERROR
             break;
-		  case QT:
-			   snprintf(outputBuffer, outputBufferSize, "QT%s", formattedString); // QT value
-				break;
-
         default:
-            snprintf(outputBuffer, outputBufferSize, "%s\n", formattedString); // Default format
+            snprintf(outputBuffer, outputBufferSize, "%s\n\r", formattedString); // Default format
             break;
     }
 }
@@ -83,6 +79,11 @@ void PrintConsole(SeverityLevel severity, const char *format, ...) {
     SendString(coloredBuffer);
 }
 
+void SendValuesToQT(float theta_acc_deg, float theta_estimation, float psi) {
+    char values[50];
+    sprintf(values, "%.4f;%.4f;%.4f\n", theta_acc_deg, theta_estimation, psi);
+    QTSendFloat(values);
+}
 
 void DisplayFloatValue(float value)
 {

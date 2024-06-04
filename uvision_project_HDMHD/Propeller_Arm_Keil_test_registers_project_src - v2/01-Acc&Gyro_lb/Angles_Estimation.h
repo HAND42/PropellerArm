@@ -12,6 +12,7 @@
 #define M_PI 3.14159265359
 #define Ko 20
 #define Ki 99
+#define PWMmoy 150
 
 #define K1 4
 #define K2 128
@@ -24,8 +25,10 @@ extern float T;
 extern float previous_theta;
 extern float pre_pre_theta;
 extern float theta;
+extern float theta_deg;
 
 extern float theta_acc;
+extern float theta_acc_deg;
 extern float pre_theta_acc;
 extern float pre_pre_theta_acc;
 

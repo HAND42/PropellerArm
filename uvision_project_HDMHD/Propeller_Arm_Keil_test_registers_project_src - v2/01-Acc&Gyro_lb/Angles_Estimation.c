@@ -1,12 +1,14 @@
 #include "Angles_Estimation.h"
+#include "motor_pwm.h"
 
-
-float T = 0.08;  // The time taken to acquire accelerometer data is approximately 0.02977 seconds.
+float T = 0.8;  // The time taken to acquire accelerometer data is approximately 0.02977 seconds.
 float pre_theta = 0;
 float pre_pre_theta = 0;
 float theta = 0;
+float theta_deg = 0;
 
 float theta_acc = 0;
+float theta_acc_deg = 0;
 float pre_theta_acc = 0;
 float pre_pre_theta_acc = 0;
 
@@ -33,11 +35,12 @@ void Timer3InterruptInit(float sampling_period){
 	
 	// https://electroprojecthub.com/blog/stm32-timer-interrupts/   -> for more information on the configuration
 	
-	int arr = getSystemClockSpeed(false).apb1timFrequency * sampling_period;
-	double timer_freq = getSystemClockSpeed(false).apb1timFrequency / (arr+1);
-	PrintConsole(INFO, "\r\n Freq interrupt timer: %lf",timer_freq);
-	double timer_Ts = 1/timer_freq;
-	PrintConsole(INFO, "\r\n Sampling time: %lf",timer_Ts);
+	float tim_frq = getSystemClockSpeed(false).apb1timFrequency;
+	int arr = tim_frq * sampling_period;
+	double interrupt_freq = tim_frq / (arr+1);
+	PrintConsole(INFO, "\r\n Freq interrupt timer %lf Hz based on the clk_tim_frq %lf Hz",interrupt_freq,tim_frq);
+	double timer_Ts = 1/interrupt_freq;
+	PrintConsole(INFO, "\r\n Sampling time: %lf s",timer_Ts);
 	
 
 	//! 1. Enable the timer clock source
@@ -75,8 +78,8 @@ void Timer3InterruptInit(float sampling_period){
 	/* Set interrupt priority */
 	IRQn_Type IRQn = TIM3_IRQn;	
 	uint32_t prioritygroup = 0x00U;
-	uint32_t PreemptPriority = 1;
-	uint32_t SubPriority = 1;
+	uint32_t PreemptPriority = 3;
+	uint32_t SubPriority = 2;
 	prioritygroup = NVIC_GetPriorityGrouping();
 	NVIC_SetPriority(IRQn, NVIC_EncodePriority(prioritygroup, PreemptPriority, SubPriority));
 
@@ -102,34 +105,34 @@ void Timer3InterruptDisable(void){
 
 
 void TIM3_IRQHandler( void ){
-	if ( TIM3->SR & TIM_SR_UIF )
-	{
-		
 
-		Led_Trigger(BLUE, 0);
-		DisplayAxisValues();
-		//---> Compute the reference theta_ref
-		theta_ref = 0;
-		
-		TiltCompensatedThetaEstimation();
-		PrintConsole(INFO, "\r\nTheta: %lf",theta); //this is the theta estimation
-//		commande = K2 * (K1 * (theta_ref - theta) - biais - gy);
-//		
-//		PWMg = PWMmoy - coeff_a * J / 2.0 / d * commande;
-//	   PWMd = PWMmoy + coeff_a * J / 2.0 / d * commande;
-		
-		TIM3->SR &= ~TIM_SR_UIF;
-		
-	}
+	//Led_Trigger(BLUE, 0);
+	//DisplayAxisValues();
+	//---> Compute the reference theta_ref			
+	//theta_ref = 0;
+			
+	
+	PrintConsole(INFO, "\r\nTheta: %lf rad",theta); //this is the theta estimation
+	//		commande = K2 * (K1 * (theta_ref - theta) - biais - gy);
+	//		commande = K2 * (K1 * (theta_ref - theta) - GetRollTurnRateGyro());
+	//		MotorPWM_Set(PWMmoy -  commande, PWMmoy +  commande);
+	//		PrintConsole(INFO, "\r\nPWMg: %lf and PWMd: %lf",PWMmoy -  commande, PWMmoy + commande);
+	//		
+	TiltCompensatedThetaEstimation2();
+	TIM3->SR &= ~TIM_SR_UIF;
+
+
 }
 
 float TiltCompensatedThetaEstimation(void){
 	
    theta_acc = GetThetaAcc_rad();
+	theta_acc_deg = GetThetaAcc_deg();
    gyro_y = GetThetaGyro_rad();
 	
 	theta = pre_theta + T*(gyro_y - pre_gyro_y) + T*Ko*theta_acc;
 	theta = theta / (Ko*T + 1);
+	theta_deg = theta*180/M_PI;
 	
 	pre_theta = theta;
 	pre_gyro_y = gyro_y;

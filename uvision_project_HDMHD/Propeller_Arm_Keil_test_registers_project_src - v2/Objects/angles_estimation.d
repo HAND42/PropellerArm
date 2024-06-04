@@ -15,4 +15,4 @@
   00_MyCustomHAL_register_lb\DisplayData.h \
   00_MyCustomHAL_register_lb\StringUtilities.h \
   00_MyCustomHAL_register_lb\UART.h 00_MyCustomHAL_register_lb\Led.h \
-  00_MyCustomHAL_register_lb\Delay.h
+  00_MyCustomHAL_register_lb\Delay.h 01-Acc&Gyro_lb\motor_pwm.h

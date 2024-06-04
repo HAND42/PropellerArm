@@ -32,7 +32,11 @@ The system Clock is configured as follow :
  UART2 communication :
 	// USART2 TX --> PA2 // Write
 	// USART2 RX --> PA3 // Read
-
+	
+ USART6 communication :
+	// USART6 TX --> PC6 // Write
+	// USART6 RX --> PC7 // Read
+	
 the gyrometer L3GD20 pins are connected to the STM32F411:
 //    CS  --> PE3   // Chip Select
 //    SPC --> PA5   // Clock
@@ -68,26 +72,31 @@ int main (void)
 	
 	SysClockConfig (); 		 // Configuration of the clock frequency -> set Maximum Frequency 100MHz
 	Uart2Init();
-	Uart6Init();   			 // Try to implement the usart1 in order to send QTdata and receive commands only for/by the QT interface
+	Uart6Init();   			 // Implemented the usart6 in order to send QTdata and receive commands only for/by the QT interface
 	TIM5Config ();           // Configuration of the Timer for generating delays
 	GPIO_Config ();		    // PowerMode light indicator / Initilization LED 
 	Sys_PowerMode_Config();	 // Configuration of the power mode (Red for power off and Blue for power on)
 	
-	Timer2InterruptInit(oscillation_button_time); // Expected button oscillation 20ms
-	Timer2InterruptEnable();
-	
 	Testing_Toggle_4Led();	 // Testing the 4 LED Yellow Orange Red & Blue
-	
-	Timer3InterruptInit(T);  // Initialization of the Interrupt Tim3 for the PID controller sampling period (Ts=0.02s) config
 	
 	GyroInit(); 				 // Initialization of the Gyroscope
 	AccelerometerInit();		 // Initialization of the Accelerometer
-	
-	//Timer3InterruptEnable();
+		
 	
 	o_Motor_Initialization_o();              // Timer, Pwm, gpio and ESC calibration
-	//o_Potentiometer_Initialization_o();      // ADC Init
+	o_Potentiometer_Initialization_o();      // ADC Init
+	
+	
+	Timer3InterruptInit(T);  // Initialization of the Interrupt Tim3 for the PID controller sampling period (Ts=0.02s) config
+	//Timer3InterruptEnable();
+	
+	Timer2InterruptInit(debouncing_check_button_time); // Debouncing check time to prevent expected button oscillation 
+	Timer2InterruptEnable();
+	
+	
+	//delay_ms(20000); //Wait until the installation is ready
 	//TestingThrustMotor();
+	//TestingStepInputResponse();
 	
 	//lcd_init ();
 	
@@ -108,14 +117,12 @@ int main (void)
 
 	while(1)
 	{
-		power_on = 1;
+		//power_on = 1;
 		//Avoid with the counter the oscillations frequencies followed by the press of the button
-		if (count>0){
-			count--;
-		}
 		if (power_on){
 			Power_On();
-			//MotorPWM_Set(150, 150);
+			//SendValuesToQT(GetThetaAcc_deg(),0,3.245593);
+			//delay_ms(1000);
 			/*Displays the values of the accelerometer and gyrometer data*/
 			//DisplayAxisValues();
 			

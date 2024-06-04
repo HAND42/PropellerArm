@@ -502,7 +502,12 @@
             <File>
               <FileName>motor_pwm.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\motor_pwm.c</FilePath>
+              <FilePath>.\01-Acc&amp;Gyro_lb\motor_pwm.c</FilePath>
+            </File>
+            <File>
+              <FileName>motor_pwm.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\01-Acc&amp;Gyro_lb\motor_pwm.h</FilePath>
             </File>
           </Files>
         </Group>

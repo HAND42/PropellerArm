@@ -35,16 +35,13 @@ The priority grouping determines how the 4 bits are split between preemption pri
 */
 
 #define PRIORITY_OSCILLATION_TIMER 2
-#define PRIORITY_BUTTON_INTERRUPTION 3
 
-
+volatile uint8_t sampling_byte = 0xFF;  
+volatile uint8_t button_state = 1;
   
 int power_on=0;
-int count=0; //to remove
 
-bool button_pressed = 0;
-
-float oscillation_button_time = 0.5;
+float debouncing_check_button_time = 0.01;
   
 void SysClockConfig(void){
 	
@@ -97,77 +94,35 @@ void Sys_PowerMode_Config(void){
 	
 	1. Enable GPIO Clock
 	2. Set the required Pin in the INPUT Mode
-	3. Configure the PULL UP/ PULL DOWN According to your requirement
+	3. Configure the PULL UP/ PULL DOWN According to our requirement
 	
 	********************************************************/
 	
+	// 1. Enable GPIO Clock
 	RCC->AHB1ENR |=  (1<<0);  // Enable GPIOA clock
 	
-	GPIOA->MODER &= ~(3<<2);  // Bits (3:2) = 0:0  --> PA1 in Input Mode
+	// 2. Set the required Pin in the INPUT Mode
+	GPIOA->MODER &= ~(3<<0);  // Bits (1:0) = 0:0  --> PA0 in Input Mode
 	
-	GPIOA->PUPDR |=  (1<<2);  // Bits (3:2) = 1:0  --> PA1 is in Pull up mode
-	
-		/*************>>>>>>> STEPS FOLLOWED <<<<<<<<************
-	
-	1. Enable the SYSCNFG bit in RCC register 
-	2. Configure the EXTI configuration Regiter in the SYSCNFG
-	3. Enable the EXTI using Interrupt Mask Register (IMR)
-	4. Configure the Rising Edge / Falling Edge Trigger
-	5. Set the Interrupt Priority
-	6. Enable the interrupt
-	
-	********************************************************/
-	
-	RCC->APB2ENR |= (1<<14);  // Enable SYSCNFG
-	
-	SYSCFG->EXTICR[0] &= ~(0xf<<4);  // Bits[7:6:5:4] = (0:0:0:0)  -> configure EXTI1 line for PA1
-	
-	EXTI->IMR |= (1<<1);  // Bit[1] = 1  --> Disable the Mask on EXTI 1
-	
-	EXTI->RTSR |= (1<<1);  // Disable Rising Edge Trigger for PA1
-	
-	EXTI->FTSR &= ~(1<<1);  // Enable Falling Edge Trigger for PA1
-	
-	/* Set interrupt priority */
-	IRQn_Type IRQn = EXTI1_IRQn;	
-	uint32_t prioritygroup = 0x00U;
-	uint32_t PreemptPriority = 1;
-	uint32_t SubPriority = PRIORITY_BUTTON_INTERRUPTION;
-	prioritygroup = NVIC_GetPriorityGrouping();
-	NVIC_SetPriority(IRQn, NVIC_EncodePriority(prioritygroup, PreemptPriority, SubPriority));
-	
-	NVIC_EnableIRQ (EXTI1_IRQn);  // Enable Interrupt
+	// 3. Configure the PULL UP
+	GPIOA->PUPDR |=  (1<<1);  // Bits (1:0) = 1:0  --> PA0 is in Pull down mode
 }
 
 void TIM2_IRQHandler(void){
 	
-	if (button_pressed){
-		power_on = !power_on;
-		button_pressed = 0;
-	}
+	button_state = GPIOA->IDR & GPIO_IDR_ID0;
 	
-   //PrintConsole(INFO, "\r\n System Mode: %s",power_on?"ON":"OFF");
+	// Update the sampling byte
+   sampling_byte = (sampling_byte << 1) | button_state;
 
+   // Check for a stable falling edge
+   if (sampling_byte == 0xFE) {
+		power_on = !power_on;
+		PrintConsole(DEFAULT,"\r\nButton triggered");
+   }	
 	
     // Don't forget to clear the interrupt flag
     TIM2->SR &= ~TIM_SR_UIF;
-}
-
-void EXTI1_IRQHandler(void){
-	/*************>>>>>>> STEPS FOLLOWED <<<<<<<<************
-	
-	1. Check the Pin, which trgerred the Interrupt
-	2. Clear the Interrupt Pending Bit
-	
-	********************************************************/
-	
-	if (EXTI->PR & (1<<1))    // If the PA1 triggered the interrupt
-	{
-		
-		button_pressed = 1;
-		
-		EXTI->PR |= (1<<1);  // Clear the interrupt flag by writing a 1 
-	}
 }
 
 ClockConfig getSystemClockSpeed(bool show) {
@@ -283,9 +238,9 @@ void Timer2InterruptInit(float oscillation_button_time){
 	
 	int arr = getSystemClockSpeed(false).apb1timFrequency * oscillation_button_time;
 	double timer_freq = getSystemClockSpeed(false).apb1timFrequency / (arr+1);
-	PrintConsole(INFO, "\r\n Freq interrupt timer for push-button osci removal: %lf",timer_freq);
+	PrintConsole(INFO, "\r\nFreq interrupt timer for push-button osci removal: %lf",timer_freq);
 	double timer_Ts = 1/timer_freq;
-	PrintConsole(INFO, "\r\n Expected time of oscillation: %lf",timer_Ts);
+	PrintConsole(INFO, "\r\nExpected time of oscillation: %lf s",timer_Ts);
 	
 
 	//! 1. Enable the timer clock source
@@ -323,7 +278,7 @@ void Timer2InterruptInit(float oscillation_button_time){
 	/* Set interrupt priority */
 	IRQn_Type IRQn = TIM2_IRQn;	
 	uint32_t prioritygroup = 0x00U;
-	uint32_t PreemptPriority = 1;
+	uint32_t PreemptPriority = 2;
 	uint32_t SubPriority = PRIORITY_OSCILLATION_TIMER;
 	prioritygroup = NVIC_GetPriorityGrouping();
 	NVIC_SetPriority(IRQn, NVIC_EncodePriority(prioritygroup, PreemptPriority, SubPriority));
