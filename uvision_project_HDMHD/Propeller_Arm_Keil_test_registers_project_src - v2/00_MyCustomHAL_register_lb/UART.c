@@ -36,8 +36,7 @@ volatile int uart1Busy = 0;
 volatile int uart2Busy = 0;
 
 // DMA1 Stream5 will be triggered for UART2 DMA TX (i.e when sending a character to the terminal)
-void DMA1_Stream5_IRQHandler(void)
-{
+void DMA1_Stream5_IRQHandler(void){
 	// See pg 187.  Bit 11 is the "Stream 5 transfer complete interrupt flag".  This bit
 	// will be set when the DMA reception is complete.
 	if((ACCESS(DMA1_HISR) & (1 << 11)) != 0)
@@ -51,8 +50,7 @@ void DMA1_Stream5_IRQHandler(void)
 }
 
 // DMA1 Stream6 will be triggered for UART2 DMA RX (i.e. when receiving a character from the terminal)
-void DMA1_Stream6_IRQHandler(void)
-{
+void DMA1_Stream6_IRQHandler(void){
 	
 	// See pg 187.  Bit 21 is the "Stream 6 transfer complete interrupt flag".  This bit
 	// will be set when the DMA transfer is complete.
@@ -70,8 +68,7 @@ void DMA1_Stream6_IRQHandler(void)
 	}
 }
 
-void USART2_IRQHandler(void)
-{
+void USART2_IRQHandler(void){
 	// See pg 549.  Bit 6 of the status register will be set when the UART
 	// transmission has completed.
 	if((ACCESS(USART2_SR) & (1 << 6)) != 0)
@@ -86,8 +83,7 @@ void USART2_IRQHandler(void)
 
 
 
-void Uart2GpioInit()
-{
+void Uart2GpioInit(){
 	// Give a clock to port A as we'll be using one of its pins for transfer of data.
 	ACCESS(RCC_AHB1ENR) |= 1;
 
@@ -104,8 +100,7 @@ void Uart2GpioInit()
 	ACCESS(GPIOA_OSPEEDR) |= ((3 << 4) | (3 << 6));
 }
 
-void Uart2DmaInit()
-{
+void Uart2DmaInit(){
 	// Enable a clock for DMA1
 	ACCESS(RCC_AHB1ENR) |= (1 << 21);
 
@@ -153,8 +148,7 @@ void Uart2DmaInit()
 	ACCESS(DMA1_S5CR) |= 1;
 }
 
-void Uart2Init()
-{
+void Uart2Init(){
 	Uart2GpioInit();
 
 	Uart2DmaInit();
@@ -191,8 +185,7 @@ void Uart2Init()
 	ACCESS(NVIC_ISER1) |= (1 << (38 - 32));
 }
 
-void SendString(char* string)
-{
+void SendString(char* string){
 	
 	// Here we block until the previous transfer completes.
 	while(uart2Busy == 1);
@@ -229,8 +222,7 @@ void SendString(char* string)
 	ACCESS(USART2_CR3) |= (1 << 7);
 }
 
-void DMA1_Stream4_IRQHandler(void)
-{
+void DMA1_Stream4_IRQHandler(void){
 	// See pg 187.  Bit 11 is the "Stream 5 transfer complete interrupt flag".  This bit
 	// will be set when the DMA reception is complete.
 	if((ACCESS(DMA1_HISR) & (1 << 5)) != 0)
@@ -244,8 +236,7 @@ void DMA1_Stream4_IRQHandler(void)
 }
 
 
-void USART1_IRQHandler(void)
-{
+void USART1_IRQHandler(void){
 	// See pg 549.  Bit 6 of the status register will be set when the UART
 	// transmission has completed.
 	if((ACCESS(USART1_SR) & (1 << 6)) != 0)
@@ -259,8 +250,7 @@ void USART1_IRQHandler(void)
 }
 
 
-void Uart1GpioInit()
-{
+void Uart1GpioInit(){
 	// Give a clock to port A as we'll be using one of its pins for transfer of data.
 	ACCESS(RCC_AHB1ENR) |= 1;
 	
@@ -277,8 +267,7 @@ void Uart1GpioInit()
 	
 }
 
-void Uart1DmaInit()
-{
+void Uart1DmaInit(){
     // Enable a clock for DMA1
     ACCESS(RCC_AHB1ENR) |= (1 << 21);
 
@@ -310,8 +299,7 @@ void Uart1DmaInit()
 }
 
 
-void Uart1Init()
-{
+void Uart1Init(){
 	Uart1GpioInit();
 
 	Uart1DmaInit();
@@ -342,8 +330,7 @@ void Uart1Init()
 	ACCESS(NVIC_ISER1) |= (1 << (8));
 }
 
-void QTSendFloat(char* value)
-{
+void QTSendFloat(char* value){
     // Convert the float to a string using a format that suits your needs
     //char floatString[20]; // Adjust the array size as needed
     //snprintf(floatString, sizeof(floatString), "%.2f", value);

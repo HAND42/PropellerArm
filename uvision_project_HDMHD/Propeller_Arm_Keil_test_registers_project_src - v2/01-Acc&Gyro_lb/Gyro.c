@@ -26,16 +26,14 @@
 
 #include "RegisterAddresses.h"
 
-void WaitForSPI1RXReady()
-{
+void WaitForSPI1RXReady(){
 	// See page 605 of the datasheet for info on the SPI status register
 	// If Bit0 == 0 then SPI RX is empty
 	// If Bit7 == 1 then SPI is busy
 	while((ACCESS(SPI1_SR) & 1) == 0 || (ACCESS(SPI1_SR) & (1 << 7)) == 1) { }
 }
 
-void WaitForSPI1TXReady()
-{
+void WaitForSPI1TXReady(){
 	// See page 605 of the datasheet for info on the SPI status register
 	// If Bit1 == 0 then SPI TX buffer is not empty
 	// If Bit7 == 1 then SPI is busy
@@ -58,8 +56,7 @@ void WaitForSPI1TXReady()
 // 5) Read a result
 // 6) Set CS back to high
 
-unsigned char ReadFromGyro(unsigned char gyroRegister)
-{
+unsigned char ReadFromGyro(unsigned char gyroRegister){
 	ACCESS(GPIOE_BSRR) |= (1 << 19);
 	WaitForSPI1TXReady();
 	ACCESS(SPI1_DR) = (gyroRegister | 0x80); // 0x80 indicates we're doing a read
@@ -74,8 +71,7 @@ unsigned char ReadFromGyro(unsigned char gyroRegister)
 	return readValue;
 }
 
-void WriteToGyro(unsigned char gyroRegister, unsigned char value)
-{
+void WriteToGyro(unsigned char gyroRegister, unsigned char value){
 	ACCESS(GPIOE_BSRR) |= (1 << 19);
 	WaitForSPI1TXReady();
 	ACCESS(SPI1_DR) = gyroRegister;
@@ -88,8 +84,7 @@ void WriteToGyro(unsigned char gyroRegister, unsigned char value)
 	ACCESS(GPIOE_BSRR) |= (1 << 3);
 }
 
-void GyroInit()
-{
+void GyroInit(){
 	// Give a clock to port A as pins PA5-thru-PA7 are connected to the gyro (pg 20 of UM1842) and
 	// page 116 of RM0383 for the RCC AHB register info.
 	ACCESS(RCC_AHB1ENR) |= 1;
@@ -145,8 +140,7 @@ void GyroInit()
 	WriteToGyro(0x20, 0x0F);
 }
 
-short GetAxisValue(unsigned char lowRegister, unsigned char highRegister)
-{
+short GetAxisValue(unsigned char lowRegister, unsigned char highRegister){
 	// See page 9 of L3GD20.  It shows the mechanical characteristics of the gyro.  Note
 	// that we leave the sensitivity as is (i.e. 0) so that it's 250 dps.  So, we read
 	// the value from the gyro and convert it to a +/- 360 degree value.
@@ -155,8 +149,7 @@ short GetAxisValue(unsigned char lowRegister, unsigned char highRegister)
 	return (short)((float)temp * scaler);
 }
 
-void GetGyroValues(short* x, short* y, short* z)
-{
+void GetGyroValues(short* x, short* y, short* z){
 	// See page 36 of the L3GD20 datasheet.  It shows the hi/lo addresses of each of the axes.
 	*x = GetAxisValue(0x28, 0x29);
 	*y = GetAxisValue(0x2A, 0x2B);

@@ -50,12 +50,12 @@ void Blinking_4Led (void){
 	delay_ms(1000);
 }
 
-void Power_On(void){
+void Power_Led_On(void){
 	GPIOD->BSRR = GPIO_BSRR_BS_15;
 	GPIOD->BSRR = GPIO_BSRR_BR_14;
 }
 
-void Power_Off(void){
+void Power_Led_Off(void){
 	GPIOD->BSRR = GPIO_BSRR_BS_14;
 	GPIOD->BSRR = GPIO_BSRR_BR_15;
 }

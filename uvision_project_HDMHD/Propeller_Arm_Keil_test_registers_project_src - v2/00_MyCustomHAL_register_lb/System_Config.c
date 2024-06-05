@@ -3,6 +3,7 @@
 #include "DisplayData.h"
 
 
+
 /* Functions definition-----------------------------------------------*/
 /**
   * @brief  System Clock Configuration
@@ -24,6 +25,7 @@
 
   
 bool power_on=0;
+bool pushButton = false;
 int count=0;
   
   
@@ -79,12 +81,14 @@ void Sys_PowerMode_Config(void){
 	3. Configure the PULL UP/ PULL DOWN According to your requirement
 	
 	********************************************************/
-	
+
+/*	
 	RCC->AHB1ENR |=  (1<<0);  // Enable GPIOA clock
 	
 	GPIOA->MODER &= ~(3<<2);  // Bits (3:2) = 0:0  --> PA1 in Input Mode
 	
 	GPIOA->PUPDR |=  (1<<2);  // Bits (3:2) = 1:0  --> PA1 is in Pull up mode
+*/
 	
 		/*************>>>>>>> STEPS FOLLOWED <<<<<<<<************
 	
@@ -97,6 +101,7 @@ void Sys_PowerMode_Config(void){
 	
 	********************************************************/
 	
+	/*
 	RCC->APB2ENR |= (1<<14);  // Enable SYSCNFG
 	
 	SYSCFG->EXTICR[0] &= ~(0xf<<4);  // Bits[7:6:5:4] = (0:0:0:0)  -> configure EXTI1 line for PA1
@@ -110,16 +115,18 @@ void Sys_PowerMode_Config(void){
 	NVIC_SetPriority (EXTI1_IRQn, 0);  // Set Priority
 	
 	NVIC_EnableIRQ (EXTI1_IRQn);  // Enable Interrupt
+	*/
 }
 
-void EXTI1_IRQHandler(void)
-{
+void EXTI1_IRQHandler(void){
 	/*************>>>>>>> STEPS FOLLOWED <<<<<<<<************
 	
 	1. Check the Pin, which trgerred the Interrupt
 	2. Clear the Interrupt Pending Bit
 	
 	********************************************************/
+	
+	SendString("Button Pushed\r\n");
 	
 	if (EXTI->PR & (1<<1))    // If the PA1 triggered the interrupt
 	{
