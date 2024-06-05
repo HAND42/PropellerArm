@@ -23,8 +23,8 @@ Kteta = 20;
 Ki = Kteta^2/4 - 1; % must be strictly inferior
 
 theta_ref = -pi()/3;
-K1 = 4;
-K2 = 128;
+K1 = 100;
+K2 = 400;
 
 fr = 0.1;
 l2 = 0.363;
