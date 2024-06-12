@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\00_MyCustomHAL_register_lb;.\01-Acc&amp;Gyro_lb;.\04_LCD1602_I2C_NOHAL</IncludePath>
+              <IncludePath>.\00-Clock_Systick_Delay;.\01-Acc&amp;Gyro_Control_loop;.\02-Display_debug&amp;QT;.\03-LCD1602_I2C_NOHAL;.\04-I2C-Slave;..\Propeller_Arm_Keil_test_registers_project_src - v2</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -389,70 +389,140 @@
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
             </File>
+            <File>
+              <FileName>TwinPropellerArmSTM32F411_configuration.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\TwinPropellerArmSTM32F411_configuration.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>SystemConfig</GroupName>
           <Files>
             <File>
-              <FileName>System_Config.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\00_MyCustomHAL_register_lb\System_Config.c</FilePath>
-            </File>
-            <File>
-              <FileName>RegisterAddresses.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\00_MyCustomHAL_register_lb\RegisterAddresses.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Delay</GroupName>
-          <Files>
-            <File>
               <FileName>Delay.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\00_MyCustomHAL_register_lb\Delay.c</FilePath>
+              <FilePath>.\00-Clock_Systick_Delay\Delay.c</FilePath>
             </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Led</GroupName>
-          <Files>
+            <File>
+              <FileName>Delay.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\00-Clock_Systick_Delay\Delay.h</FilePath>
+            </File>
             <File>
               <FileName>Led.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\00_MyCustomHAL_register_lb\Led.c</FilePath>
+              <FilePath>.\00-Clock_Systick_Delay\Led.c</FilePath>
+            </File>
+            <File>
+              <FileName>Led.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\00-Clock_Systick_Delay\Led.h</FilePath>
+            </File>
+            <File>
+              <FileName>System_Config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\00-Clock_Systick_Delay\System_Config.c</FilePath>
+            </File>
+            <File>
+              <FileName>System_Config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\00-Clock_Systick_Delay\System_Config.h</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>Theta_Acc&amp;Gyro</GroupName>
+          <GroupName>Theta_Acc&amp;Gyro_Control-loop</GroupName>
           <Files>
             <File>
               <FileName>Accelerometer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\01-Acc&amp;Gyro_lb\Accelerometer.c</FilePath>
+              <FilePath>.\01-Acc&amp;Gyro_Control_loop\Accelerometer.c</FilePath>
+            </File>
+            <File>
+              <FileName>Accelerometer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\01-Acc&amp;Gyro_Control_loop\Accelerometer.h</FilePath>
             </File>
             <File>
               <FileName>Angles_Estimation.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\01-Acc&amp;Gyro_lb\Angles_Estimation.c</FilePath>
+              <FilePath>.\01-Acc&amp;Gyro_Control_loop\Angles_Estimation.c</FilePath>
+            </File>
+            <File>
+              <FileName>Angles_Estimation.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\01-Acc&amp;Gyro_Control_loop\Angles_Estimation.h</FilePath>
             </File>
             <File>
               <FileName>Gyro.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\01-Acc&amp;Gyro_lb\Gyro.c</FilePath>
+              <FilePath>.\01-Acc&amp;Gyro_Control_loop\Gyro.c</FilePath>
+            </File>
+            <File>
+              <FileName>Gyro.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\01-Acc&amp;Gyro_Control_loop\Gyro.h</FilePath>
+            </File>
+            <File>
+              <FileName>motor_pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\01-Acc&amp;Gyro_Control_loop\motor_pwm.c</FilePath>
+            </File>
+            <File>
+              <FileName>motor_pwm.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\01-Acc&amp;Gyro_Control_loop\motor_pwm.h</FilePath>
+            </File>
+            <File>
+              <FileName>Potentiometer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\01-Acc&amp;Gyro_Control_loop\Potentiometer.c</FilePath>
+            </File>
+            <File>
+              <FileName>Potentiometer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\01-Acc&amp;Gyro_Control_loop\Potentiometer.h</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>I2C</GroupName>
+          <GroupName>Display_debug&amp;QT</GroupName>
           <Files>
             <File>
-              <FileName>I2C.c</FileName>
+              <FileName>DisplayData.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\00_MyCustomHAL_register_lb\I2C.c</FilePath>
+              <FilePath>.\02-Display_debug&amp;QT\DisplayData.c</FilePath>
+            </File>
+            <File>
+              <FileName>DisplayData.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\02-Display_debug&amp;QT\DisplayData.h</FilePath>
+            </File>
+            <File>
+              <FileName>RegisterAddresses.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\02-Display_debug&amp;QT\RegisterAddresses.h</FilePath>
+            </File>
+            <File>
+              <FileName>StringUtilities.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\02-Display_debug&amp;QT\StringUtilities.c</FilePath>
+            </File>
+            <File>
+              <FileName>StringUtilities.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\02-Display_debug&amp;QT\StringUtilities.h</FilePath>
+            </File>
+            <File>
+              <FileName>UART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\02-Display_debug&amp;QT\UART.c</FilePath>
+            </File>
+            <File>
+              <FileName>UART.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\02-Display_debug&amp;QT\UART.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -462,52 +532,27 @@
             <File>
               <FileName>i2c-lcd.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\04_LCD1602_I2C_NOHAL\i2c-lcd.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>UART_com</GroupName>
-          <Files>
-            <File>
-              <FileName>UART.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\00_MyCustomHAL_register_lb\UART.c</FilePath>
+              <FilePath>.\03-LCD1602_I2C_NOHAL\i2c-lcd.c</FilePath>
             </File>
             <File>
-              <FileName>StringUtilities.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\00_MyCustomHAL_register_lb\StringUtilities.c</FilePath>
-            </File>
-            <File>
-              <FileName>DisplayData.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\00_MyCustomHAL_register_lb\DisplayData.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Potentiometer</GroupName>
-          <Files>
-            <File>
-              <FileName>Potentiometer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Potentiometer.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Motor_control</GroupName>
-          <Files>
-            <File>
-              <FileName>motor_pwm.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\01-Acc&amp;Gyro_lb\motor_pwm.c</FilePath>
-            </File>
-            <File>
-              <FileName>motor_pwm.h</FileName>
+              <FileName>i2c-lcd.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\01-Acc&amp;Gyro_lb\motor_pwm.h</FilePath>
+              <FilePath>.\03-LCD1602_I2C_NOHAL\i2c-lcd.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>I2C_Slave_forArduinoScreenMaster</GroupName>
+          <Files>
+            <File>
+              <FileName>I2C-ST_Slave_Ard_Master.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\04-I2C-Slave\I2C-ST_Slave_Ard_Master.c</FilePath>
+            </File>
+            <File>
+              <FileName>I2C-ST_Slave_Ard_Master.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\04-I2C-Slave\I2C-ST_Slave_Ard_Master.h</FilePath>
             </File>
           </Files>
         </Group>

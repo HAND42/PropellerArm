@@ -49,6 +49,14 @@ def plot_thrust_motor(file_path):
             plt.title('Thrust generated in function of the command PWM in us')
             plt.grid(True)
 
+            # Plot the Amperage in function of the throttle
+            plt.figure(figsize=(10, 6))
+            plt.plot(throttle, ampere_cons, color='green')
+            plt.xlabel('PWM Throttle in us')
+            plt.ylabel('Amperage drawn in A')
+            plt.title('Amperage drawn in function of the command PWM in us')
+            plt.grid(True)
+
             # Plot the data
             plt.figure(figsize=(10, 6))
             plt.plot(throttle, [thr / ampere for thr, ampere in zip(throttle, ampere_cons)],
@@ -221,7 +229,7 @@ def plot_audio_waveform(audio_path, start_time=None, end_time=None, step_time=No
 # Check if the file exists in the current directory
 file_path = 'C:/Users/Hugo/Documents/GitHub/PropellerArm/uvision_project_HDMHD/PID system modeling/MotorModelingTest/data_motor_testbench.txt'
 audio_path = 'C:/Users/Hugo/Documents/GitHub/PropellerArm/uvision_project_HDMHD/PID system modeling/MotorModelingTest/sound_motor1150-1500us-stepinput'
-# plot_thrust_motor(file_path)
-audio_wave_amplitude = plot_audio_waveform(
-    audio_path, start_time=24.7, end_time=25.7, step_time=25.1)
+plot_thrust_motor(file_path)
+# audio_wave_amplitude = plot_audio_waveform(
+#     audio_path, start_time=24.7, end_time=25.7, step_time=25.1)
 plt.show()

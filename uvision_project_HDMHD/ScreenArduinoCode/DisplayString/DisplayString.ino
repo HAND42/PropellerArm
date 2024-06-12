@@ -123,6 +123,7 @@ void loop(void) {
     // Serial.println(p.x); 
     // Serial.print(tft.width());
     // Serial.println(tft.height());
+    Serial.print("Screen pressed");
   
 
   
@@ -153,12 +154,12 @@ void loop(void) {
         }
       }
     }
-    tft.fillScreen(BLACK);
-    tft.setRotation(1);
-    tft.fillRect(SCREEN_SIZE_W/2-100, SCREEN_SIZE_H/2-30, 200, 60, BLUE);
-    tft.setCursor(SCREEN_SIZE_W/2-40,SCREEN_SIZE_H/2-10);
-    tft.setTextColor(RED);  tft.setTextSize(3);
-    tft.println("START");
+    // tft.fillScreen(BLACK);
+    // tft.setRotation(1);
+    // tft.fillRect(SCREEN_SIZE_W/2-100, SCREEN_SIZE_H/2-30, 200, 60, BLUE);
+    // tft.setCursor(SCREEN_SIZE_W/2-40,SCREEN_SIZE_H/2-10);
+    // tft.setTextColor(RED);  tft.setTextSize(3);
+    // tft.println("START");
     delay(1000);  // Wait for 1 second before sending the next data
   }
 
