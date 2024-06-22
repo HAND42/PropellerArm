@@ -1,8 +1,8 @@
 % simulation
 END = 15;    % []
 Ts = 0.08;    % []
-Tcalibration = 5;
-Techelon = 7;
+Tcalibration = 0.5;
+Techelon = 4    ;
 
 % input_theta_truth
 theta_max = 0.785398; % theta_max = 45°
@@ -24,7 +24,7 @@ Ki = Kteta^2/4 - 1; % must be strictly inferior
 
 theta_ref = -pi()/4;
 K1 = 4;
-K2 = 100;
+K2 = 128;
 
 fr = 0.1;
 l2 = 0.363;
