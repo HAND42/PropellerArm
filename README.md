@@ -1,8 +1,24 @@
 # PropellerArm
 
-## Propeller Arm Requirements
+# Introduction
 
-1. PID to maintain the two arms in a fix position horizontal
-2. Add a screen to see the angle measured by the accelerometer/gyrometer or eventually also the angle rate
-3. Connect with another uart communication to display on QT interface the robotic propeller arm
-4. Le bouton interruption sert de stopper les moteurs au niveau software mais continue d'alimenter la carte électronique pour recuperer les angles successifs de la carte avec les gyro et accelero
+Our project focuses on controlling a twin-propeller arm using a cascade control loop system. The primary goal is to achieve precise and stable control of the arm's position in response to an input angle from a potentiometer. This control is implemented by adjusting the speed of the motors to converge towards the desired angle.
+
+## Objectives
+
+- Implement a cascade control loop system for controlling the twin-propeller arm.
+- Achieve precise positioning of the arm based on input from a potentiometer.
+- Provide hands-on experience to students in robotics through practical sessions and demonstrations.
+- Fine-tune control systems to optimize performance and stability.
+
+## Project Application
+
+This project will serve as a practical tool for educational purposes, particularly in robotics labs sessions conducted by Mr. Ducard. It aims to give students practical experience in:
+
+- Implementing control systems in real-world applications.
+- Understanding feedback mechanisms for accurate position control.
+- Fine-tuning and optimizing control algorithms for stability and performance.
+
+By integrating theoretical concepts with practical implementation, students will gain insights into the complexities of real-time control and enhance their skills in robotics and automation.
+
+For more information about the project, refer to the PID_Controlled_Propeller_Arm-REPORT.pdf document.
